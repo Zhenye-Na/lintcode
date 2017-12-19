@@ -1,14 +1,11 @@
 # 96. Partition List
 
-Description
-Given a linked list and a value `x`, partition it such that all nodes less than `x` come before nodes greater than or equal to `x`.
-
-You should **preserve the original relative order of the nodes in each of the two partitions**.
-
-Example:
-
-Input: `head = 1->4->3->2->5->2`, `x = 3`
-Output: `1->2->2->4->3->5`
+- **Description**
+    - Given a linked list and a value `x`, partition it such that all nodes less than `x` come before nodes greater than or equal to `x`.
+    - You should **preserve the original relative order of the nodes in each of the two partitions**.
+- **Example**
+    - Input: `head = 1->4->3->2->5->2`, `x = 3`
+    - Output: `1->2->2->4->3->5`
 
 
 ## Solution
@@ -71,7 +68,7 @@ class Solution:
 
 ### Solution 2
 
-分别new 两个 LinkedList 一个放比 `x` 小的，另一个放入大于等于 `x` 的 然后连起来
+分别new 两个 LinkedList 一个放比 `x` 小的，另一个放入大于等于 `x` 的, 然后连起来
 
 - Time `O(n)`
 - Space `O(n)`
@@ -111,8 +108,8 @@ public class Solution {
 
         while (head != null) {
             if (head.val < x) {
-                left.next = head;
-                left      = head;
+                left.next  = head;
+                left       = head;
             } else {
                 right.next = head;
                 right      = head;
