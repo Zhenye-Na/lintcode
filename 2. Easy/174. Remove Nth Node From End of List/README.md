@@ -1,24 +1,20 @@
 # 174. Remove Nth Node From End of List
 
-Description
-Given a linked list, remove the nth node from the end of list and return its head.
+- **Description**
+    - Given a linked list, remove the nth node from the end of list and return its head.
+    - The minimum number of nodes in list is `n`.
+- **Example**
+    - Given linked list: `1->2->3->4->5->null`, and `n = 2`.
+    - After removing the second node from the end, the linked list becomes `1->2->3->5->null`.
+- **Challenge**
+    - Can you do it without getting the length of the linked list?
 
-The minimum number of nodes in list is n.
-
-Have you met this question in a real interview?  
-Example
-Given linked list: 1->2->3->4->5->null, and n = 2.
-
-After removing the second node from the end, the linked list becomes 1->2->3->5->null.
-
-Challenge
-Can you do it without getting the length of the linked list?
 
 ## Solution
 
 ### Length of Linked List is known
 
-头指针可能改变， 所以要用dummy node, return dummy.next
+头指针可能改变， 所以要用 `dummy node`, `return dummy.next`
 
 
 ```python
