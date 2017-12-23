@@ -1,12 +1,12 @@
 # 184. Largest Number
 
-**Description**
-Given a list of non negative integers, arrange them such that they form the largest number.
-The result may be very large, so you need to return a string instead of an integer.
-**Example**
-Given [1, 20, 23, 4, 8], the largest formed number is 8423201.
-**Challenge**
-Do it in `O(nlogn)` time complexity.
+- **Description**
+    - Given a list of non negative integers, arrange them such that they form the largest number.
+    - The result may be very large, so you need to return a string instead of an integer.
+- **Example**
+    - Given `[1, 20, 23, 4, 8]`, the largest formed number is `8423201`.
+- **Challenge**
+    - Do it in `O(nlogn)` time complexity.
 
 
 ## Solution
@@ -72,7 +72,7 @@ public class Solution {
 In terms of Time and Space Complexity:
 Let's assume:
 
-```
+```c
 the length of input array is n,
 average length of Strings in s_num is k,
 Then, compare 2 strings will take O(k).
