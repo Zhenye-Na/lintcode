@@ -2,34 +2,24 @@
 
 > *LeetCode 402. Remove K Digits*
 
-Description
-
-Given string `A` representative a positive integer which has `N` digits, remove any `k` digits of the number, the remaining digits are arranged according to the original order to become a new positive integer.
-
-Note:
-The length of `num` is less than `240` and will be `≥ k`.
-The given num does not contain any leading zero.
-
-Example
-Example 1:
-
-Input: `num = "1432219"`, `k = 3`
-Output: `"1219"`
-Explanation: Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest.
-
-
-Example 2:
-
-Input: `num = "10200"`, `k = 1`
-Output: `"200"`
-Explanation: Remove the leading 1 and the number is 200. Note that the output must not contain leading zeroes.
-
-
-Example 3:
-
-Input: `num = "10"`, `k = 2`
-Output: `"0"`
-Explanation: Remove all the digits from the number and it is left with nothing which is `0`.
+- **Description**
+    - Given string `A` representative a positive integer which has `N` digits, remove any `k` digits of the number, the remaining digits are arranged according to the original order to become a new positive integer.
+- **Note**
+    - The length of `num` is less than `240` and will be `≥ k`.
+    - The given num does not contain any leading zero.
+- **Example**
+    - Example 1:
+        - **Input**: `num = "1432219"`, `k = 3`
+        - **Output**: `"1219"`
+        - **Explanation**: Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest.
+    - Example 2:
+        - **Input**: `num = "10200"`, `k = 1`
+        - **Output**: `"200"`
+        - **Explanation**: Remove the leading 1 and the number is 200. Note that the output must not contain leading zeroes.
+    - Example 3:
+        - **Input**: `num = "10"`, `k = 2`
+        - **Output**: `"0"`
+        - **Explanation**: Remove all the digits from the number and it is left with nothing which is `0`.
 
 
 ## Solution
@@ -82,20 +72,20 @@ public:
      * @return: A string
      */
     string removeKdigits(string num, int k) {
-            while (k > 0) {
-                int n = num.size();
-                int i = 0;
-                while (i+1<n && num[i]<=num[i+1])  i++;
-                num.erase(i, 1);
-                k--;
-            }
-            // trim leading zeros
-            int s = 0;
-            while (s<(int)num.size()-1 && num[s]=='0')  s++;
-            num.erase(0, s);
-
-            return num=="" ? "0" : num;
+        while (k > 0) {
+            int n = num.size();
+            int i = 0;
+            while (i + 1 < n && num[i] <= num[i + 1])  i++;
+            num.erase(i, 1);
+            k--;
         }
+        // trim leading zeros
+        int s = 0;
+        while (s < (int)num.size() - 1 && num[s] == '0')  s++;
+        num.erase(0, s);
+
+        return num == "" ? "0" : num;
+    }
 };
 ```
 
@@ -119,8 +109,8 @@ public:
         // write your code here
         string res;
         int keep = A.size() - k;
-        for (int i=0; i<A.size(); i++) {
-            while (res.size()>0 && res.back()>A[i] && k>0) {
+        for (int i = 0; i < A.size(); i++) {
+            while (res.size() > 0 && res.back() > A[i] && k > 0) {
                 res.pop_back();
                 k--;
             }
@@ -130,10 +120,10 @@ public:
 
         // trim leading zeros
         int s = 0;
-        while (s<(int)res.size()-1 && res[s]=='0')  s++;
+        while (s < (int)res.size() - 1 && res[s] == '0')  s++;
         res.erase(0, s);
 
-        return res=="" ? "0" : res;
+        return res == "" ? "0" : res;
     }
 };
 ```
