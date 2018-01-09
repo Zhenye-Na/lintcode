@@ -1,21 +1,21 @@
-68. Binary Tree Postorder Traversal
-Description
-Given a binary tree, return the postorder traversal of its nodes' values.
+# 68. Binary Tree Postorder Traversal
 
-Example
-Given binary tree {1,#,2,3},
+- **Description**
+    - Given a binary tree, return the postorder traversal of its nodes' values.
+- **Example**
+    - Given binary tree `{1,#,2,3}`,
 
-   1
-    \
-     2
-    /
-   3
+    ```
+       1
+        \
+         2
+        /
+       3
+    ```
 
-
-return [3,2,1].
-
-Challenge
-Can you do it without recursion?
+    - return `[3,2,1]`.
+- Challenge
+    - Can you do it without recursion?
 
 ## Solution
 
@@ -142,7 +142,6 @@ class Solution:
         # Initialize two stacks
         s1 = []
         s2 = []
-
 
         s1.append(root)
         while s1:
