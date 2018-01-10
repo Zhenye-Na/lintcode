@@ -1,24 +1,19 @@
 # 47. Majority Element II
 
 
-Description
-Given an array of integers, the majority number is the number that occurs more than 1/3 of the size of the array.
-
-Find it.
-
-There is only one majority number in the array.
-
-Have you met this question in a real interview?  
-Example
-Given [1, 2, 1, 2, 1, 3, 3], return 1.
-
-Challenge
-O(n) time and O(1) extra space.
+- **Description**
+    - Given an array of integers, the majority number is the number that occurs **`more than 1/3`** of the size of the array.
+    - Find it.
+    - There is only one majority number in the array.
+- **Example**
+    - Given `[1, 2, 1, 2, 1, 3, 3]`, return `1`.
+- **Challenge**
+    - `O(n)` time and `O(1)` extra space.
 
 
 ## Solution
 
-### O(n) time and O(n) space
+### `O(n)` time and `O(n)` extra space
 
 ```python
 class Solution:
@@ -40,7 +35,7 @@ class Solution:
 ```
 
 
-### O(n logn) time and O(1) extra space
+### `O(n logn)` time and `O(1)` extra space
 
 ```python
 class Solution:
