@@ -1,15 +1,18 @@
 # 423. Valid Parentheses
-Description
-Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-Example
-The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
-
-Challenge
-O(n)的时间，n为括号的个数
-
+- **Description**
+    - Given a string containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+- **Example**
+    - The brackets **must close** in the correct order, `"()"` and `"()[]{}"` are all valid but `"(]"` and `"([)]"` are not.
+- **Challenge**
+    - `O(n)`的时间，n为括号的个数
 
 
+## Solution
+
+用到 `Stack` 这个数据结构 `FILO`，如果传进来的是 `")}]"` 的任何一个，和栈顶元素进行比较后，如果括号匹配上了，就 `pop` 掉所有的元素，如果匹配不上或者 `Stack` 空了，就返回 false
+
+### Python
 
 ```python
 class Solution:
