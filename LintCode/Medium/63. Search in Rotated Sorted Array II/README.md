@@ -1,17 +1,13 @@
 # 63. Search in Rotated Sorted Array II
-Description
-Follow up for Search in Rotated Sorted Array:
 
-What if duplicates are allowed?
-
-Would this affect the run-time complexity? How and why?
-
-Write a function to determine if a given target is in the array.
-
-Have you met this question in a real interview?  
-Example
-Given [1, 1, 0, 1, 1, 1] and target = 0, return true.
-Given [1, 1, 1, 1, 1, 1] and target = 0, return false.
+- **Description**
+    - Follow up for [Search in Rotated Sorted Array]():
+        - **What if duplicates are allowed?**
+        - **Would this affect the run-time complexity? How and why?**
+        - Write a function to determine if a given target is in the array.
+- **Example**
+    - Given `[1, 1, 0, 1, 1, 1]` and `target = 0`, return **`true`**.
+    - Given `[1, 1, 1, 1, 1, 1]` and `target = 0`, return **`false`**.
 
 
 
