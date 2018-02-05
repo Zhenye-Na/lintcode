@@ -52,10 +52,10 @@ class Solution:
 
 
         if A[start] == target:
-            return start;
+            return start
         if A[end] == target:
-            return end;
-        return -1;
+            return end
+        return -1
 ```
 
 ### Java
