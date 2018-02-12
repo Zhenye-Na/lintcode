@@ -1,6 +1,4 @@
-# 75. Find Peak Element
-
-> *Same as LeetCode: 162. Find Peak Element*
+# 162. Find Peak Element
 
 - **Description**
     - There is an integer array which has the following features:
@@ -18,13 +16,13 @@
 
     - Find a peak element in this array. Return the index of the peak.
     - It's guaranteed the array has at least one peak.
-    - The array may contain multiple peeks, _find any of them_.
-    - _The array has at least 3 numbers in it_.
+    - The array may contain multiple peeks, **find any of them**.
+    - **The array has at least 3 numbers in it**.
 - **Example**
     - Given `[1, 2, 1, 3, 4, 5, 7, 6]`
-    - Return index 1 (which is number 2) or 6 (which is number 7)
+    - Return index `1` (which is number `2`) or `6` (which is number `7`)
 - **Challenge**
-    - Time complexity $O(\log N)$
+    - Time complexity O(log N)
 
 
 ## Solution
@@ -44,7 +42,37 @@ We can divide into 4 situations:
     - Currently in descending section, `end = mid`
 
 
-### Code
+### Python
+
+```python
+class Solution:
+    """
+    @param: A: An integers array.
+    @return: return any of peek positions.
+    """
+    def findPeak(self, A):
+        # write your code here
+        start, end = 0, len(A) - 1
+        while (start + 1 < end):
+            P = (start + end) // 2
+
+            # A[mid] is one of peaks
+            if A[P] > A[P - 1] and A[P] > A[P + 1]:
+                return P
+            # Ascending area
+            elif A[P] > A[P - 1] and A[P] < A[P + 1]:
+                start = P
+            # Descending area
+            else:
+                end = P
+
+        return start if A[start] >= A[end] else end
+
+```
+
+
+
+### Java
 
 
 ```java

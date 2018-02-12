@@ -13,7 +13,7 @@ class Solution:
             if A[P] > A[P - 1] and A[P] > A[P + 1]:
                 return P
             # Ascending area
-            elif A[P] > A[P-1] and A[P] < A[P+1]:
+            elif A[P] > A[P - 1] and A[P] < A[P + 1]:
                 start = P
             # Descending area
             else:
