@@ -1,1 +1,1 @@
-# leetcode-mysql
+# LeetCode / LintCode problems practice 🚧
