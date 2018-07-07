@@ -5,7 +5,6 @@ public class Solution {
      */
     public int findPeak(int[] A) {
         // write your code here
-        if (A.length == 0) return -1;
         if (A.length == 3) return 1;
         
         
