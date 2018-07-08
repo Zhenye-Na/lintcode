@@ -30,8 +30,8 @@ $$ C_{m+n-2}^{m-1} = \frac{(m+n-2)!}{(m-1)!(n-1)!} $$
 
 There are only two options for the robot to reach the target position:
 
-- from (x - 1, y) to (x, y)
-- from (x, y - 1) to (x, y)
+- from `(x - 1, y)` to `(x, y)`
+- from `(x, y - 1)` to `(x, y)`
 
 #### Code
 
