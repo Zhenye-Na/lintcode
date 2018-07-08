@@ -1,1 +1,3 @@
-# LeetCode / LintCode problems practice 🚧
+# LeetCode / LintCode problems practice
+
+> *My LeetCode / LintCode problems practice* 🚧
