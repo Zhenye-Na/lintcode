@@ -119,6 +119,7 @@ public class Solution {
 ```
 
 ### Solution 2
+
 从 solution 1 中可以明显发现其中的缺点，并不需要获得所有的路径，只有在计算中发现 `sum == target` ，才把他加进 results 当中，并且不需要最后 `for loop` 那一步。 用到了 ResultType，同时记录 path 和 当前 sum 值。 时间复杂度有很大提高。
 
 ```
@@ -196,6 +197,8 @@ public class Solution {
 ### Solution 3
 
 九章的答案，写的十分简短，非常棒，还要继续学习
+
+#### Code 3
 
 ```java
 public class Solution {
