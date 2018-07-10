@@ -2,13 +2,12 @@
 
 ## Table of Contents
 
-- [Solution](#solution)
-    - [Solution 1](solution-1)
-        - [Code](#code-1)
-    - [Solution 2](solution-2)
-        - [Code](#code-2)
-    - [Solution 3](solution-3)
-        - [Code](#code-3)
+- [Solution 1](solution-1)
+    - [Code](#code-1)
+- [Solution 2](solution-2)
+    - [Code](#code-2)
+- [Solution 3](solution-3)
+    - [Code](#code-3)
 
 - **Description**
     - Given a binary tree, find all paths that sum of the nodes in the path equals to a given number target.
