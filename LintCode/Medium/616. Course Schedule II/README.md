@@ -1,24 +1,20 @@
-# 615. Course Schedule
+# 616. Course Schedule II
 
 - **Description**
     - There are a total of n courses you have to take, labeled from `0` to `n - 1`.
     - Some courses may have prerequisites, for example to take course `0` you have to first take course `1`, which is expressed as a pair: `[0,1]`
-    - Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+    - Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses.
+    - There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty array.
 - **Example**
-    - Given `n = 2`, prerequisites = `[[1,0]]`
-    - Return `true`
-    - Given `n = 2`, prerequisites = `[[1,0],[0,1]]`
-    - Return `false`
+- Given `n = 2`, prerequisites = `[[1,0]]`
+- Return `[0,1]`
+- Given `n = 4`, prerequisites = `[1,0],[2,0],[3,1],[3,2]]`
+- Return `[0,1,2,3]` or `[0,2,1,3]`
 
 
 ## Solution
 
-**Topological Sorting (拓扑排序) + BFS + Queue**
-
-- 根据题意，先修课程是用 `index = 1` 的 1D array 中的元素表示的；Topological Sorting 要用到 `BFS+Queue`
-- 获得所有课程的 indegree，并且得到所有“相对”先修课程的后修课程
-- 将 `indegree == 0` 的课程放入 `Queue` 中，进行 BFS，同时将 `poll()` 出来的课程放入 `result` 中，对于该课程的所有后修课程 `indegree--`
-- 如果最后还有课程没有添加进 `queue` 中，那么相当于又换，`return false` 即可
+跟 615 题道理一样，只不过这道题要把结果输出来。如果 `result` 最后的 `index ！= numCourses`，那么相当于 有环，直接返回空数组即可
 
 
 ### Code
@@ -28,14 +24,15 @@ public class Solution {
     /*
      * @param numCourses: a total of n courses
      * @param prerequisites: a list of prerequisite pairs
-     * @return: true if can finish all courses or false
+     * @return: the course order
      */
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
         // write your code here
 
+        int[] result = new int[numCourses];
         int[] indegree = new int[numCourses];
-        List[] order = new ArrayList[numCourses];
-        int remaining = numCourses;
+        List[] order = new ArrayList[numCourses];  // Array of ArrayList
+        int added = 0;
 
         // Get prerequisites
         for (int i = 0; i < numCourses; i++) {
@@ -59,7 +56,7 @@ public class Solution {
         while (!queue.isEmpty()) {
             
             int prerequisite = queue.poll();
-            remaining--;
+            result[added] = prerequisite;
 
             
             for (Object c : order[prerequisite]) {
@@ -72,9 +69,14 @@ public class Solution {
                 }
     
             }
-
+            added++;
         }
-        return (remaining == 0);
+
+        if (added == numCourses) {
+            return result;
+        } else {
+            return new int[0];
+        }
     }
 }
 ```
