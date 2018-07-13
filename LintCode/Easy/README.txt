@@ -61,6 +61,7 @@
 212. Space Replacement
 213. String Compression
 227. Mock Hanoi Tower by Stacks
+242. Convert Binary Tree to Linked Lists by Depth
 245. Subtree
 246. Binary Tree Path Sum II
 365. Count 1 in Binary
