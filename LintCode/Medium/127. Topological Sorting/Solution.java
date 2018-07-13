@@ -128,3 +128,53 @@ public class Solution {
         return result;
     }
 }
+
+
+
+
+
+
+// DFS Implemetation
+
+/**
+ * Definition for Directed graph.
+ * class DirectedGraphNode {
+ *     int label;
+ *     ArrayList<DirectedGraphNode> neighbors;
+ *     DirectedGraphNode(int x) { label = x; neighbors = new ArrayList<DirectedGraphNode>(); }
+ * };
+ */
+
+public class Solution {
+    /*
+     * @param graph: A list of Directed graph node
+     * @return: Any topological order for the given graph.
+     */
+    public ArrayList<DirectedGraphNode> topSort(ArrayList<DirectedGraphNode> graph) {
+        // write your code here
+        if (graph == null || graph.size() == 0) {
+            return new ArrayList<DirectedGraphNode>();
+        }
+        LinkedList<DirectedGraphNode> result = new LinkedList<>();
+        Set<DirectedGraphNode> gray = new HashSet<>();
+        Set<DirectedGraphNode> dark = new HashSet<>();
+        for (DirectedGraphNode node : graph) {
+            if (!gray.contains(node) && !dark.contains(node)) {
+                dfs(node, gray, dark, result);
+            }
+        }
+        return new ArrayList<DirectedGraphNode>(result);
+    }
+    
+    void dfs(DirectedGraphNode node, Set<DirectedGraphNode> gray, Set<DirectedGraphNode> dark, LinkedList<DirectedGraphNode> result) {
+        gray.add(node);
+        for (DirectedGraphNode child : node.neighbors) {
+            if (!gray.contains(child) && !dark.contains(child)) {
+                dfs(child, gray, dark, result);
+            }
+        }
+        dark.add(node);
+        gray.remove(node);
+        result.addFirst(node);
+    }
+}
