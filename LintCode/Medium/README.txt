@@ -170,6 +170,7 @@
 575. Decode String
 588. Partition Equal Subset Sum
 591. Connecting Graph III
+598. Zombie in Matrix
 601. Flatten 2D Vector
 603. Largest Divisible Subset
 605. Sequence Reconstruction
@@ -178,6 +179,7 @@
 615. Course Schedule
 616. Course Schedule II
 617. Maximum Average Subarray II
+618. Search Graph Nodes
 619. Binary Tree Longest Consecutive Sequence III
 633. Find the Duplicate Number
 636. 132 Pattern
