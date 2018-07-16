@@ -140,6 +140,7 @@
 426. Restore IP Addresses
 427. Generate Parentheses
 428. Pow(x, n)
+431. Connected Component in Undirected Graph
 436. Maximal Square
 439. Segment Tree Build II
 442. Implement Trie (Prefix Tree)
