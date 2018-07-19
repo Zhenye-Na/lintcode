@@ -1,19 +1,21 @@
 # 604. Window Sum
 
-Description
-Given an array of n integer, and a moving window(size k), move the window at each iteration from the start of the array, find the sum of the element inside the window at each moving.
+- **Description**
+    - Given an array of n integer, and a moving window (size `k`), move the window at each iteration from the start of the array, find the sum of the element inside the window at each moving.
+- **Example**
+    - For array `[1,2,7,8,5]`, moving window size `k = 3`.
 
-Have you met this question in a real interview?  
-Example
-For array [1,2,7,8,5], moving window size k = 3.
-1 + 2 + 7 = 10
-2 + 7 + 8 = 17
-7 + 8 + 5 = 20
-return [10,17,20]
+    ```java
+    1 + 2 + 7 = 10
+    2 + 7 + 8 = 17
+    7 + 8 + 5 = 20
+    ```
+
+    - return `[10,17,20]`
 
 ## Solution
 
-
+用到了 prefixSum 的思想
 
 
 ```java
@@ -37,7 +39,7 @@ public class Solution {
             prefixSum[i + 1] = sum;
         }
         
-        
+        // Create result array
         int[] result = new int[length - k + 1];
         for (int i = 0; i < length - k + 1; i++) {
             result[i] = prefixSum[i + k] - prefixSum[i];
