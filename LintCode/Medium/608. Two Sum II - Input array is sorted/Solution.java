@@ -24,3 +24,27 @@ public class Solution {
         return new int[2];
     }
 }
+
+
+
+public class Solution {
+    /**
+     * @param nums: an array of Integer
+     * @param target: target = nums[index1] + nums[index2]
+     * @return: [index1 + 1, index2 + 1] (index1 < index2)
+     */
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        int length = nums.length;
+        for (int i = 0; i < length; i++) {
+            if (map.get(nums[i]) != null) {
+                int[] result = {map.get(nums[i]) + 1, i + 1};
+                return result;
+            }
+            map.put(target - nums[i], i);
+        }
+
+        return new int[2];
+    }
+}
