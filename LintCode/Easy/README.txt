@@ -91,6 +91,7 @@
 499. Word Count (Map Reduce)
 514. Paint Fence
 517. Ugly Number
+521. Remove Duplicate Numbers in Array
 524. Left Pad
 539. Move Zeroes
 547. Intersection of Two Arrays
