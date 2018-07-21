@@ -120,4 +120,4 @@ For more information about Quick Select, you can refer to this video
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=SXXpkdruLfc
 " target="_blank"><img src="http://img.youtube.com/vi/SXXpkdruLfc/0.jpg" 
-alt="Quickselect Algorithm with Partitioning | Code Tutorial" width="640" height="360" border="0" /></a>
+alt="Quickselect Algorithm with Partitioning | Code Tutorial"  border="0" /></a>
