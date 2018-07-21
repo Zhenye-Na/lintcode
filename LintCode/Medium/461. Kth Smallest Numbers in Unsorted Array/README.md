@@ -117,6 +117,4 @@ public class Solution {
 
 For more information about Quick Select, you can refer to this video
 
-<p align="center">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/SXXpkdruLfc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/SXXpkdruLfc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
