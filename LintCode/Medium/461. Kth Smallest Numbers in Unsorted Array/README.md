@@ -117,4 +117,7 @@ public class Solution {
 
 For more information about Quick Select, you can refer to this video
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/SXXpkdruLfc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=SXXpkdruLfc
+" target="_blank"><img src="http://img.youtube.com/vi/SXXpkdruLfc/0.jpg" 
+alt="Quickselect Algorithm with Partitioning | Code Tutorial" width="640" height="360" border="0" /></a>
