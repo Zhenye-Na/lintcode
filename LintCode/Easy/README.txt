@@ -87,6 +87,7 @@
 480. Binary Tree Paths
 488. Happy Number
 491. Palindrome Number
+494. Implement Stack by Two Queues
 496. Toy Factory
 499. Word Count (Map Reduce)
 514. Paint Fence
