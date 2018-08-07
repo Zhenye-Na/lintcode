@@ -324,9 +324,7 @@
 1026. Domino and Tromino Tiling
 1027. Escape The Ghosts
 1029. Cheapest Flights Within K Stops
-
 1031. Is Graph Bipartite?
-
 1035. Rabbits in Forest
 1037. Global and Local Inversions
 1039. Max Chunks To Make Sorted
