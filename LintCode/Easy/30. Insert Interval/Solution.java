@@ -17,47 +17,26 @@ public class Solution {
      */
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         // write your code here
+        if (newInterval == null) return intervals;
         List<Interval> result = new ArrayList<>();
+        int index = 0, size = intervals.size();
 
-        boolean startFlag = false, endFlag = false;
-        int length = intervals.size(), foundIndex = 0;
-
-        for (int i = 0; i < length; i++) {
-            // first interval that overlaps, skip this interval
-            if (isStartIn(intervals.get(i), newInterval)) {
-                startFlag = true;
-                foundIndex = i;
-                continue;
-            }
-
-            if (isEndIn(intervals.get(i), newInterval) && startFlag == true) {
-                endFlag = true;
-                result.add(new Interval(intervals.get(foundIndex).start, intervals.get(i).end));
-            } else if (isEndIn(intervals.get(i), newInterval)) {
-                endFlag = true;
-                result.add(new Interval(newInterval.start, intervals.get(i).end));
-            } else {
-                // no overlapping intervals
-                result.add(intervals.get(i));
-            }
+        while (index < size && intervals.get(index).end < newInterval.start) {
+            result.add(intervals.get(index++));
         }
 
-        if (!endFlag) {
-            intervals.get(foundIndex).end = newInterval.end;
+        while (index < size && intervals.get(index).start <= newInterval.end) {
+            newInterval.start = Math.min(intervals.get(index).start, newInterval.start);
+            newInterval.end = Math.max(intervals.get(index).end, newInterval.end);
+            index++;
+        }
+        result.add(newInterval);
 
+        while (index < size) {
+            result.add(intervals.get(index++));
         }
 
         return result;
-
-    }
-
-
-    private boolean isStartIn(Interval interval, Interval newInterval) {
-        return (newInterval.start >= interval.start && newInterval.start <= interval.end);
-    }
-
-    private boolean isEndIn(Interval interval, Interval newInterval) {
-        return (newInterval.end >= interval.start && newInterval.end <= interval.end);
     }
 
 }
