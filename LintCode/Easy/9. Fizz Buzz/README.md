@@ -24,7 +24,7 @@
 
 ## Solution
 
-```Java
+```java
 public class Solution {
     /**
      * @param n: An integer
@@ -57,7 +57,7 @@ But nobody will care this stupid approach even if it is still fast. Notice **Cha
 
 ### abstraction 抽象方法，一个if
 
-```Java
+```java
 /**
 * 本参考程序来自九章算法，由 @leetcode 提供。版权所有，转发请注明出处。
 * - 九章算法致力于帮助更多中国人找到好的工作，教师团队均来自硅谷和国内的一线大公司在职工程师。
@@ -92,7 +92,7 @@ public class Solution {
 
 ### Multiple `While loops`
 
-```Java
+```java
 /**
 * 本参考程序来自九章算法，由 @令狐冲 提供。版权所有，转发请注明出处。
 * - 九章算法致力于帮助更多中国人找到好的工作，教师团队均来自硅谷和国内的一线大公司在职工程师。

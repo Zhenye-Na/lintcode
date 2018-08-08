@@ -10,11 +10,13 @@ The characters of B in A are not necessary continuous or ordered.
 
 ## Solution
 
-HashMap的解法，先把A的所有char放到hashMap里边，然后对B进行遍历，逐个减去，如果找不到key，返回false；如果key都存在，value变成0说明B里边有多余的char, 返回false即可
 
 ### HashMap
 
-```Java
+
+HashMap的解法，先把A的所有char放到hashMap里边，然后对B进行遍历，逐个减去，如果找不到key，返回false；如果key都存在，value变成0说明B里边有多余的char, 返回false即可
+
+```java
 public class Solution {
     /**
      * @param A: A string

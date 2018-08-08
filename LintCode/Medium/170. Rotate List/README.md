@@ -1,18 +1,18 @@
 # 170. Rotate List
-Description
-Given a list, rotate the list to the right by k places, where k is non-negative.
 
-Have you met this question in a real interview?  
-Example
-Given 1->2->3->4->5 and k = 2, return 4->5->1->2->3.
-
-Related Problems
-Easy 1334. Rotate Array
-Easy 671. Rotate Words
-Hard 450. Reverse Nodes in k-Group
-Easy 8. Rotate String
+- **Description**
+    - Given a list, rotate the list to the right by `k` places, where `k` is non-negative.
+- **Example**
+    - Given `1->2->3->4->5` and `k = 2`, return `4->5->1->2->3`.
+- **Related Problems**
+    - Easy 1334. Rotate Array
+    - Easy 671. Rotate Words
+    - Hard 450. Reverse Nodes in k-Group
+    - Easy 8. Rotate String
 
 ## Solution
+
+这道题用到了 `Dummy Node` 这个思想，需要思考的是 index 下标 是 `<` 还是 `<=`
 
 ```java
 /**

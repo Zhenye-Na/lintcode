@@ -98,38 +98,38 @@ KMP: Knuth-Morris-Pratt (Optional)
 */
 
 public class Solution {
-	int[] KMPpreprocessing(String needle) {
-		int n = needle.length();
-		int[] match = new int[n];
-		Arrays.fill(match, -1);
-		int j = -1;
-		for (int i = 1; i < n; ++i) {
-			while (j >= 0 && needle.charAt(i) != needle.charAt(j + 1))
-				j = match[j];
-			if (needle.charAt(i) == needle.charAt(j + 1))
-				j++;
-			match[i] = j;
-		}
-		return match;
-	}
+    int[] KMPpreprocessing(String needle) {
+        int n = needle.length();
+        int[] match = new int[n];
+        Arrays.fill(match, -1);
+        int j = -1;
+        for (int i = 1; i < n; ++i) {
+            while (j >= 0 && needle.charAt(i) != needle.charAt(j + 1))
+                j = match[j];
+            if (needle.charAt(i) == needle.charAt(j + 1))
+                j++;
+            match[i] = j;
+        }
+        return match;
+    }
 
     public int strStr(String haystack, String needle) {
-    	int lengthOfHaystack = haystack.length();
-    	int lengthOfNeedle = needle.length();
-    	if (lengthOfNeedle == 0)
-    		return 0;
-    	if (lengthOfNeedle > lengthOfHaystack)
-    		return -1;
-    	int[] match = KMPpreprocessing(needle);
-    	int j = -1;
-    	for (int i = 0; i < lengthOfHaystack; i++) {
-    		while (j >= 0 && haystack.charAt(i) != needle.charAt(j + 1))
-    			j = match[j];
-    		if (haystack.charAt(i) == needle.charAt(j + 1))
-    			j++;
-    		if (j == lengthOfNeedle - 1)
-    			return (i - lengthOfNeedle + 1);
-    	}
+        int lengthOfHaystack = haystack.length();
+        int lengthOfNeedle = needle.length();
+        if (lengthOfNeedle == 0)
+            return 0;
+        if (lengthOfNeedle > lengthOfHaystack)
+            return -1;
+        int[] match = KMPpreprocessing(needle);
+        int j = -1;
+        for (int i = 0; i < lengthOfHaystack; i++) {
+            while (j >= 0 && haystack.charAt(i) != needle.charAt(j + 1))
+                j = match[j];
+            if (haystack.charAt(i) == needle.charAt(j + 1))
+                j++;
+            if (j == lengthOfNeedle - 1)
+                return (i - lengthOfNeedle + 1);
+        }
         return -1;
     }
 }
