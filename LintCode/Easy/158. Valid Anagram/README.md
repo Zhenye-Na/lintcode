@@ -1,21 +1,21 @@
-158. Valid Anagram
-Description
-Write a method anagram(s,t) to decide if two strings are anagrams or not.
+# 158. Valid Anagram
 
-Have you met this question in a real interview?  
-Clarification
-What is Anagram?
-
-Two strings are anagram if they can be the same after change the order of characters.
-Example
-Given s = "abcd", t = "dcab", return true.
-Given s = "ab", t = "ab", return true.
-Given s = "ab", t = "ac", return false.
-
-Challenge
-O(n) time, O(1) extra space
+- **Description**
+    - Write a method `anagram(s,t)` to decide if two strings are anagrams or not.
+- **Clarification**
+    - What is Anagram?
+    - **Two strings are anagram if they can be the same after change the order of characters**.
+- **Example**
+    - Given `s = "abcd"`, `t = "dcab"`, return `true`.
+    - Given `s = "ab"`, `t = "ab"`, return `true`.
+    - Given `s = "ab"`, `t = "ac"`, return `false`.
+- **Challenge**
+    - `O(n)` time, `O(1)` extra space
 
 
+## Solution
+
+### HashMap
 
 ```java
 public class Solution {
@@ -55,7 +55,7 @@ public class Solution {
 
 ```
 
-
+### Array
 
 通过使用一个数组的方式进一步降低了空间复杂度，同时也加快的运行速度。
 

@@ -1,22 +1,26 @@
 # 171. Anagrams
-Description
-Given an array of strings, return all groups of strings that are anagrams.
 
-All inputs will be in lower-case
-
-Have you met this question in a real interview?  
-Example
-Given ["lint", "intl", "inlt", "code"], return ["lint", "inlt", "intl"].
-
-Given ["ab", "ba", "cd", "dc", "e"], return ["ab", "ba", "cd", "dc"].
-
-Challenge
-What is Anagram?
-
-Two strings are anagram if they can be the same after change the order of characters.
+- **Description**
+    - Given an array of strings, return all groups of strings that are anagrams.
+    - All inputs will be in lower-case
+- **Example**
+    - Given `["lint", "intl", "inlt", "code"]`, return `["lint", "inlt", "intl"]`.
+    - Given `["ab", "ba", "cd", "dc", "e"]`, return `["ab", "ba", "cd", "dc"]`.
+- **Challenge**
+    - What is Anagram?
+        - Two strings are anagram if they can be the same after change the order of characters.
 
 
 ## Solution
+
+新学到的 function:
+
+- `String.toCharArray()`
+- `String.valueOf()`
+- `map.entrySet()`
+- `entry.getValue()`
+- `ArrayList.addAll`
+
 
 ```java
 public class Solution {
@@ -30,6 +34,7 @@ public class Solution {
         if (strs == null || strs.length == 0) {
             return result;
         }
+
         Map<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
         for (int i = 0; i < strs.length; i++) {
             char[] arr = strs[i].toCharArray();
@@ -41,11 +46,13 @@ public class Solution {
             }
             map.get(s).add(strs[i]);
         }
+
         for (Map.Entry<String, ArrayList<String>> entry : map.entrySet()) {
             if (entry.getValue().size() >= 2) {
                 result.addAll(entry.getValue());
             }
         }
+
         return result;
     }
 

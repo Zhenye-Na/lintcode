@@ -1,24 +1,27 @@
 # 1038. Jewels and Stones
 
-Description
-You're given strings J representing the types of stones that are jewels, and S representing the stones you have. Each character in S is a type of stone you have. You want to know how many of the stones you have are also jewels.
+- **Description**
+    - You're given strings `J` representing the types of stones that are jewels, and `S` representing the stones you have. Each character in `S` is a type of stone you have. You want to know how many of the stones you have are also jewels.
+    - The letters in `J` are guaranteed distinct, and all characters in `J` and `S` are letters. Letters are case sensitive, so `"a"` is considered a different type of stone from `"A"`.
+    - `S` and `J` will consist of letters and have length at most `50`.
+    - The characters in `J` are distinct.
+- **Example**
 
-The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+    ```
+    Example 1:
+    Input: J = "aA", S = "aAAbbbb"
+    Output: 3
+    ```
 
-S and J will consist of letters and have length at most 50.
-The characters in J are distinct.
-Have you met this question in a real interview?  
-Example
-Example 1:
+    ```
+    Example 2:
+    Input: J = "z", S = "ZZ"
+    Output: 0
+    ```
 
-Input: J = "aA", S = "aAAbbbb"
-Output: 3
-Example 2:
+## Solution
 
-Input: J = "z", S = "ZZ"
-Output: 0
-
-
+### `HashSet` in Java
 
 ```java
 public class Solution {
@@ -48,4 +51,34 @@ public class Solution {
         return num;
     }
 }
+```
+
+
+### Python in one-line
+
+```python
+class Solution:
+    """
+    @param J: the types of stones that are jewels
+    @param S: representing the stones you have
+    @return: how many of the stones you have are also jewels
+    """
+    def numJewelsInStones(self, J, S):
+        # Write your code here
+        J = set(J)
+        return sum(c in J for c in S)
+
+```
+
+### JavaScript
+
+```javascript
+const numJewelsInStones = function (J, S) {
+    let [jewels, cnt] = [new Set(J), 0]
+    for (let i in S) {
+        if (jewels.has(S[i])) cnt++
+    }
+    return cnt
+}
+
 ```
