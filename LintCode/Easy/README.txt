@@ -82,259 +82,132 @@
 376. Binary Tree Path Sum
 389. Valid Sudoku
 397. Longest Continuous Increasing Subsequence
-30%
 407. Plus One
-32%
 408. Add Binary
-25%
 413. Reverse Integer
-28%
 415. Valid Palindrome
-25%
 420. Count and Say
-30%
 422. Length of Last Word
-35%
 423. Valid Parentheses
-29%
 433. Number of Islands
-26%
 445. Cosine Similarity
-32%
 451. Swap Nodes in Pairs
-36%
 453. Flatten Binary Tree to Linked List
-34%
 457. Classical Binary Search
-38%
 458. Last Position of Target
-37%
 459. Closest Number in Sorted Array
-36%
 462. Total Occurrence of Target
-27%
 464. Sort Integers II
-29%
 467. Complete Binary Tree
-27%
 468. Symmetric Binary Tree
-41%
 469. Same Tree
-45%
 470. Tweaked Identical Binary Tree
-39%
 474. Lowest Common Ancestor II
-37%
 480. Binary Tree Paths
-30%
 481. Binary Tree Leaf Sum
-48%
 482. Binary Tree Level Sum
-39%
 487. Name Deduplication
-39%
 488. Happy Number
-33%
 490. Set of Stacks
-56%
 491. Palindrome Number
-38%
 492. Implement Queue by Linked List
-36%
 493. Implement Queue by Linked List II
-31%
 494. Implement Stack by Two Queues
-35%
 495. Implement Stack
-47%
 496. Toy Factory
-36%
 497. Shape Factory
-26%
 499. Word Count (Map Reduce)
-43%
 500. Inverted Index
-28%
 514. Paint Fence
-32%
 517. Ugly Number
-36%
 519. Consistent Hashing
-29%
 521. Remove Duplicate Numbers in Array
-35%
 524. Left Pad
-32%
 537. N-Gram (Map Reduce)
-55%
 539. Move Zeroes
-37%
 543. Kth Largest in N Arrays
-26%
 546. Implement Queue by Interface
-30%
 547. Intersection of Two Arrays
-25%
 548. Intersection of Two Arrays II
-24%
 551. Nested List Weight Sum
-47%
 554. Sort Integers (Map Reduce)
-34%
 557. Count Characters
-47%
 560. Friendship Service
-28%
 569. Add Digits
-38%
 595. Binary Tree Longest Consecutive Sequence
-33%
 596. Minimum Subtree
-35%
 597. Subtree with Maximum Average
-27%
 599. Insert into a Cyclic Sorted List
-22%
 604. Window Sum
-34%
 607. Two Sum III - Data structure design
-36%
 626. Rectangle Overlap
-42%
 627. Longest Palindrome
-32%
 628. Maximum Subtree
-45%
 637. Valid Word Abbreviation
-26%
 638. Isomorphic Strings
-31%
 642. Moving Average from Data Stream
-36%
 644. Strobogrammatic Number
-33%
 646. First Position Unique Character
-33%
 647. Find All Anagrams in a String
-26%
 655. Add Strings
-29%
 658. Swap Without Extra Variable (Only C++)
-65%
 661. Convert BST to Greater Tree
-34%
 662. Guess Number Higher or Lower
-27%
 671. Rotate Words
-16%
 680. Split String
-29%
 684. Missing String
-26%
 697. Sum of Square Numbers
-17%
 702. Concatenated String with Uncommon Characters of Two Strings
-30%
 720. Rearrange a String With Integers
-28%
 730. Sum of All Subsets
-20%
 737. Find Elements in Matrix
-32%
 745. Palindromic Ranges
-29%
 749. John's backyard garden
-42%
 764. Calculate Circumference And Area
-57%
 765. Valid Triangle
-66%
 766. Leap Year
-61%
 767. Reverse Array
-52%
 768. Yang Hui Triangle
-45%
 769. Spiral Array
-34%
 770. Maximum and Minimum
-33%
 771. Double Factorial
-72%
 777. Valid Perfect Square
-36%
 784. The Longest Common Prefix II
-40%
 786. Linked List Weighted Sum In Reverse Order
-60%
 792. Kth Prime Number
-36%
 797. Reach a Number
-30%
 807. Palindrome Number II
-46%
 813. Find Anagram Mappings
-52%
 822. Reverse Order Storage
-49%
 823. Input Stream
-34%
 828. Word Pattern
-36%
 830. String Sort
-33%
 834. Remove Duplicate Letters
-30%
 835. Hamming Distance
-67%
 836. Partition to K Equal Sum Subsets
-40%
 837. Palindromic Substrings
-47%
 838. Subarray Sum Equals K
-29%
 839. Merge Two Sorted Interval Lists
-34%
 844. Number Pair Statistics
-47%
 845. Greatest Common Divisor
-68%
 846. Multi-keyword Sort
-42%
 856. Sentence Similarity
-35%
 868. Maximum Average Subarray I
-39%
 888. Valid Word Square
-64%
 891. Valid Palindrome II
-45%
 895. Friend Request
-30%
 897. Island City
-32%
 900. Closest Binary Search Tree Value
-40%
 914. Flip Game
-58%
 916. Palindrome Permutation
-58%
 920. Meeting Rooms
-39%
 932. Friends Within Three Jumps
-18%
 943. Range Sum Query - Immutable
-52%
 949. Fibonacci II
-18%
 951. Rearrange
-51%
 952. Digital Problem
-68%
 956. Data Segmentation
-34%
 957. Radar Detection
-46%
 958. Palindrome Data Stream
 970. Big Business
 973. 1-bit and 2-bit Characters

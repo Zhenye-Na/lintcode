@@ -2,6 +2,7 @@
 4. Ugly Number II
 5. Kth Largest Element
 7. Serialize and Deserialize Binary Tree
+10. String Permutation II
 11. Search Range in Binary Search Tree
 12. Min Stack
 15. Permutations
@@ -44,6 +45,7 @@
 88. Lowest Common Ancestor of a Binary Tree
 90. k Sum II
 91. Minimum Adjustment Cost
+92. Backpack
 94. Binary Tree Maximum Path Sum
 95. Validate Binary Search Tree
 98. Sort List
@@ -62,6 +64,7 @@
 120. Word Ladder
 123. Word Search
 124. Longest Consecutive Sequence
+125. Backpack II
 127. Topological Sorting
 129. Rehashing
 130. Heapify
@@ -105,16 +108,24 @@
 203. Segment Tree Modify
 205. Interval Minimum Number
 206. Interval Sum
+208. Assignment Operator Overloading (C++ Only)
 221. Add Two Numbers II
 223. Palindrome Linked List
+224. Implement Three Stacks by Single Array
+229. Stack Sorting
+232. Tiny Url
+233. Next Smaller and Larger Number with the Same 1 Bits
 247. Segment Tree Query II
 248. Count of Smaller Number
+279. Number of Ways to Represent N Cents
 363. Trapping Rain Water
 371. Print Numbers by Recursion
 374. Spiral Matrix
+378. Convert Binary Search Tree to Doubly Linked List
 379. Reorder array to construct the minimum number
 380. Intersection of Two Linked Lists
 381. Spiral Matrix II
+382. Triangle Count
 383. Container With Most Water
 384. Longest Substring Without Repeating Characters
 386. Longest Substring with At Most K Distinct Characters
@@ -127,6 +138,7 @@
 399. Nuts & Bolts Problem
 401. Kth Smallest Number in Sorted Matrix
 402. Continuous Subarray Sum
+403. Continuous Subarray Sum II
 405. Submatrix Sum
 406. Minimum Size Subarray Sum
 411. Gray Code
@@ -140,18 +152,27 @@
 427. Generate Parentheses
 428. Pow(x, n)
 431. Connected Component in Undirected Graph
+432. Find the Weak Connected Component in the Directed Graph
+434. Number of Islands II
 436. Maximal Square
 439. Segment Tree Build II
 442. Implement Trie (Prefix Tree)
 443. Two Sum - Greater than target
+447. Search in a Big Sorted Array
 448. Inorder Successor in BST
 460. Find K Closest Elements
 461. Kth Smallest Numbers in Unsorted Array
 471. Top K Frequent Words
 473. Add and Search Word - Data structure design
+475. Binary Tree Maximum Path Sum II
+476. Stone Game
 477. Surrounded Regions
+486. Merge K Sorted Arrays
 501. Design Twitter
+502. Mini Cassandra
+503. Anagram (Map Reduce)
 504. Inverted Index (Map Reduce)
+505. Web Logger
 507. Wiggle Sort II
 508. Wiggle Sort
 511. Swap Two Nodes in Linked List
@@ -159,31 +180,70 @@
 513. Perfect Squares
 515. Paint House
 518. Super Ugly Number
+520. Consistent Hashing II
+522. Tiny Url II
+523. Url Parser
+525. Mini Uber
+526. Load Balancer
 528. Flatten Nested List Iterator
+529. Geohash
+530. Geohash II
+531. Six Degrees
 532. Reverse Pairs
+533. Two Sum - Closest to target
 534. House Robber II
 535. House Robber III
+538. Memcache
 540. Zigzag Iterator
+541. Zigzag Iterator II
+544. Top k Largest Numbers
+545. Top k Largest Numbers II
 549. Top K Frequent Words (Map Reduce)
 553. Bomb Enemy
+555. Counting Bloom Filter
+556. Standard Bloom Filter
+559. Trie Service
+562. Backpack IV
+563. Backpack V
 564. Combination Sum IV
-570. Find the Missing Number II
+565. Heart Beat
+566. GFS Client
 570. Find the Missing Number II
 575. Decode String
+577. Merge K Sorted Interval Lists
+578. Lowest Common Ancestor III
+581. Longest Repeating Subsequence
+584. Drop Eggs II
+585. Maximum Number in Mountain Sequence
+586. Sqrt(x) II
+587. Two Sum - Unique pairs
 588. Partition Equal Subset Sum
+589. Connecting Graph
+590. Connecting Graph II
 591. Connecting Graph III
+593. Stone Game II
 598. Zombie in Matrix
 601. Flatten 2D Vector
 603. Largest Divisible Subset
 605. Sequence Reconstruction
+606. Kth Largest Element II
 608. Two Sum II - Input array is sorted
 609. Two Sum - Less than or equal to target
+610. Two Sum - Difference equals to target
+611. Knight Shortest Path
+612. K Closest Points
+613. High Five
 614. Binary Tree Longest Consecutive Sequence II
 615. Course Schedule
 616. Course Schedule II
 617. Maximum Average Subarray II
 618. Search Graph Nodes
 619. Binary Tree Longest Consecutive Sequence III
+620. Maximum Subarray IV
+624. Remove Substrings
+625. Partition Array II
+630. Knight Shortest Path II
+631. Maximal Square II
 633. Find the Duplicate Number
 636. 132 Pattern
 640. One Edit Distance
@@ -194,6 +254,7 @@
 649. Binary Tree Upside Down
 650. Find Leaves of Binary Tree
 651. Binary Tree Vertical Order Traversal
+652. Factorization
 654. Sparse Matrix Multiplication
 656. Multiply Strings
 657. Insert Delete GetRandom O(1)
@@ -220,7 +281,9 @@
 701. Trim a Binary Search Tree
 704. Bulb Switcher II
 706. Binary Watch
+714. Black Jack OO Design
 717. Tree Longest Path With Same Value
+718. Repeat String
 719. Calculate Maximum Value
 723. Rotate Bits - Left
 724. Minimum Partition
@@ -230,9 +293,12 @@
 734. Number of Subsequences of Form a^i b^j c^k
 735. Replace With Greatest From Right
 740. Coin Change 2
+741. Calculate Maximum Value II
 742. Self Dividing Numbers
 743. Monotone Increasing Digits
 744. Sum of first K even-length Palindrome numbers
+747. Coffee Maker OO Design
+748. Kindle OO Design
 750. Portal
 751. John's business
 752. Rogue Knight Sven
@@ -249,9 +315,25 @@
 790. Parser
 791. Merge Number
 793. Intersection of Arrays
+798. Backpack VII
+799. Backpack VIII
+800. Backpack IX
+801. Backpack X
+805. Maximum Association Set
+806. Buy Fruits
+808. Movie Network
 814. Shortest Path in Undirected Graph
 817. Range Sum Query 2D - Mutable
+819. Word Sorting
+820. Rectangle
+821. Time Intersection
+824. Single Number IV
+831. 3Sum II
+832. Count Negative Number
+833. Process Sequence
 840. Range Sum Query - Mutable
+842. Origami
+843. Digital Flip
 851. Pour Water
 853. Number Of Corner Rectangles
 854. Closest Leaf in a Binary Tree
@@ -276,6 +358,9 @@
 886. Convex Polygon
 887. Ternary Expression Parser
 889. Sentence Screen Fitting
+894. Pancake Sorting
+896. Prime Product
+898. Leftmost One
 902. Kth Smallest Element in a BST
 903. Range Addition
 904. Plus One Linked List
@@ -284,17 +369,27 @@
 909. Android Unlock Patterns
 911. Maximum Size Subarray Sum Equals k
 913. Flip Game II
+915. Inorder Predecessor in BST
 917. Palindrome Permutation II
 918. 3Sum Smaller
 919. Meeting Rooms II
 921. Count Univalue Subtrees
 927. Reverse Words in a String II
-938. Joseph Problem
+931. Median of K Sorted Arrays
+933. Tuple Multiply
+934. Unlock Problem
+935. Cartesian Product
+939. Binary Tree Kth Floor Node
+940. Maximum Absolute Value
 944. Maximum Submatrix
 945. Task Scheduler
 946. 233 Matrix
+953. The Biggest Score On The Tree
 955. Implement Queue by Circular Array
+959. K Spaced Array Sorting
 960. First Unique Number in a Stream II
+969. Longest Repeating Substring
+972. Deliver The Message
 974. 01 Matrix
 975. 2 Keys Keyboard
 976. 4Sum II
@@ -308,6 +403,8 @@
 992. Beautiful Arrangement II
 994. Contiguous Array
 995. Best Time to Buy and Sell Stock with Cooldown
+996. Maximum Slope Straight Line
+997. Print Organization Chart
 1000. Best Time to Buy and Sell Stock with Transaction Fee
 1001. Asteroid Collision
 1003. Binary Tree Pruning
@@ -379,7 +476,6 @@
 1207. Teemo Attacking
 1208. Target Sum
 1210. Increasing Subsequences
-1210. Increasing Subsequences
 1215. Magical String
 1217. Total Hamming Distance
 1220. Matchsticks to Square
@@ -425,7 +521,49 @@
 1352. Compare Version Numbers
 1353. Sum Root to Leaf Numbers
 1363. ZigZag Conversion
+1366. Directed Graph Loop
+1367. Police Distance
 1374. Shortest Distance in 3D Space
 1375. Substring With At Least K Distinct Characters
 1376. Equivalent Strings
+1377. Find Substring
+1378. Minimum String Array Coverage
 1382. High Capacity Backpack
+1396. Set Union
+1397. Digital Coverage
+1399. Take Coins
+1402. Recommend Friends
+1403. Maximum Product Path
+1409. Matrix Finding Number
+1411. Edit Distance - Replace Edition
+1412. Pick Three Numbers
+1413. Tree
+1416. The Previous Number
+1442. Order Problem
+1444. Dyeing Problem
+1446. 01 Matrix Walking Problem
+1448. Card Game
+1454. Word Frequency Count
+1457. Search Subarray
+1458. Minimum Submatrix
+1463. Paper Review
+1465. Order Of Tasks
+1466. Best Shopping Plan
+1467. Ask For Cooling Time
+1469. Longest Path On The Tree
+1470. The Game Of Take Numbers
+1473. Find The Sum Of The Array
+1474. Shortest Phrase
+1481. Unique Substring
+1482. Minimum Sum Path
+1484. The Most Frequent word
+1487. Judging Triangle
+1489. The Largest Sum Of The Matrix Boundary Elements
+1538. Card Game II
+1539. Flipped the Pixel
+1542. NextTime Norepeat
+1543. Unique Path IV
+1545. Last Closest Time
+1552. Parking Problem
+1553. Climbing Stairs III
+1554. LastTime Norepeat
