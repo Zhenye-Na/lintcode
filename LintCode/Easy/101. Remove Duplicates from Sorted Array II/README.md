@@ -1,16 +1,11 @@
 # 101. Remove Duplicates from Sorted Array II
-Description
-Follow up for "Remove Duplicates":
-What if duplicates are allowed at most twice?
 
-For example,
-Given sorted array A = [1,1,1,2,2,3],
-
-Your function should return length = 5, and A is now [1,1,2,2,3].
-
-Have you met this question in a real interview?  
-Example
-给出数组A =[1,1,1,2,2,3]，你的函数应该返回长度5，此时A=[1,1,2,2,3]。
+- **Description**
+    - Follow up for "Remove Duplicates":
+    - What if duplicates are allowed **at most twice**?
+- **Example**
+    - Given sorted array `A = [1,1,1,2,2,3]`,
+    - Your function should return `length = 5`, and `A` is now `[1,1,2,2,3]`.
 
 
 ## Solution
