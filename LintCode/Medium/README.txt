@@ -2,7 +2,6 @@
 4. Ugly Number II
 5. Kth Largest Element
 7. Serialize and Deserialize Binary Tree
-7. Serialize and Deserialize Binary Tree
 11. Search Range in Binary Search Tree
 12. Min Stack
 15. Permutations

@@ -81,7 +81,7 @@
 445. Cosine Similarity
 451. Swap Nodes in Pairs
 453. Flatten Binary Tree to Linked List
-457. Classical Binary Search
+457. Classical Binary Search
 464. Sort Integers II
 469. Same Tree
 480. Binary Tree Paths
