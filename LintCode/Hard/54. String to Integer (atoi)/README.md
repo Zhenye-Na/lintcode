@@ -122,9 +122,7 @@ public class Solution {
             }
         }
 
-
         value = isPos ? value : -value;
-
         return (int) value;
     }
 }
