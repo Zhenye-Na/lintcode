@@ -1,14 +1,11 @@
 # 64. Merge Sorted Array
-Description
-Given two sorted integer arrays A and B, merge B into A as one sorted array.
 
-You may assume that A has enough space (size that is greater or equal to m + n) to hold additional elements from B. The number of elements initialized in A and B are m and n respectively.
-
-Have you met this question in a real interview?  
-Example
-A = [1, 2, 3, empty, empty], B = [4, 5]
-
-After merge, A will be filled as [1, 2, 3, 4, 5]
+- **Description**
+    - Given two sorted integer arrays A and B, merge B into A as one sorted array.
+    - You may assume that A has enough space (size that is greater or equal to m + n) to hold additional elements from B. The number of elements initialized in A and B are m and n respectively.
+- **Example**
+    - `A = [1, 2, 3, empty, empty]`, `B = [4, 5]`
+    - After merge, A will be filled as `[1, 2, 3, 4, 5]`
 
 
 
@@ -23,6 +20,10 @@ public static void arraycopy(Object src,
                              int destPos,
                              int length)
 ```
+
+这道题是要求 **merge in place**，而且 `A` 里面的空位个数等于 `B.size()` 
+
+两根指针，剩下的用 `System.arraycopy()` 加进去
 
 ```java
 public class Solution {
@@ -54,14 +55,14 @@ public class Solution {
         if (pa >= 0) {
             System.arraycopy(A, 0, A, 0, pa + 1);
         }
-
     }
-
 
 }
 ```
 
 ### While
+
+两根指针，余下的用while放进去
 
 ```java
 public class Solution {
@@ -94,7 +95,5 @@ public class Solution {
         }
 
     }
-
-
 }
 ```
