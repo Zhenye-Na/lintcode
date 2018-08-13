@@ -12,15 +12,16 @@
 
 ## Solution
 
-### **[Failed]** 暴力解法 O(n^2)
+
+### Prefix Sum 前缀和数组
 
 ```java
 class ResultType {
-    int bestSum;
-    int[] combination;
-    public ResultType(int s, int[] c) {
-        bestSum = s;
-        combination = c;
+    int sum;
+    int position;
+    public ResultType(int s, int p) {
+        sum = s;
+        position = p;
     }
 }
 
@@ -32,30 +33,49 @@ public class Solution {
      */
     public int[] subarraySumClosest(int[] nums) {
         // write your code here
+
         if (nums == null || nums.length < 2) {
             return new int[]{0, 0};
         }
 
-        ResultType resultType = new ResultType(Integer.MAX_VALUE, new int[]{0, 0});
+        ResultType[] resultArray = new ResultType[nums.length + 1];
+        
+        // First sum in Prefix Array is 0 because there is no more element
+        resultArray[0] = new ResultType(0, 0);
 
-        int sum = nums[0] + nums[1];
-        int length = nums.length;
-        for (int i = 0; i < length; i++) {
-            for (int j = i + 1; j < length; j++) {
-                int currSum = nums[i] + nums[j];
-                if (Math.abs(currSum) < Math.abs(resultType.bestSum)) {
-                    resultType.bestSum = currSum;
-                    resultType.combination = new int[]{i, j};
-                }
+        // Create Prefix Sum Array
+        for (int i = 1; i <= nums.length; i++) {
+            resultArray[i] = new ResultType(resultArray[i - 1].sum + nums[i - 1], i);
+        }
+
+        // Sort ResultType array based on sum
+        Arrays.sort(resultArray, new Comparator<ResultType>() {
+            public int compare(ResultType r1, ResultType r2) {
+                return r1.sum - r2.sum;
+            }
+        });
+
+
+        // Find the combination which sum is closest to zero
+        int[] result = new int[2];
+        int bestSum = Integer.MAX_VALUE;
+        for (int i = 1; i < resultArray.length; i++) {
+            int currSum = resultArray[i].sum - resultArray[i - 1].sum;
+            if (bestSum > currSum) {
+                bestSum = currSum;
+                int[] tmp = new int[]{resultArray[i].position - 1, resultArray[i - 1].position - 1};
+                Arrays.sort(tmp);
+                
+                // Subarray starts from the next position
+                result[0] = tmp[0] + 1;
+                result[1] = tmp[1];
             }
         }
 
-        return resultType.combination;
+        return result;
     }
 }
 ```
-
-### Prefix Sum 前缀和数组
 
 **问：** 为什么需要一个 (0,0) 的初始 Pair?
 
