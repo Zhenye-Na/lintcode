@@ -23,6 +23,7 @@
 
 可以注意到，相同的条件 使用了 4 次 `ps <= pe`， 基本都是这个 pattern
 
+### Version 1
 
 ```java
 public class Solution {
@@ -67,6 +68,8 @@ public class Solution {
     }
 }
 ```
+
+### Version 2
 
 
 ```java
