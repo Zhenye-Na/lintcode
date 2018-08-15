@@ -5,12 +5,6 @@
 - [ ] 191. Maximum Product Subarray
 
 
-**2. Binary Search**
-
-- [ ] 437. Copy Books
-- [ ] 160. Find Minimum in Rotated Sorted Array II
-
-
 **3. Binary Tree `&&` Divide Conquer**
 
 - [ ] 95. Validate Binary Search Tree
