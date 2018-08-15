@@ -1,7 +1,7 @@
 # 63. Search in Rotated Sorted Array II
 
 - **Description**
-    - Follow up for [Search in Rotated Sorted Array]():
+    - Follow up for [**Search in Rotated Sorted Array**](https://github.com/Zhenye-Na/LxxxCode/tree/master/LintCode/Medium/62.%20Search%20in%20Rotated%20Sorted%20Array):
         - **What if duplicates are allowed?**
         - **Would this affect the run-time complexity? How and why?**
         - Write a function to determine if a given target is in the array.
