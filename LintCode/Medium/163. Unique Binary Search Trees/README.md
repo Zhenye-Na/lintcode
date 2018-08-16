@@ -22,8 +22,10 @@ Given n = 3, there are a total of 5 unique BST's.
 
 **Recommended video:**
 
-- Understand what is Catalan Numbers: [![Program for Nth Catalan Number | GeeksforGeeks](https://img.youtube.com/vi/2NZF2UKyh0g/0.jpg)](https://www.youtube.com/watch?v=2NZF2UKyh0g)
-- Understand why we can use Catalan Numbers to solve this problem: [![Count Number of Binary Search Tree Possible given n keys Dynamic Programming](https://img.youtube.com/vi/YDf982Lb84o/0.jpg)](https://www.youtube.com/watch?v=YDf982Lb84o)
+- Understand what is Catalan Numbers:
+  - [![Program for Nth Catalan Number | GeeksforGeeks](https://img.youtube.com/vi/2NZF2UKyh0g/0.jpg)](https://www.youtube.com/watch?v=2NZF2UKyh0g)
+- Understand why we can use Catalan Numbers to solve this problem:
+  - [![Count Number of Binary Search Tree Possible given n keys Dynamic Programming](https://img.youtube.com/vi/YDf982Lb84o/0.jpg)](https://www.youtube.com/watch?v=YDf982Lb84o)
 
 Catalan numbers are a sequence of natural numbers that occurs in many interesting counting problems like following.
 
