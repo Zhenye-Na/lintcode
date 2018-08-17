@@ -53,7 +53,7 @@ Catalan numbers satisfy the following recursive formula.
 
 **Q&A**
 - When am I know this problem is solved by Catalan Numbers?
-  - Just remember the numbers "1,1,2,5,14,42,132,..." and if you see them you apply for the formula
+  - Just remember the numbers `"1,1,2,5,14,42,132,..."` and if you see them you apply for the formula
 
 
 ### Python
