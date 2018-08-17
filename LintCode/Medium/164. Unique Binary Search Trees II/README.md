@@ -1,21 +1,21 @@
 # 164. Unique Binary Search Trees II
 
-Description
-Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
-Example
-Given n = 3, your program should return all 5 unique BST's shown below.
+- **Description**
+    - Given n, generate all structurally **unique BST**'s (binary search trees) that store values `1...n`.
+- **Example**
+    - Given `n = 3`, your program should return all `5` unique BST's shown below.
 
-```
-   1         3     3      2      1
-    \       /     /      / \      \
-     3     2     1      1   3      2
-    /     /       \                 \
-   2     1         2                 3
-```
+    ```
+       1         3     3      2      1
+        \       /     /      / \      \
+         3     2     1      1   3      2
+        /     /       \                 \
+       2     1         2                 3
+    ```
 
 ## Solution
 
-> From LeetCode Discussion: I start by noting that `1..n` is the in-order traversal for any BST with nodes 1 to n. So if I pick i^th node as my root, the left subtree will contain elements `1` to `(i-1)`, and the right subtree will contain elements (i+1) to n. I use recursive calls to get back all possible trees for left and right subtrees and combine them in all possible ways with the root.
+> **From LeetCode Discussion**: I start by noting that `1..n` is the in-order traversal for any BST with nodes 1 to n. So if I pick i^th node as my root, the left subtree will contain elements `1` to `(i-1)`, and the right subtree will contain elements (i+1) to n. I use recursive calls to get back all possible trees for left and right subtrees and combine them in all possible ways with the root.
 
 
 ### Java
