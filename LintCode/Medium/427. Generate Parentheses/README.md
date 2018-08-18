@@ -5,15 +5,14 @@
 - **Example**
     - Given `n = 3`, a solution set is:
 
-    ```java
+    ```
     "((()))", "(()())", "(())()", "()(())", "()()()"
     ```
 
 
 ## Solution
 
-Backtracking
-
+**Backtracking**
 
 ### Java
 
