@@ -21,12 +21,9 @@
 ## Solution
 
 
-
 ### Java
 
 ```java
-import java.util.LinkedList;
-
 public class Solution {
     /**
      * @param n: a decimal number
