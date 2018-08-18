@@ -1,13 +1,17 @@
-180. Binary Representation
-Description
-Given a (decimal - e.g. 3.72) number that is passed in as a string, return the binary representation that is passed in as a string. If the fractional part of the number can not be represented accurately in binary with at most 32 characters, return ERROR.
+# 180. Binary Representation
 
-Have you met this question in a real interview?  
-Example
-For n = "3.72", return "ERROR".
+- **Description**
+    - Given a (decimal - e.g. `3.72`) number that is passed in as a string, return the binary representation that is passed in as a string. 
+    - If the fractional part of the number can not be represented accurately in binary with at most 32 characters, return `ERROR`.
+- **Example**
+    - For `n = "3.72"`, return `"ERROR"`.
+    - For `n = "3.5"`, return `"11.1"`.
 
-For n = "3.5", return "11.1".
 
+## Solution
+
+
+### Java
 
 ```java
 public class Solution {
