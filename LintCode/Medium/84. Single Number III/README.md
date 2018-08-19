@@ -1,17 +1,15 @@
 # 84. Single Number III
-Description
-Given 2*n + 2 numbers, every numbers occurs twice except two, find them.
 
-Have you met this question in a real interview?  
-Example
-Given [1,2,2,3,4,4,5,3] return 1 and 5
-
-Challenge
-O(n) time, O(1) extra space.
+- **Description**
+    - Given `2 * n + 2` numbers, every numbers occurs twice except two, find them.
+- **Example**
+    - Given `[1,2,2,3,4,4,5,3]` return `1` and `5`
+- **Challenge**
+    - `O(n)` time, `O(1)` extra space.
 
 ## Solution
 
-[leetcode 算法解析（一）：260. Single Number III](https://segmentfault.com/a/1190000004886431)
+[**leetcode 算法解析（一）：260. Single Number III**](https://segmentfault.com/a/1190000004886431)
 
 注意 Note 中的第一个条件：**`The order of the result is not important.`**，这个条件非常重要，这关系到算法的正确性。
 
@@ -27,12 +25,18 @@ O(n) time, O(1) extra space.
 int bitFlag = (AXORB & (~ (AXORB - 1)));
 ```
 
-这一行代码的作用是：`找到数字 A 和数字 B 中不相同的一位，并将该位设置为 1，其他位设置为 0；`
+```java
+~ (AXORB - 1)) = - AXORB = ~ AXORB + 1
+```
 
-> 根据 XOR 的定义，我们知道，在 AXORB 中，为 1 的位即 A 和 B 不相同的位，AXORB 中为 0 的位即 A 和 B 中相同的位
+这一行代码的作用是：**`找到数字 A 和数字 B 中不相同的一位，并将该位设置为 1，其他位设置为 0`**
+
+> 根据 XOR 的定义，我们知道，在 `AXORB` 中，为 `1` 的位即 `A` 和 `B` 不相同的位，`AXORB` 中为 `0` 的位即 `A` 和 `B` 中相同的位
 >
-> 所以，要找到 A 和 B 中不相同的位，只需要找到在 AXORB 中从右往左第一个为 1 的位，保留该位并将其他位置为 0 即可。
+> 所以，要找到 `A` 和 `B` 中不相同的位，只需要找到在 `AXORB` 中从右往左第一个为 `1` 的位，保留该位并将其他位置为 `0` 即可。
 
+
+### Python
 
 ```python
 class Solution:
