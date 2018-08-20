@@ -93,7 +93,7 @@
 445. Cosine Similarity
 451. Swap Nodes in Pairs
 453. Flatten Binary Tree to Linked List
-457. Classical Binary Search
+457. Classical Binary Search
 458. Last Position of Target
 459. Closest Number in Sorted Array
 462. Total Occurrence of Target
