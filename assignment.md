@@ -9,7 +9,6 @@
 
 - [ ] 95. Validate Binary Search Tree
 - [ ] 378. Convert Binary Search Tree to Doubly Linked List
-- [ ] 85. Insert Node in a Binary Search Tree
 - [ ] 11. Search Range in Binary Search Tree
 - [ ] 448. Inorder Successor in BST
 - [ ] 87. Remove Node in Binary Search Tree
