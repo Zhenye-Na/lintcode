@@ -156,24 +156,8 @@ class Solution:
 接下来可以从下面三种题解中看看如何寻找/标记先驱节点
 
 1. 第一个解法的本质，其实是利用None的次数来标记父节点。第一次向stack填入None的时候，都代表进入情况2（没有左节点了），这个时候pop 掉stack 并print，进入这个被print 节点的右子树，然后第二次出现None的时候，是情况2.2（右子树也空了），这个时候pop出来的就是真正的先驱节点。那个已经被printed的先驱节点，在第一次出现None的时候已经被pop掉了
-1. 第二个解法，九章给出来的标准做法。其实我个人感觉有点绕。这个算法包括了两种操作：第一个操作是把一整条向左的path都存入到stack里面，第二个操作是寻找先驱节点。这个算法用到的一个重要的性质是：对于一个右子树，先驱节点到达它的方式一定是，先向左一下，（到达进入右子树，但却已经被访问过的那个节点），再向右进入右子树，所以利用这个性质，所有 `stack[-1] == node` 的节点其实都是已经被printed的节点了，不是真正的先驱节点。
-1. 第三个解法（morris），是我最喜欢的，逻辑上很直接。这个算法的根本是：把一个子树的最右边的节点（最后一个被访问的节点）的右节点，连到它的先驱节点上。这样就避免了找先驱节点的麻烦，相当于反向的思维解决了问题。算法是对于每一个节点，第一步是找它是谁的先驱节点，方法和2类似，就是找它左子树的最右边，首先如果没有左子树，直接print 然后向右走就行。然后要分两种情况
-
-    - 发现它左子树最右边是None，就把这个None改成它自己，向左走；
-    - 如果左子树的最右边是它自己，说明我要找的就是它，print 它，然后向右走
-
-
-最后总结一下这道题的思想，是用 iteraton 方式来做 DFS 遍历，所以同样类别的题，如果面试问到，都可以去思考如何得到先驱节点的方法。
-
 
 ```python
-# 本参考程序来自九章算法，由 @Leon 提供。版权所有，转发请注明出处。
-# - 九章算法致力于帮助更多中国人找到好的工作，教师团队均来自硅谷和国内的一线大公司在职工程师。
-# - 现有的面试培训课程包括：九章算法班，系统设计班，算法强化班，Java入门与基础算法班，Android 项目实战班，
-# - Big Data 项目实战班，算法面试高频题班, 动态规划专题班
-# - 更多详情请见官方网站：http://www.jiuzhang.com/?source=code
-
-
 class Solution:
     """
     @param root: A Tree
@@ -193,7 +177,16 @@ class Solution:
                 stack.append(curr)
                 curr = curr.left
         return ans
+```
 
+1. 第二个解法，九章给出来的标准做法。其实我个人感觉有点绕。这个算法包括了两种操作：第一个操作是把一整条向左的path都存入到stack里面，第二个操作是寻找先驱节点。这个算法用到的一个重要的性质是：对于一个右子树，先驱节点到达它的方式一定是，先向左一下，（到达进入右子树，但却已经被访问过的那个节点），再向右进入右子树，所以利用这个性质，所有 `stack[-1] == node` 的节点其实都是已经被printed的节点了，不是真正的先驱节点。
+
+```python
+class Solution:
+    """
+    @param root: A Tree
+    @return: Inorder in ArrayList which contains node values.
+    """
     def inorderTraversal2(self,root):
         ans = []
         stack = []
@@ -215,8 +208,20 @@ class Solution:
                 node = stack.pop(-1)
                 while stack and stack[-1].right == node:
                     node = stack.pop(-1)
-        return ans    
+        return ans 
+```
 
+1. 第三个解法（morris），是我最喜欢的，逻辑上很直接。这个算法的根本是：把一个子树的最右边的节点（最后一个被访问的节点）的右节点，连到它的先驱节点上。这样就避免了找先驱节点的麻烦，相当于反向的思维解决了问题。算法是对于每一个节点，第一步是找它是谁的先驱节点，方法和2类似，就是找它左子树的最右边，首先如果没有左子树，直接print 然后向右走就行。然后要分两种情况
+
+    - 发现它左子树最右边是None，就把这个None改成它自己，向左走；
+    - 如果左子树的最右边是它自己，说明我要找的就是它，print 它，然后向右走
+
+```python
+class Solution:
+    """
+    @param root: A Tree
+    @return: Inorder in ArrayList which contains node values.
+    """
     def inorderTraversal3(self,root):
         ans = []
         stack = []
@@ -238,3 +243,5 @@ class Solution:
                 curr = curr.right
         return ans
 ```
+
+最后总结一下这道题的思想，是用 iteraton 方式来做 DFS 遍历，所以同样类别的题，如果面试问到，都可以去思考如何得到先驱节点的方法。
