@@ -12,7 +12,7 @@
 class ResultType {
     public boolean isBalanced;
     public int maxDepth;
-    
+
     public ResultType(boolean isBalanced, int maxDepth) {
         this.isBalanced = isBalanced;
         this.maxDepth = maxDepth;
@@ -29,10 +29,9 @@ public class Solution {
         // write your code here
         return helper(root).isBalanced;
     }
-    
-    
+
     private ResultType helper(TreeNode root) {
-        
+
         if (root == null) {
             return new ResultType(true, 0);
         }
@@ -44,17 +43,17 @@ public class Solution {
         if (!left.isBalanced || !right.isBalanced) {
             return new ResultType(false, -1);
         }
-        
+
         // root is not balanced
         if (Math.abs(left.maxDepth - right.maxDepth) > 1) {
             return new ResultType(false, -1);
         }
-        
+
         // current node is balanced
         return new ResultType(true, Math.max(left.maxDepth, right.maxDepth) + 1);
-        
-    }
-    
 
-    
+    }
+
+
+
 }
