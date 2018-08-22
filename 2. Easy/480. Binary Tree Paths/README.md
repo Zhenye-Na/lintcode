@@ -1,10 +1,9 @@
 # 480. Binary Tree Paths
 
-**Description**  
-Given a binary tree, return all root-to-leaf paths.
-  
-**Example**  
-Given the following binary tree:
+- **Description**  
+    - Given a binary tree, return all root-to-leaf paths.
+- **Example**  
+    - Given the following binary tree:
 
     ```
        1
@@ -14,17 +13,68 @@ Given the following binary tree:
       5
     ```
 
-All root-to-leaf paths are:
+    - All root-to-leaf paths are:
 
-    ```
+    ```java
     [
       "1->2->5",
       "1->3"
     ]
     ```
-    
+
 
 ## Solution
+
+### `Divide & Conquer`
+
+#### Python
+
+```python
+"""
+Definition of TreeNode:
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left, self.right = None, None
+"""
+
+class Solution:
+    """
+    @param root: the root of the binary tree
+    @return: all root-to-leaf paths
+    """
+    def __init__(self):
+        self.result = []
+
+
+    def binaryTreePaths(self, root):
+        # write your code here
+        if not root:
+            return self.result
+
+        self.dfs(root, "")
+        return self.result
+
+    def dfs(self, root, path):
+
+        # dfs has reached the leaf node, add path to result
+        if root.left is None and root.right is None:
+            path = path + str(root.val)
+            self.result.append(path)
+            return
+
+        # turn left
+        if root.left:
+            self.dfs(root.left, path + str(root.val) + "->")
+
+        # turn right
+        if root.right:
+            self.dfs(root.right, path + str(root.val) + "->")
+
+```
+
+
+#### Java
 
 这道题要求输出从 root 出发 到 leaf 结束的所有路径。String 在Java是 immutable 的， 所以我把它作为一个 argument 传入 helper 函数。
 
@@ -44,9 +94,6 @@ Returns:
     otherwise, the value of obj.toString() is returned.
 */
 ```
-
-
-### Code
 
 ```java
 /**
@@ -74,24 +121,24 @@ public class Solution {
         helper(root, String.valueOf(root.val), result);
         return result;
     }
-    
+
     private void helper(TreeNode root, String path, List<String> result) {
-        
+
         if (root == null) return;
 
         if (root.left == null && root.right == null) {
             result.add(path);
             return;
         }
-        
+
         if (root.left != null) {
             helper(root.left, path + "->" + String.valueOf(root.left.val), result);
         }
         if (root.right != null) {
             helper(root.right, path + "->" + String.valueOf(root.right.val), result);   
         }
-        
+
     }
-    
+
 }
 ```
