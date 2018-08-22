@@ -15,28 +15,28 @@ public class Solution {
      * @param root: The root of binary tree.
      * @return: An integer
      */
-     
+
     private int depth = 0;
-    
+
     public int maxDepth(TreeNode root) {
         // write your code here
         traverse(root, 1);
         return depth;
     }
-    
-    
+
     private void traverse(TreeNode root, int currDepth) {
-        
+
         if (root == null) return;
-    
-        if (currDepth > depth) depth = currDepth;
-        
+
+        if (currDepth > depth) {
+            depth = currDepth;
+        }
+
         traverse(root.left, currDepth + 1);
         traverse(root.right, currDepth + 1);
 
     }
-    
-    
+
 }
 
 
@@ -58,6 +58,5 @@ public class Solution {
 
         return Math.max(LeftDepth, RightDepth) + 1;
     }
-
 
 }
