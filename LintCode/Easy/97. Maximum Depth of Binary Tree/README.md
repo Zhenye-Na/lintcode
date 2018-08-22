@@ -1,19 +1,20 @@
-97. Maximum Depth of Binary Tree
-Description
-Given a binary tree, find its maximum depth.
+# 97. Maximum Depth of Binary Tree
 
-The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+- **Description**
+    - Given a binary tree, find its maximum depth.
+    - The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+- **Example**
+    - Given a binary tree as follow:
 
-Have you met this question in a real interview?  
-Example
-Given a binary tree as follow:
+    ```
+      1
+     / \
+    2   3
+       / \
+      4   5  
+    ```
 
-  1
- / \
-2   3
-   / \
-  4   5  
-The maximum depth is 3.
+    - The maximum depth is 3.
 
 
 ## Solution
@@ -48,7 +49,6 @@ class Solution:
         right = self.findMaxDepth(root.right)
 
         return max(left, right) + 1
-
 ```
 
 
