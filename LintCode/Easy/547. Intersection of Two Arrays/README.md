@@ -70,7 +70,7 @@ public class Solution {
 ```
 
 ### Binary search
-**Time complexity: `O(nlogn)`**
+**Time complexity: `O(n logn)`**
 
 ```java
 public class Solution {
@@ -89,7 +89,7 @@ public class Solution {
         }
         return result;
     }
-    
+
     public boolean binarySearch(int[] nums, int target) {
         int low = 0;
         int high = nums.length - 1;

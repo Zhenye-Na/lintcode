@@ -41,3 +41,41 @@ class Solution:
             return ResultType(0, False)
 
         return ResultType(max(left.depth, right.depth) + 1, True)
+
+
+
+
+
+
+"""
+Definition of TreeNode:
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left, self.right = None, None
+"""
+
+class Solution:
+    """
+    @param root: The root of binary tree.
+    @return: True if this Binary tree is Balanced, or false.
+    """
+    def isBalanced(self, root):
+        # write your code here
+        return self.helper(root) != -1
+
+
+    def helper(self, root):
+        if not root:
+            return 0
+
+        left  = self.helper(root.left)
+        right = self.helper(root.right)
+
+        if abs(left - right) > 1:
+            return -1
+
+        if left == -1 or right == -1:
+            return -1
+
+        return max(left, right) + 1
