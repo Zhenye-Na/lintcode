@@ -4,7 +4,9 @@
 * - 现有的面试培训课程包括：九章算法班，系统设计班，算法强化班，Java入门与基础算法班，Android 项目实战班，
 * - Big Data 项目实战班，算法面试高频题班, 动态规划专题班
 * - 更多详情请见官方网站：http://www.jiuzhang.com/?source=code
-*/ 
+*/
+
+
 
 // Version 1: Traverse
 public class Solution {
@@ -27,6 +29,8 @@ public class Solution {
     }
 }
 
+
+
 // version 2: Divide & Conquer
 public class Solution {
     /**
@@ -36,34 +40,36 @@ public class Solution {
     public void flatten(TreeNode root) {
         helper(root);
     }
-    
+
     // flatten root and return the last node
     private TreeNode helper(TreeNode root) {
         if (root == null) {
             return null;
         }
-        
-        TreeNode leftLast = helper(root.left);
+
+        TreeNode leftLast  = helper(root.left);
         TreeNode rightLast = helper(root.right);
-        
+
         // connect leftLast to root.right
         if (leftLast != null) {
             leftLast.right = root.right;
             root.right = root.left;
             root.left = null;
         }
-        
+
         if (rightLast != null) {
             return rightLast;
         }
-        
+
         if (leftLast != null) {
             return leftLast;
         }
-        
+
         return root;
     }
 }
+
+
 
 // version 3: Non-Recursion
 /**
@@ -86,10 +92,10 @@ public class Solution {
         if (root == null) {
             return;
         }
-        
+
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
-        
+
         while (!stack.empty()) {
             TreeNode node = stack.pop();
             if (node.right != null) {
@@ -98,8 +104,8 @@ public class Solution {
             if (node.left != null) {
                 stack.push(node.left);
             }
-            
-            // connect 
+
+            // connect
             node.left = null;
             if (stack.empty()) {
                 node.right = null;
