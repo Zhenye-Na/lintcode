@@ -33,7 +33,7 @@ public class Solution {
         return length;
     }
 
-    
+
     private ResultType helper(TreeNode root) {
         // Exit
         if (root == null) {
@@ -50,6 +50,7 @@ public class Solution {
 
         if (root.left != null) {
             if (root.val + 1 == root.left.val) {
+                // ascending
                 sublength.alength = Math.max(sublength.alength, left.alength + 1);
             } else if (root.val - 1 == root.left.val) {
                 // descending
