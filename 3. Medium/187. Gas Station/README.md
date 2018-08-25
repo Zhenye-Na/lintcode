@@ -80,9 +80,9 @@
 
 - https://www.cnblogs.com/boring09/p/4248482.html
 
-#### Java
+#### C++
 
-```java
+```cpp
 int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {
   int start  = 0;  // 起始位置
   int remain = 0;  // 当前剩余燃料
