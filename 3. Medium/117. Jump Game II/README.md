@@ -86,10 +86,21 @@ class Solution:
         jumps = [len(A)] * len(A)
         jumps[0] = 0
 
+        ancestor = [len(A)] * len(A)
+
         for i in range(1, len(A)):
             for j in range(i):
                 if A[j] + j >= i:
                     jumps[i] = min(jumps[i], jumps[j] + 1)
+                    ancestor[i] = j
 
+        path = []
+        idx = len(A) - 1
+        path.insert(0, idx)
+        while idx >= 0:
+            path.insert(0, ancestor[-1])
+            idx = ancestor[-1]
+
+        print(path)
         return jumps[-1]
 ```
