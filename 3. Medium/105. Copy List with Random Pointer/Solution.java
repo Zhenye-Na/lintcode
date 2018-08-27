@@ -14,23 +14,23 @@ public class Solution {
     public RandomListNode copyRandomList(RandomListNode head) {
         // write your code here
         if (head == null) return head;
-        
+
         List<RandomListNode> nodes = getNodes(head);
-        
+
         Map<RandomListNode, RandomListNode> relation = new HashMap<>();
         for (RandomListNode node : nodes) {
             relation.put(node, new RandomListNode(node.label));
         }
-        
+
         for (RandomListNode node : nodes) {
-            relation.get(node).next = relation.get(node.next);
+            relation.get(node).next   = relation.get(node.next);
             relation.get(node).random = relation.get(node.random);
         }
-        
+
         return relation.get(head);
     }
-    
-    
+
+
     private List<RandomListNode> getNodes(RandomListNode head) {
         // get all the nodes from .next
         List<RandomListNode> nodesList = new ArrayList<>();
@@ -56,9 +56,9 @@ public class Solution {
 * - 现有的面试培训课程包括：九章算法班，系统设计班，算法强化班，Java入门与基础算法班，Android 项目实战班，
 * - Big Data 项目实战班，算法面试高频题班, 动态规划专题班
 * - 更多详情请见官方网站：http://www.jiuzhang.com/?source=code
-*/ 
+*/
 
-//HashMap version
+// HashMap version
 public class Solution {
     public RandomListNode copyRandomList(RandomListNode head) {
         if (head == null) {

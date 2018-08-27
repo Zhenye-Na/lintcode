@@ -15,6 +15,55 @@
 
 **deep copy**, 用 **137. Clone Graph** 的 HashMap 可解，但是无法做到 `O(1)` Space Complexity
 
+#### Python
+
+```python
+"""
+Definition for singly-linked list with a random pointer.
+class RandomListNode:
+    def __init__(self, x):
+        self.label = x
+        self.next = None
+        self.random = None
+"""
+
+
+class Solution:
+    # @param head: A RandomListNode
+    # @return: A RandomListNode
+    def copyRandomList(self, head):
+        # write your code here
+        if not head:
+            return head
+
+        # Get list of nodes
+        nodes = self.getNodes(head)
+
+        # mapping from original nodes to new nodes
+        mapping = {}
+
+        # create mapping relation
+        for node in nodes:
+            mapping[node]        = RandomListNode(node.label)
+
+        # update cloning nodes
+        for node in nodes:
+            mapping[node].next   = mapping[node.next] if node.next else None
+            mapping[node].random = mapping[node.random] if node.random else None
+
+        return mapping[head]
+
+
+    def getNodes(self, head):
+        nodes = []
+        while head:
+            l.append(head)
+            head = head.next
+        return nodes
+```
+
+
+#### Java
 
 ```java
 /**
@@ -33,23 +82,23 @@ public class Solution {
     public RandomListNode copyRandomList(RandomListNode head) {
         // write your code here
         if (head == null) return head;
-        
+
         List<RandomListNode> nodes = getNodes(head);
-        
+
         Map<RandomListNode, RandomListNode> relation = new HashMap<>();
         for (RandomListNode node : nodes) {
             relation.put(node, new RandomListNode(node.label));
         }
-        
+
         for (RandomListNode node : nodes) {
-            relation.get(node).next = relation.get(node.next);
+            relation.get(node).next   = relation.get(node.next);
             relation.get(node).random = relation.get(node.random);
         }
-        
+
         return relation.get(head);
     }
-    
-    
+
+
     private List<RandomListNode> getNodes(RandomListNode head) {
         // get all the nodes from .next
         List<RandomListNode> nodesList = new ArrayList<>();
@@ -67,7 +116,7 @@ public class Solution {
 
 // 这个解法比我自己写的好处：
 // 1. 只有一个 while 循环
-// 2. 用到了 dummy node， 并不需要把所有的nodes循环出来，可以一边 `.next` 一边操作
+// 2. 用到了 dummy node， 并不需要把所有的 nodes 循环出来，可以一边 `.next` 一边操作
 
 // @九章算法
 // HashMap version
@@ -160,6 +209,3 @@ public class Solution {
     }
 }
 ```
-
-
-
