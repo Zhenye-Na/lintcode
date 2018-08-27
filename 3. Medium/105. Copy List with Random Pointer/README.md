@@ -57,7 +57,7 @@ class Solution:
     def getNodes(self, head):
         nodes = []
         while head:
-            l.append(head)
+            nodes.append(head)
             head = head.next
         return nodes
 ```
