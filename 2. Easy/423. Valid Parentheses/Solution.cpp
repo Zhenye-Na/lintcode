@@ -21,13 +21,16 @@ public:
             if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
             } else {
-                // return false if stack is empty because the next char is closing brackets but there is no opening brackets
+                // return false if stack is empty because the next char is closing
+                // brackets but there is no opening brackets
                 if (stack.empty()) {
                     return false;
                 }
 
                 // top element (nearest brackets) is not in pair
-                if ((c == ')' && stack.top() != '(') || (c == ']' && stack.top() != '[' ) || (c == '}' && stack.top() != '{')) {
+                if ((c == ')' && stack.top() != '(') ||
+                    (c == ']' && stack.top() != '[' ) ||
+                    (c == '}' && stack.top() != '{')) {
                     return false;
                 }
 
