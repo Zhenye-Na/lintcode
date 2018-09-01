@@ -42,7 +42,7 @@
 - 虽然没有一击AC，但是还是提供“错误”代码以及详细 comments
 
 
-### Code
+### [Failed] Solution 1
 
 ```java
 class Coordinate {
@@ -70,15 +70,15 @@ public class Solution {
         return layout;
     }
 
-    
+
     private void helper(int n,
                         int startX,
                         int startY,
                         List<Coordinate> layout,
                         List<List<Coordinate>> results) {
-        
+
         // Definition: Recursively find all possible ways to arrange Queens' position
-        
+
         // Exit when there is a Queen in each row of the chess board
         if (layout.size() == n) {
             results.add(new ArrayList<>(layout));
@@ -99,11 +99,11 @@ public class Solution {
                     // Remember to remove it after recursion
                     layout.remove(layout.size() - 1);
                 }
-                
+
             }
         }
     }
-    
+
 
     private boolean isValid(List<Coordinate> layout, Coordinate curr) {
         for (Coordinate queen : layout) {
@@ -114,14 +114,14 @@ public class Solution {
         }
         return true;
     }
-    
-    
+
+
     private List<List<String>> drawGrid(int n,
                                         List<List<Coordinate>> results) {
-        
+
         // Draw chess board
         List<List<String>> layout = new ArrayList<>();
-        
+
         for (int index = 0; index < results.size(); index++) {
             List<String> chessboard = new ArrayList<>();
             for (int i = 0; i < n; i++) {
@@ -139,11 +139,88 @@ public class Solution {
 ```
 
 
+### Backtracking
+
+```java
+public class Solution {
+    /*
+     * @param n: The number of queens
+     * @return: All distinct solutions
+     */
+    private List<List<String>> result = new ArrayList<>();
+
+    public List<List<String>> solveNQueens(int n) {
+        // write your code here
+        if (n <= 0) return result;
+        helper(n, new ArrayList<Integer>());
+        return result;
+    }
+
+
+    private void helper(int n, List<Integer> solution) {
+
+        if (solution.size() == n) {
+            // base case:
+            result.add(drawBoard(solution, n));
+            return;
+        }
+
+        // recursive case:
+        for (int col = 0; col < n; col++) {
+            if (!isSafe(col, solution)) {
+                continue;
+            }
+
+            // choose
+            solution.add(col);
+
+            // explore
+            helper(n, solution);
+
+            // un-choose
+            solution.remove(solution.size() - 1);
+        }
+
+    }
+
+
+    private boolean isSafe(int col, List<Integer> solution) {
+        int row = solution.size();
+        for (int rowIndex = 0; rowIndex < solution.size(); rowIndex++) {
+            if (solution.get(rowIndex) == col || rowIndex + solution.get(rowIndex) == row + col || rowIndex - solution.get(rowIndex) == row - col) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    private List<String> drawBoard(List<Integer> solution, int n) {
+        List<String> result = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < n; j++) {
+                sb.append(j == solution.get(i) ? 'Q' : '.');
+            }
+
+            result.add(sb.toString());
+        }
+
+        return result;
+    }
+
+
+}
+```
+
+***
+
+
 **贴上九章的题解，观摩大佬的答案：**
 
 - 首先不需要存储**行数**，因为每行都有且仅有一个，而且DFS是从第0行到第n-1行
-
-
 
 
 ```java
@@ -153,7 +230,7 @@ public class Solution {
 * - 现有的面试培训课程包括：九章算法班，系统设计班，算法强化班，Java入门与基础算法班，Android 项目实战班，
 * - Big Data 项目实战班，算法面试高频题班, 动态规划专题班
 * - 更多详情请见官方网站：http://www.jiuzhang.com/?source=code
-*/ 
+*/
 
 class Solution {
     /**
@@ -167,11 +244,11 @@ class Solution {
         if (n <= 0) {
             return results;
         }
-        
+
         search(results, new ArrayList<Integer>(), n);
         return results;
     }
-    
+
     /*
      * results store all of the chessboards
      * cols store the column indices for each row
@@ -183,7 +260,7 @@ class Solution {
             results.add(drawChessboard(cols));
             return;
         }
-        
+
         for (int colIndex = 0; colIndex < n; colIndex++) {
             if (!isValid(cols, colIndex)) {
                 continue;
@@ -193,7 +270,7 @@ class Solution {
             cols.remove(cols.size() - 1);
         }
     }
-    
+
     private List<String> drawChessboard(List<Integer> cols) {
         List<String> chessboard = new ArrayList<>();
         for (int i = 0; i < cols.size(); i++) {
@@ -205,7 +282,7 @@ class Solution {
         }
         return chessboard;
     }
-    
+
     private boolean isValid(List<Integer> cols, int column) {
         int row = cols.size();
         for (int rowIndex = 0; rowIndex < cols.size(); rowIndex++) {
