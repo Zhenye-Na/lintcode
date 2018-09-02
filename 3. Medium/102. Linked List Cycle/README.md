@@ -13,7 +13,7 @@
 
 ## Solution
 
-这道题解法比较有趣，**“两根指针”**
+这道题解法比较有趣，**"两根指针"**
 
 一个跑得快，一个跑得慢，如果有 `cycle` 存在，那么迟早这两根指针会指向同一个 `ListNode`，而如果 `fast` 跑完了也没遇上 `slow`，那么就不存在 `cycle`
 
@@ -41,15 +41,15 @@ public class Solution {
     public boolean hasCycle(ListNode head) {
         // write your code here
         if (head == null || head.next == null) return false;
-        
+
         ListNode slow = head;
         ListNode fast = head.next;
-        
+
         while (fast != slow) {
             if (fast.next == null || fast.next.next == null) {
                 return false;
             }
-            
+
             fast = fast.next.next;
             slow = slow.next;
         }
