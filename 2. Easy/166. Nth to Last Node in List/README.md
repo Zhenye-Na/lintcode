@@ -8,6 +8,19 @@
     - return node whose value is `1`.
 
 
+## Solution
+
+做题没看清题意，导致多了一步 ╮(╯▽╰)╭
+
+题目说的很明确 `The minimum number of nodes in list is n` 也就不需要做边界异常检测
+
+直接用两根指针的思想，先把距离 `n` 整出来，然后再用两根指针，右边的出去了就表示左边的已经到了
+
+详细代码见下：
+
+### Python
+
+
 ```python
 """
 Definition of ListNode
@@ -17,7 +30,6 @@ class ListNode(object):
         self.val = val
         self.next = next
 """
-
 
 class Solution:
     """
@@ -31,11 +43,11 @@ class Solution:
             return None
 
         # Test if n is out of bounds, if so return None
-        first = head
-        num = 1
+        first, num = head, 1
+
         while first.next:
             first = first.next
-            num += 1
+            num  += 1
 
         if n > num:
             return None
@@ -48,11 +60,12 @@ class Solution:
             n -= 1
 
         # Left pointer indicates result
-        # When Right pointer reach the end of LinedList, then Left pointer points
-        # to the element which is n slots before end
+        # When Right pointer reach the end of LinedList
+        # then Left pointer points to the element which
+        # is n slots before last ListNode
         left = head
         while right and right.next:
-            left = left.next
+            left  = left.next
             right = right.next
 
         return left
