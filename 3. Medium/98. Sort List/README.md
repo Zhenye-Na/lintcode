@@ -1,14 +1,11 @@
 # 98. Sort List
 
-Description
-Sort a linked list in O(n log n) time using constant space complexity.
-
-Have you met this question in a real interview?  
-Example
-Given 1->3->2->null, sort it to 1->2->3->null.
-
-Challenge
-Solve it by merge sort & quick sort separately.
+- **Description**
+    - Sort a linked list in `O(n logn)` time using constant space complexity.
+- **Example**
+    - Given `1->3->2->null`, sort it to `1->2->3->null`.
+- **Challenge**
+    - Solve it by merge sort & quick sort separately.
 
 
 ## Solution
