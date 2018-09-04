@@ -37,19 +37,17 @@ class Solution:
         mid.next = None
 
         while last:
+            # Connect from left to right
             tmp       = head.next
             head.next = last
-            h         = last.next
 
+            # Connect from right to left
+            h         = last.next
             last.next = tmp
+
+            # Update pointers
             head      = tmp
             last      = h
-
-
-
-
-
-
 
 
 
