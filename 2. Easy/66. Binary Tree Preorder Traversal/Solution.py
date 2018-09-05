@@ -6,7 +6,7 @@ class TreeNode:
         self.left, self.right = None, None
 """
 
-# Traverse
+# Recursion
 
 class Solution:
     """

@@ -1,22 +1,21 @@
 # 66. Binary Tree Preorder Traversal
 
-Description
-Given a binary tree, return the preorder traversal of its nodes' values.
-Example
-Given:
+- **Description**
+    - Given a binary tree, return the preorder traversal of its nodes' values.
+- **Example**
+    - Given:
 
-```
-    1
-   / \
-  2   3
- / \
-4   5
-```
+    ```
+        1
+       / \
+      2   3
+     / \
+    4   5
+    ```
 
-return `[1,2,4,5,3]`.
-
-Challenge
-Can you do it without recursion?
+    - return `[1,2,4,5,3]`.
+- **Challenge**
+    - Can you do it without recursion?
 
 
 ## Solution
