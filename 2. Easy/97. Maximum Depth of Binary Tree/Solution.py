@@ -13,6 +13,46 @@ class Solution:
     """
     def maxDepth(self, root):
         # write your code here
+        if not root:
+            return 0
+        return self.helper(root)
+
+
+    def helper(self, root):
+        # base case
+        if not root:
+            return -1
+
+        if not root.left and not root.right:
+            return 1
+
+        return max(self.helper(root.left), self.helper(root.right)) + 1
+
+
+
+
+
+
+
+
+
+
+
+"""
+Definition of TreeNode:
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left, self.right = None, None
+"""
+
+class Solution:
+    """
+    @param root: The root of binary tree.
+    @return: An integer
+    """
+    def maxDepth(self, root):
+        # write your code here
         return self.findMaxDepth(root)
 
 
@@ -25,6 +65,9 @@ class Solution:
         right = self.findMaxDepth(root.right)
 
         return max(left, right) + 1
+
+
+
 
 
 """
@@ -58,6 +101,10 @@ class Solution:
 
         self.traverse(root.left, currDepth + 1)
         self.traverse(root.right, currDepth + 1)
+
+
+
+
 
 """
 Definition of TreeNode:
