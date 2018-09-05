@@ -3,9 +3,9 @@
 - **Description**
     - Given n, how many structurally unique BSTs (binary search trees) that store values `1...n`?
 - **Example**
-    - Given n = 3, there are a total of 5 unique BST's.
+    - Given `n = 3`, there are a total of `5` unique BST's.
 
-    ```java
+    ```
     1           3    3       2      1
      \         /    /       / \      \
       3      2     1       1   3      2
@@ -50,6 +50,7 @@ Catalan numbers satisfy the following recursive formula.
 - `catalan[3] = 2 + 1 + 2 = 5`
 
 **Q&A**
+
 - When am I know this problem is solved by Catalan Numbers?
   - Just remember the numbers `"1,1,2,5,14,42,132,..."` and if you see them you apply for the formula
 
