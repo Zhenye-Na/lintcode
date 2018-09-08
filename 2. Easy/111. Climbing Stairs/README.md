@@ -1,11 +1,11 @@
 # 111. Climbing Stairs
 
 - **Description**
-- You are climbing a stair case. It takes n steps to reach to the top.
-- Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+    - You are climbing a stair case. It takes n steps to reach to the top.
+    - Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
 - **Example**
-- Given an example n=3 , 1+1+1=2+1=1+2=3
-- return 3
+    - Given an example `n=3`, `1+1+1=2+1=1+2=3`
+    - return `3`
 
 
 ## Solution
@@ -42,7 +42,7 @@ class Solution:
 爬楼梯 多一个 base 可以是 1步 2步 3步
 
 ```java
-static long countSteps(int n) { 
+static long countSteps(int n) {
     if(n == 0) {
         return 0;
     }
@@ -50,7 +50,7 @@ static long countSteps(int n) {
     long res[] = new long[n+1];
     res[0] = 1;
     res[1] = 1;
-    
+
     for(int i = 2; i < n + 1; i++){
         res[i] = 0;
         for(int j = 1; j <= m && j <=i; j++){
@@ -69,7 +69,7 @@ public class Solution {
         }
         int last = 1, lastlast = 1;
         int now = 0;
-        
+
         for (int i = 2; i <= n; i++) {
             now = last + lastlast;
             lastlast = last;
@@ -81,11 +81,11 @@ public class Solution {
 
 }
 
-m = 2, ways(n) = ways(n-1) + ways(n-2) 
+m = 2, ways(n) = ways(n-1) + ways(n-2)
 
-generalization: ways(n, m) = ways(n-1, m) + ways(n-2, m) + ... + ways(n-m, m) 
+generalization: ways(n, m) = ways(n-1, m) + ways(n-2, m) + ... + ways(n-m, m)
 
-// a recursive function used by countWays 
+// a recursive function used by countWays
 
 static int countWaysUtil(int n, int m) {
     int res[] = new int[n];
@@ -99,9 +99,9 @@ static int countWaysUtil(int n, int m) {
     }
     return res[n-1];
 
-} 
+}
 
-//returns number of ways to reach s'th stair 
+//returns number of ways to reach s'th stair
 int countWays(int s, int m){
     return countWaysUtil(s + 1, m);
 }
