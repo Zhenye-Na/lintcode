@@ -52,6 +52,33 @@ class Solution:
         if A is None or len(A) == 0:
             return 1
 
+        # check each number if at right position, if not, keep swap it to correct position
+        for i in range(len(A)):
+            while A[i] > 0 and A[i] <= len(A) and A[i] != A[A[i] - 1]:
+                # swap elements
+                idx = A[i] - 1
+                A[i], A[idx] = A[idx], A[i]
+
+        # check whether there is missing number
+        for idx, num in enumerate(A):
+            if num != idx + 1:
+                return idx + 1
+
+        # no missing, then return next integer
+        return len(A) + 1
+```
+
+```python
+class Solution:
+    """
+    @param A: An array of integers
+    @return: An integer
+    """
+    def firstMissingPositive(self, A):
+        # write your code here
+        if A is None or len(A) == 0:
+            return 1
+
         for i in range(len(A)):
             # Make sure A[i] is in range(1, len(A) + 1),if A[i] is not supposed to be at index i, then move it to the correct index/ position
             while A[i] > 0 and A[i] <= len(A) and A[i] != A[A[i] - 1]:
