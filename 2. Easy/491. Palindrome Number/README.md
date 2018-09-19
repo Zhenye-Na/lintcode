@@ -1,18 +1,14 @@
 # 491. Palindrome Number
 
-Description
-Check a positive number is a palindrome or not.
+- **Description**
+    - Check a **positive number** is a palindrome or not.
+    - A palindrome number is that if you reverse the whole number you will get exactly the same number.
+    - It's guaranteed the input number is a **32-bit integer**, but after reversion, the number may exceed the **32-bit integer**.
+- **Example**
+    - `11`, `121`, `1`, `12321` are palindrome numbers.
+    - `23`, `32`, `1232` are not palindrome numbers.
 
-A palindrome number is that if you reverse the whole number you will get exactly the same number.
-
-It's guaranteed the input number is a 32-bit integer, but after reversion, the number may exceed the 32-bit integer.
-
-Have you met this question in a real interview?  
-Example
-11, 121, 1, 12321 are palindrome numbers.
-
-23, 32, 1232 are not palindrome numbers.
-
+## Solution
 
 ```python
 class Solution:
