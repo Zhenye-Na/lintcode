@@ -40,7 +40,7 @@ class Solution:
 
 
 
-class Solution:
+class Solution2:
     """
     @param nums: Give an array numbers of n integer
     @return: Find all unique triplets in the array which gives the sum of zero.
