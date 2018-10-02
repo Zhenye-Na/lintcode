@@ -16,3 +16,7 @@
 # LintCode problems practice
 
 > *My LintCode problems practice* 🚧
+
+<p align="center">
+    <img src="coding.png" width="20%">
+</p>

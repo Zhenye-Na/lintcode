@@ -7,7 +7,14 @@
 
 **3. Binary Tree `&&` Divide Conquer**
 
-- [ ] 95. Validate Binary Search Tree
+- [ ] 614. Binary Tree Longest Consecutive Sequence II
+- [ ] 619. Binary Tree Longest Consecutive Sequence III
+- [ ] 88. Lowest Common Ancestor of a Binary Tree
+- [ ] 376. Binary Tree Path Sum
+- [ ] 246. Binary Tree Path Sum II
+- [ ] 472. Binary Tree Path Sum III
+- [ ] 863. Binary Tree Path Sum IV
+- [x] 95. Validate Binary Search Tree
 - [ ] 378. Convert Binary Search Tree to Doubly Linked List
 - [ ] 11. Search Range in Binary Search Tree
 - [ ] 448. Inorder Successor in BST
@@ -34,19 +41,19 @@
 
 **6. LinkedList & Array**
 
-- [ ] 103. Linked List Cycle II
-- [ ] 98. Sort List **[Merge Sort & Quick Sort]**
+- [x] 103. Linked List Cycle II
+- [x] 98. Sort List **[Merge Sort & Quick Sort]**
 - [ ] 106. Convert Sorted List to Binary Search Tree
 - [ ] 378. Convert Binary Search Tree to Doubly Linked List
     - **Array:**
-- [ ] 64. Merge Sorted Array
+- [x] 64. Merge Sorted Array
 - [ ] 80. Median
 - [ ] 5. Kth Largest Element
     - **与 dummy node 有关的练习：**
 - [ ] 96. Partition List
 - [ ] 165. Merge Two Sorted Lists
 - [ ] 511. Swap Two Nodes in Linked List
-- [ ] 99. Reorder List
+- [x] 99. Reorder List
 - [ ] 170. Rotate List
 
 
@@ -89,7 +96,7 @@
 **Heap**
 {:.info}
 
-- [ ] 130. Heapify
+- [x] 130. Heapify
 - [ ] 4. Ugly Number II
 - [ ] 544. *Top k Largest Numbers*
 - [ ] 545. Top k Largest Numbers II
