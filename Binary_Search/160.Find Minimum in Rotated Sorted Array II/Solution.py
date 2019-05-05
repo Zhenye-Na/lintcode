@@ -9,7 +9,6 @@ class Solution:
             return None
 
         start, end = 0, len(nums) - 1
-
         while start + 1 < end:
             while nums[start] == nums[end]:
                 end -= 1
