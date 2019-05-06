@@ -4,8 +4,9 @@
 
 Given a string(Given in the way of char array) and an offset, rotate the string by offset in place. (rotate from left to right)
 
-offset >= 0
-the length of str >= 0
+
+> `offset >= 0`  
+> the length of str `>= 0`
 
 **Example**
 
@@ -53,3 +54,47 @@ Explanation: Note that it is rotated in place, that is, after str is rotated, it
 
 Rotate in-place with O(1) extra memory.
 
+
+```python
+class Solution:
+    """
+    @param str: An array of char
+    @param offset: An integer
+    @return: nothing
+    """
+    def rotateString(self, s, offset):
+        # write your code here
+        if not s or len(s) == 0:
+            return s
+
+        offset = offset % len(s)
+        start_index = len(s) - offset
+
+        first, last = 0, start_index - 1
+        while first + 1 <= last:
+            tmp = s[first]
+            s[first] = s[last]
+            s[last] = tmp
+
+            first += 1
+            last -= 1
+
+        last = len(s) - 1
+        while start_index + 1 <= last:
+            tmp = s[start_index]
+            s[start_index] = s[last]
+            s[last] = tmp
+
+            start_index += 1
+            last -= 1
+
+
+        first, last = 0, len(s) - 1
+        while first + 1 <= last:
+            tmp = s[first]
+            s[first] = s[last]
+            s[last] = tmp
+
+            first += 1
+            last -= 1
+```
