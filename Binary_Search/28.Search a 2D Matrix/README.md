@@ -13,24 +13,25 @@ This matrix has the following properties:
 
 **Example**
 
-```
+
 Example 1:
-	Input:  [[5]],2
-	Output: false
+
+```
+Input:  [[5]], 2
+Output: false
 	
-	Explanation: 
-	false if not included.
-	
+Explanation: 
+false if not included.
+```
+
 Example 2:
-	Input:  [
-				[1, 3, 5, 7],
-				[10, 11, 16, 20],
-				[23, 30, 34, 50]
-			],3
-	Output: true
+
+```
+Input:  [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50]], 3
+Output: true
 	
-	Explanation: 
-	return true if included.
+Explanation: 
+return true if included.
 ```
 
 **Challenge**
