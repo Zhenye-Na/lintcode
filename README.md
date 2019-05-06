@@ -218,7 +218,7 @@
 
 
 
-#### [Union Find](./Union Find/)
+#### [Union Find](./Union_Find/)
 
 
 
