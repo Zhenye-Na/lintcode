@@ -31,4 +31,3 @@ class Solution:
                 self._find_permutations(nums, permutations, tmp, visited)
                 tmp.pop()
                 visited[i] = False
-
