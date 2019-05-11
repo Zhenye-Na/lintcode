@@ -1,8 +1,7 @@
 <h3 align="center"><strong>LintCode Online Judge</strong></h3>
 
-#### [Binary Search](./Binary_Search/)
 
-##### Classical Binary Search
+#### [Binary Search](./Binary_Search/)
 
 457.Classical Binary Search  
 14.First Position of Target  
@@ -27,24 +26,22 @@
 183.Wood Cut (H)  
 437.Copy Books (H)  
 
+
 #### [Recursion](./Recursion/)
 
 15.Permutations (M)  
 16.Permutations II (M)  
 17.Subsets (M)  
 18.Subsets II (M)  
-730.Sum of All Subsets  
-152.Combinations  
+152.Combinations (M)  
 135.Combination Sum (M)  
-153.Combination Sum II (M)  
-564.Combination Sum IV (M)  
+153.Combination Sum II (M)    
 425.Letter Combinations of a Phone Number (M)
 426.Restore IP Addresses (M)  
-136.Palindrome Partitioning (M)
+136.Palindrome Partitioning (M)  
 
 
 #### [Tree](./Tree/)
-
 
 66.Binary Tree Preorder Traversal  
 67.Binary Tree Inorder Traversal  
@@ -60,11 +57,15 @@
 578.Lowest Common Ancestor III (M)  
 595.Binary Tree Longest Consecutive Sequence  
 614.Binary Tree Longest Consecutive Sequence II (M)  
+94.Binary Tree Maximum Path Sum (M)  
 376.Binary Tree Path Sum  
 246.Binary Tree Path Sum II  
 472.Binary Tree Path Sum III (H)  
-95.Validate Binary Search Tree (M)  
 378.Convert Binary Tree to Doubly Linked List (M)  
+
+**Binary Search Tree**
+
+95.Validate Binary Search Tree (M)  
 86.Binary Search Tree Iterator (H)  
 448.Inorder Successor in BST (M)  
 11.Search Range in Binary Search Tree (M)  
@@ -205,10 +206,29 @@
 #### [Dynamic Programming](./Dynamic_Programming/)
 
 
-- [ ] 109. Triangle
-- [ ] 191. Maximum Product Subarray
+109.Triangle  
+191.Maximum Product Subarray  
 
 
+**Backpack**
+
+1. 0-1 背包问题
+
+[Backpack]()  
+[Backpack II]()  
+[Backpack V]()  
+[Backpack VI - 564.Combination Sum IV (M)]()  
+
+
+2. 多重背包问题
+
+[Backpack VII]()  
+[Backpack VIII]()
+
+1. 完全背包问题
+
+[Backpack III]()  
+[Backpack IV]()  
 
 
 #### [Trie](./Trie/)
@@ -266,7 +286,7 @@
 
 #### [Math](./Math/)
 
-
+730.Sum of All Subsets  
 
 
 
@@ -280,3 +300,6 @@
 
 
 
+<p align="center">
+<span style="color:#1d58a6"><sup> &copy; Copyright Zhenye Na <img src="https://cdn3.iconfinder.com/data/icons/coffee-11/500/Coffee_brain-512.png" width="20" height="auto" /> May 2018 </sup></span>
+</p>
