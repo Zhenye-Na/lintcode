@@ -14,8 +14,8 @@ The number of nodes does not exceed 20.
 Example 1:
 
 ```
-Input：{1,2,3}
-Output：[2,3,1]
+Input: {1,2,3}
+Output: [2,3,1]
 Explanation:  
    1
   / \
@@ -27,8 +27,8 @@ Post order traversal
 Example 2:
 
 ```
-Input：{1,#,2,3}
-Output：[3,2,1]
+Input: {1,#,2,3}
+Output: [3,2,1]
 Explanation:  
 1
  \
