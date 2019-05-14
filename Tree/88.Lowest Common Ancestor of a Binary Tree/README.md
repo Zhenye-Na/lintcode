@@ -2,7 +2,7 @@
 
 **Description**
 
-Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes.
+Given the root and two nodes in a Binary Tree. Find the *lowest common ancestor(LCA)* of the two nodes.
 
 The lowest common ancestor is the node with largest depth which is the ancestor of both nodes.
 
@@ -45,9 +45,9 @@ Explanation:
 
 1. 如果两边返回的都不是 `null`
     - 如果相等，那么就是 LCA, 返回其中任意一个即可
-    - 如果不相等, 那么root 为 LCA
-2. 如果 `left != null && right == null` , 返回left
-3. 如果 `right != null && left == null` , 返回right
+    - 如果不相等, 那么 `root` 为 LCA
+2. 如果 `left != null && right == null` , 返回 `left`
+3. 如果 `right != null && left == null` , 返回 `right`
 4. 最后两边都是 `null` , 则返回 `null`
 
 

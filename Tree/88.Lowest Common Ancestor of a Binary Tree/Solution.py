@@ -16,7 +16,7 @@ class Solution:
     """
     def lowestCommonAncestor(self, root, A, B):
         # write your code here
-        node =  self._dfs(root, A, B)
+        node = self._dfs(root, A, B)
         return node
 
     def _dfs(self, root, A, B):
@@ -34,11 +34,11 @@ class Solution:
         if left and right: 
             return root
         
-        # 左子树有一个点或者左子树有LCA
+        # 左子树有一个点或者左子树有 LCA
         if left:
             return left
         
-        # 右子树有一个点或者右子树有LCA
+        # 右子树有一个点或者右子树有 LCA
         if right:
             return right
         
