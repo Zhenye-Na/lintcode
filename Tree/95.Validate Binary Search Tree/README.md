@@ -19,8 +19,8 @@ Example 1:
 
 ```
 Input:  {-1}
-Output：true
-Explanation：
+Output: true
+Explanation:
 For the following binary tree（only one node）:
 	      -1
 This is a binary search tree.
@@ -29,7 +29,7 @@ This is a binary search tree.
 Example 2:
 
 ```
-Input:  {2,1,4,#,#,3,5}
+Input: {2,1,4,#,#,3,5}
 Output: true
 For the following binary tree:
 	  2
@@ -114,6 +114,6 @@ class Solution:
         # is BST
         minNode = leftMin if leftMin is not None else root.val
         maxNode = rightMax if rightMax is not None else root.val
-        
+
         return True, minNode, maxNode
 ```

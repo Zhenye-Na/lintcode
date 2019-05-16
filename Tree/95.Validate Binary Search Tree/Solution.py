@@ -1,3 +1,31 @@
+import sys
+
+class Solution:
+    """
+    @param root: The root of binary tree.
+    @return: True if the binary tree is BST, or false
+    """
+    
+    def isValidBST(self, root):
+        # write your code here
+        if root is None:
+            return True
+
+        leftMax = sys.maxsize
+        rightMin = -sys.maxsize - 1
+        return self.dfs(root, rightMin, leftMax)
+        
+    def dfs(self, root, Min, Max): 
+        if root is None:
+            return True
+
+        if root.val >= Max or root.val <= Min :
+            return False
+        
+        return self.dfs(root.left, Min, root.val) and self.dfs(root.right, root.val, Max)
+
+
+
 """
 Definition of TreeNode:
 class TreeNode:
@@ -38,5 +66,5 @@ class Solution:
         # is BST
         minNode = leftMin if leftMin is not None else root.val
         maxNode = rightMax if rightMax is not None else root.val
-        
+
         return True, minNode, maxNode

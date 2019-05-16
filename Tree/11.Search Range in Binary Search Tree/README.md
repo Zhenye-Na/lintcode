@@ -21,7 +21,7 @@ Example 2:
 ```
 Input: {20,8,22,4,12},10,22
 Output: [12,20,22]
-Explanation：
+Explanation:
         20
        /  \
       8   22
