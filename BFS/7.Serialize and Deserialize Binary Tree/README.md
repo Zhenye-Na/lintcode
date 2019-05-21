@@ -42,6 +42,9 @@ You can use other method to do serializaiton and deserialization.
 
 **BFS**
 
+- `serialize()` 采用bfs，对当前二叉树搜索，遍历vector，将当前节点左右儿子依次存入 vector，空节点需要删去。
+- `deserialize()` 首先切割字符串，然后用 isLeftChild 标记是当前是左右儿子，数字转化为字符串，存为队列首节点的左右儿子。
+
 ```python
 from collections import deque
 
@@ -52,7 +55,6 @@ class TreeNode:
         self.val = val
         self.left, self.right = None, None
 """
-
 
 class Solution:
     """
@@ -127,17 +129,36 @@ class Solution:
 
 **DFS**
 
+用 `'#'` 将 node 隔开。很直接的解决。思路是分治法 (不是遍历)
+
 ```python
+"""
+Definition of TreeNode:
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left, self.right = None, None
+"""
+
 class Solution:
-    
+
     def serialize(self, root):
-        if not root: return ['#']
-        return [str(root.val)] + self.serialize(root.left) + self.serialize(root.right)
-    
+        # write your code here
+        if not root:
+            return ['#']
+        ans = []
+        ans.append(str(root.val))
+        ans += self.serialize(root.left)
+        ans += self.serialize(root.right)
+        return ans
+            
     def deserialize(self, data):
-        elem = data.pop(0)
-        if elem == '#': return None 
-        root = TreeNode(int(elem))
+        # write your code here
+        ch = data.pop(0)
+        if ch == '#':
+            return None
+        else:
+            root = TreeNode(int(ch))
         root.left = self.deserialize(data)
         root.right = self.deserialize(data)
         return root
