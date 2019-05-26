@@ -24,7 +24,7 @@
 
 ## Solution
 
-1. 把整个 matrix[][] flatten 成一个 vector，然后 Binary Search
+1. 把整个 `matrix[][]` flatten 成一个 vector，然后 Binary Search
 1. 先 Binary Search 第一列，然后根据结果 Binary Search 某一行
 
 

@@ -25,25 +25,14 @@
 249.Count of Smaller Number before itself (H)  
 183.Wood Cut (H)  
 437.Copy Books (H)  
-
-
-#### [Recursion](./Recursion/)
-
-15.Permutations (M)  
-16.Permutations II (M)  
-17.Subsets (M)  
-18.Subsets II (M)  
-152.Combinations (M)  
-135.Combination Sum (M)  
-153.Combination Sum II (M)    
-425.Letter Combinations of a Phone Number (M)  
-426.Restore IP Addresses (M)  
-136.Palindrome Partitioning (M)  
+600.Smallest Rectangle Enclosing Black Pixels (H)  
+940.Maximum Absolute Value (M)  
+1626.Salary Adjustment (M)  
 
 
 #### [Tree](./Tree/)
 
-> *Divide and Conquer*
+> Divide and Conquer
 
 66.Binary Tree Preorder Traversal  
 67.Binary Tree Inorder Traversal  
@@ -94,19 +83,30 @@
 433.Number of Islands  
 598.Zombie in Matrix  
 611.Knight Shortest Path  
-573.Build Post Office II 
-431.Connected Component in Undirected Graph 
-600.Smallest Rectangle Enclosing Black Pixels 
-120.Word Ladder  
+573.Build Post Office II  
+431.Connected Component in Undirected Graph  
+120.Word Ladder (H)  
+121.Word Ladder II (H)  
+630.Knight Shortest Path II (M)  
+1446.01 Matrix Walking Problem (M)  
 
 
 #### [DFS](./DFS/)
 
-564.Combination Sum IV  
-86.Binary Search Tree Iterator  
-121.Word Ladder II  
+15.Permutations (M)  
+16.Permutations II (M)  
+17.Subsets (M)  
+18.Subsets II (M)  
+152.Combinations (M)  
+135.Combination Sum (M)  
+153.Combination Sum II (M)    
+425.Letter Combinations of a Phone Number (M)  
+426.Restore IP Addresses (M)  
+136.Palindrome Partitioning (M)  
+121.Word Ladder II (H)  
 52.Next Permutation  
 190.Next Permutation II  
+33.N-Queens  
 
 
 #### [Linked List]()
@@ -144,12 +144,15 @@
 64.Merge Sorted Array  
 6.Merge Two Sorted Arrays (Merge Sorted Array II)
 
+
 #### [Stack](./Stack/)
 
 575.Decode String  
 528.Flatten Nested List Iterator  
 494.Implement Stack by Two Queues  
 40.Implement Queue by Two Stacks
+122.Largest Rectangle in Histogram (H)
+12.Min Stack (M)
 
 **Iterator 相关题**
 
@@ -192,7 +195,7 @@
 
 **Backpack**
 
-1. 0-1 背包问题
+0-1 背包问题
 
 [Backpack]()  
 [Backpack II]()  
@@ -200,12 +203,12 @@
 [Backpack VI - 564.Combination Sum IV (M)]()  
 
 
-2. 多重背包问题
+多重背包问题
 
 [Backpack VII]()  
 [Backpack VIII]()
 
-1. 完全背包问题
+完全背包问题
 
 [Backpack III]()  
 [Backpack IV]()  
@@ -220,9 +223,9 @@
 
 #### [Union Find](./Union_Find/)
 
-
-
-
+433.Number of Islands  
+178.Graph Valid Tree  
+431.Connected Component in Undirected Graph (M)  
 
 
 #### [Sweep Line](./Sweep_Line/)
