@@ -40,6 +40,7 @@
 97.Maximum Depth of Binary Tree  
 480.Binary Tree Paths  
 596.Minimum Subtree  
+628.Maximum Subtree  
 93.Balanced Binary Tree  
 597.Subtree with Maximum Average  
 453.Flatten Binary Tree to Linked List  
@@ -55,6 +56,7 @@
 472.Binary Tree Path Sum III (H)  
 863.Binary Tree Path Sum IV (M)  
 378.Convert Binary Tree to Doubly Linked List (M)  
+650.Find Leaves of Binary Tree  
 
 **Binary Search Tree**
 
@@ -81,6 +83,7 @@
 616.Course Schedule II  
 605.Sequence Reconstruction  
 433.Number of Islands  
+677.Number of Big Islands  
 598.Zombie in Matrix  
 611.Knight Shortest Path  
 573.Build Post Office II  
@@ -89,6 +92,7 @@
 121.Word Ladder II (H)  
 630.Knight Shortest Path II (M)  
 1446.01 Matrix Walking Problem (M)  
+375.Clone Binary Tree  
 
 
 #### [DFS](./DFS/)
@@ -107,26 +111,37 @@
 52.Next Permutation  
 190.Next Permutation II  
 33.N-Queens  
+790.Parser  
+652.Factorization  
+1353.Sum Root to Leaf Numbers  
+1031.Is Graph Bipartite
 
 
 #### [Linked List]()
 
-103.Linked List Cycle II  
-98.Sort List **[Merge Sort & Quick Sort]**  
-106.Convert Sorted List to Binary Search Tree  
-378.Convert Binary Search Tree to Doubly Linked List  
-96.Partition List  
+450.Reverse Nodes in k-Group  
 165.Merge Two Sorted Lists  
+36.Reverse Linked List II  
 511.Swap Two Nodes in Linked List  
+98.Sort List  
 99.Reorder List  
 170.Rotate List  
+96.Partition List  
+105.Copy List with Random Pointer - LintCode
+102.Linked List Cycle  
+103.Linked List Cycle II  
+380.Intersection of Two Linked Lists  
+106.Convert Sorted List to Binary Search Tree  
+372.Delete Node in a Linked List  
 
 
 #### [Array]()
 
-64.Merge Sorted Array  
-80.Median  
-5.Kth Largest Element
+41.Maximum Subarray  
+604.Window Sum  
+138.Subarray Sum  
+139.Subarray Sum Closest  
+547.Intersection of Two Arrays (3 approaches)  
 
 
 #### [Two Pointers](./Two_Pointers/)
@@ -150,9 +165,9 @@
 575.Decode String  
 528.Flatten Nested List Iterator  
 494.Implement Stack by Two Queues  
-40.Implement Queue by Two Stacks
-122.Largest Rectangle in Histogram (H)
-12.Min Stack (M)
+40.Implement Queue by Two Stacks  
+122.Largest Rectangle in Histogram (H)  
+12.Min Stack (M)  
 
 **Iterator 相关题**
 
@@ -169,7 +184,7 @@
 138.Subarray Sum  
 105.Copy List with Random Pointer  
 171.Anagrams  
-124.Longest Consecutive Sequence
+124.Longest Consecutive Sequence  
 
 
 #### [Heap](./Heap/)
@@ -262,7 +277,8 @@
 
 #### [Sort](./Sort/)
 
-
+80.Median  
+5.Kth Largest Element  
 
 
 
