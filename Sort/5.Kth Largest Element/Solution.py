@@ -15,7 +15,6 @@ class Solution:
         if start == end:
             return nums[start]
 
-
         left, right = start, end
         pivot = nums[left + (right - left) // 2]
         while left <= right:
