@@ -127,9 +127,9 @@
 99.Reorder List  
 170.Rotate List  
 96.Partition List  
-105.Copy List with Random Pointer - LintCode
+105.Copy List with Random Pointer  
 102.Linked List Cycle  
-103.Linked List Cycle II  
+103.Linked List Cycle II (H)  
 380.Intersection of Two Linked Lists  
 106.Convert Sorted List to Binary Search Tree  
 372.Delete Node in a Linked List  
@@ -146,32 +146,45 @@
 
 #### [Two Pointers](./Two_Pointers/)
 
-56.Two Sum  
-607.Two Sum III - Data structure design  
-587.Two Sum - Unique pairs  
-610.Two Sum - Difference equals to target  
-57.3-Sum  
-59.3-Sum Closest  
-58.4Sum  
 100.Remove Duplicates from Sorted Array  
 101.Remove Duplicates from Sorted Array II  
 39.Recover Rotated Sorted Array  
 64.Merge Sorted Array  
-6.Merge Two Sorted Arrays (Merge Sorted Array II)
+6.Merge Two Sorted Arrays (Merge Sorted Array II)  
+49.Sort Letters by Case  
+148.Sort Colors  
+143.Sort Colors II  
+144.Interleaving Positive and Negative Numbers  
+373.Partition Array by Odd and Even  
+415.Valid Palindrome  
+461.Kth Smallest Numbers in Unsorted Array  
+521.Remove Duplicate Numbers in Array  
+539.Move Zeroes  
+56.Two Sum  
+57.3-Sum  
+58.4Sum  
+59.3-Sum Closest  
+533.Two Sum - Closest to target
+607.Two Sum III - Data structure design  
+587.Two Sum - Unique pairs  
+609.Two Sum - Less than or equal to target  
+443.Two Sum - Greater than target  
+610.Two Sum - Difference equals to target  
 
 
 #### [Stack](./Stack/)
 
-575.Decode String  
-528.Flatten Nested List Iterator  
+575.Decode String (Expression Expand)  
 494.Implement Stack by Two Queues  
 40.Implement Queue by Two Stacks  
+224.Implement Three Stacks by Single Array (M)
+955.Implement Queue by Circular Array
+12.Min Stack (单调栈) (M)  
 122.Largest Rectangle in Histogram (H)  
-12.Min Stack (M)  
 
 **Iterator 相关题**
 
-86.Binary Search Tree Iterator  
+528.Flatten Nested List Iterator *  
 540.Zigzag Iterator  
 541.Zigzag Iterator II  
 601.Flatten 2D Vector  
@@ -181,7 +194,6 @@
 
 129.Rehashing  
 134.LRU Cache  
-138.Subarray Sum  
 105.Copy List with Random Pointer  
 171.Anagrams  
 124.Longest Consecutive Sequence  
@@ -199,7 +211,7 @@
 486.Merge K Sorted Arrays  
 81.Find Median from Data Stream  
 401.Kth Smallest Number in Sorted Matrix  
-131.The Skyline Problem  
+131.The Skyline Problem (H)  
 471.Top K Frequent Words  
 
 
