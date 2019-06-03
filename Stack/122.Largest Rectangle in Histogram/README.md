@@ -13,7 +13,7 @@ Example 1:
 Input: [2,1,5,6,2,3]
 Output: 10
 Explanation:
-The third and fourth rectangular truncated rectangle has an area of 2*5=10.
+The third and fourth rectangular truncated rectangle has an area of 2 * 5 = 10.
 ```
 
 Example 2:
@@ -22,11 +22,22 @@ Example 2:
 Input: [1,1]
 Output: 2
 Explanation:
-The first and second rectangular truncated rectangle has an area of 2*1=2.
+The first and second rectangular truncated rectangle has an area of 2 * 1 = 2.
 ```
 
 
 **单调栈解法**
+
+*O(n)*
+
+每个元素进栈出栈 -> O(n)
+
+*讲解:*
+
+- 柱子下标是 `i` 和 `j`, 同时 `i < j`, `A[i] >= A[j]`, 那么下标为 `i` 的柱子一定不会是后面某根柱子的下边界. 那么 `A[i]` 就可以从候选列表里删掉, 维护一个**单调递增栈**
+- 下面代码中, `h = height[stack.pop()]` 可以知道左边界和右边界, 因为是 `cur` 这根柱子让 `h` 从栈中 `pop` 出来, (假如 `cur` 不是他的右边界, 那么 `h` 早就 `pop` 出来了), 左边界就是现在的**栈顶元素**
+- 以 h 为高度的矩形, 被 cur 以右边界限制住了, 即使 cur 右边有比 cur 还矮的柱子, 以 h 为高的矩形也画不过去
+- `cur = -1` 这一步操作是为了清空栈
 
 ```python
 class Solution:
@@ -54,7 +65,9 @@ class Solution:
 ```
 
 
-**O(n2) 解法**
+**O(n^2) 解法**
+
+两根指针, for 循环每一根柱子, 去找到比当前循环到的柱子矮的第一根柱子, 作为左右边界, 然后算面积, 取最大值
 
 ```java
 /**
@@ -66,7 +79,7 @@ class Solution:
 */ 
 
 public class Solution {
-    /**作者：千秋无痕
+    /**作者: 千秋无痕
      * @param height: A list of integer
      * @return: The area of largest rectangle in the histogram
      */
@@ -99,3 +112,7 @@ public class Solution {
     }
 }
 ```
+
+**O(n^3)**
+
+穷举左边界, 穷举右边界, 然后看左右边界之间最矮的柱子, 这根柱子将限制我们长方形的高.

@@ -7,7 +7,7 @@
 */ 
 
 public class Solution {
-    /**作者：千秋无痕
+    /**作者: 千秋无痕
      * @param height: A list of integer
      * @return: The area of largest rectangle in the histogram
      */
