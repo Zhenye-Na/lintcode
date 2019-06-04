@@ -1,5 +1,6 @@
 <h3 align="center"><strong>LintCode Online Judge</strong></h3>
 
+![](./assets/proj.png)
 
 #### [Binary Search](./Binary_Search/)
 
@@ -21,7 +22,7 @@
 160.Find Minimum in Rotated Sorted Array II  
 62.Search in Rotated Sorted Array (M)  
 460.Find K Closest Elements (k closest numbers in sorted array)  
-65.Median of two Sorted Arrays (H)  
+**65.Median of two Sorted Arrays** (H)  
 249.Count of Smaller Number before itself (H)  
 183.Wood Cut (H)  
 437.Copy Books (H)  
@@ -58,7 +59,7 @@
 378.Convert Binary Tree to Doubly Linked List (M)  
 650.Find Leaves of Binary Tree  
 
-**Binary Search Tree**
+> **Binary Search Tree**
 
 95.Validate Binary Search Tree (M)  
 86.Binary Search Tree Iterator (H)  
@@ -179,12 +180,14 @@
 40.Implement Queue by Two Stacks  
 224.Implement Three Stacks by Single Array (M)
 955.Implement Queue by Circular Array
-12.Min Stack (单调栈) (M)  
-122.Largest Rectangle in Histogram (H)  
+**12.Min Stack (Monotonic Stack)** (M)  
+**122.Largest Rectangle in Histogram** (H)  
+**510.Maximal Rectangle** (H)  
+**126.Max Tree** (H)
 
-**Iterator 相关题**
+> **Iterator 相关题**
 
-528.Flatten Nested List Iterator *  
+528.Flatten Nested List Iterator  
 540.Zigzag Iterator  
 541.Zigzag Iterator II  
 601.Flatten 2D Vector  
@@ -305,8 +308,6 @@
 
 
 #### [Others](./Others/)
-
-
 
 
 
