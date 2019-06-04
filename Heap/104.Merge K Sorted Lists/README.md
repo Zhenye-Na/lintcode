@@ -74,7 +74,7 @@ public class Solution {
 
         for (ListNode head : lists) {
             if (head != null) {
-                pq.offer(head);    
+                pq.offer(head);
             }
         }
 
