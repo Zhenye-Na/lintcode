@@ -11,7 +11,6 @@ class Solution:
 
         return self._quickSelect(nums, 0, len(nums) - 1, k)
 
-
     def _quickSelect(self, nums, startIndex, endIndex, k):
         if startIndex == endIndex:
             return nums[startIndex]
