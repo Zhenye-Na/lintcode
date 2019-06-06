@@ -1,42 +1,38 @@
-# 401. Kth Smallest Number in Sorted Matrix
+# 1272. Kth Smallest Element in a Sorted Matrix
 
 **Description**
 
-Find the `kth` smallest number in a row and column sorted matrix.
+Given a `n x n` matrix where each of the rows and columns are sorted in ascending order, find the `k`th smallest element in the matrix.
 
-Each row and each column of the matrix is incremental.
+Note that it is the `k`th smallest element in the sorted order, not the `k`th distinct element.
+
+You may assume `k` is always valid, `1 <= k <= n^2`.
 
 **Example**
 
-Example 1:
+Example 1
 
 ```
 Input:
-[
-  [1 ,5 ,7],
-  [3 ,7 ,8],
-  [4 ,8 ,9],
-]
-k = 4
-Output: 5
+[[1, 5, 9],[10, 11, 13],[12, 13, 15]]
+8
+Output: 13
 ```
 
-Example 2:
+Example 2
 
 ```
 Input:
-[
-  [1, 2],
-  [3, 4]
-]
-k = 3
-Output: 3
+[[-5]]
+1
+Output: -5
 ```
 
 **Challenge**
 
-`O(klogn)` time, `n` is the maximum of the width and height of the matrix.
+If `k << n^2`, what's the best algorithm? How about `k ~ n^2`?
 
+**Heap**
 
 ```python
 from heapq import heappush, heappop
@@ -44,9 +40,9 @@ from heapq import heappush, heappop
 
 class Solution:
     """
-    @param matrix: a matrix of integers
-    @param k: An integer
-    @return: the kth smallest number in the matrix
+    @param matrix: List[List[int]]
+    @param k: a integer
+    @return: return a integer
     """
     dx = [0, 1]
     dy = [1, 0]

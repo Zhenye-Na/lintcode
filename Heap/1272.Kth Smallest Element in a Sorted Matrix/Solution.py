@@ -1,52 +1,11 @@
-# 401. Kth Smallest Number in Sorted Matrix
-
-**Description**
-
-Find the `kth` smallest number in a row and column sorted matrix.
-
-Each row and each column of the matrix is incremental.
-
-**Example**
-
-Example 1:
-
-```
-Input:
-[
-  [1 ,5 ,7],
-  [3 ,7 ,8],
-  [4 ,8 ,9],
-]
-k = 4
-Output: 5
-```
-
-Example 2:
-
-```
-Input:
-[
-  [1, 2],
-  [3, 4]
-]
-k = 3
-Output: 3
-```
-
-**Challenge**
-
-`O(klogn)` time, `n` is the maximum of the width and height of the matrix.
-
-
-```python
 from heapq import heappush, heappop
 
 
 class Solution:
     """
-    @param matrix: a matrix of integers
-    @param k: An integer
-    @return: the kth smallest number in the matrix
+    @param matrix: List[List[int]]
+    @param k: a integer
+    @return: return a integer
     """
     dx = [0, 1]
     dy = [1, 0]
@@ -73,4 +32,3 @@ class Solution:
 
     def _isValid(self, i, j, m, n, visited):
         return 0 <= i < m and 0 <= j < n and not visited[i][j]
-```
