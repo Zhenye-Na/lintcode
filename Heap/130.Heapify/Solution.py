@@ -9,8 +9,6 @@ class Solution:
         for i in range(n, -1, -1):
             self.helper(A, i)
 
-
-
     def helper(self, A, i):
         lowest = i             # root is the smallest element
         left   = i * 2 + 1     # left child

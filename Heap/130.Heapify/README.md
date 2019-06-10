@@ -48,8 +48,6 @@ class Solution:
         for i in range(n, -1, -1):
             self.helper(A, i)
 
-
-
     def helper(self, A, i):
         lowest = i             # root is the smallest element
         left   = i * 2 + 1     # left child
@@ -80,6 +78,12 @@ public class Solution {
      * @param A: Given an integer array
      * @return: void
      */
+    public void heapify(int[] A) {
+        for (int i = A.length / 2; i >= 0; i--) {
+            siftdown(A, i);
+        }
+    }
+
     private void siftdown(int[] A, int k) {
         while (k < A.length) {
             int smallest = k;
@@ -98,12 +102,6 @@ public class Solution {
             A[k] = temp;
 
             k = smallest;
-        }
-    }
-
-    public void heapify(int[] A) {
-        for (int i = A.length / 2; i >= 0; i--) {
-            siftdown(A, i);
         }
     }
 }
