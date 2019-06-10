@@ -91,10 +91,70 @@ class Solution:
 
 ```
 
+**Union Find 1**
 
-**Union Find**
+初始化的时候建立一个 children 字典, 在 union 的时候, 如果合并了, 那么把 children 字典也合并, 最后输出 列表不为空的即可
 
-Find parent用来寻根，中间遍历建立关系，同时union，结果输出略加处理。（我感觉set输出就可以了）
+```python
+"""
+Definition for a undirected graph node
+class UndirectedGraphNode:
+    def __init__(self, x):
+        self.label = x
+        self.neighbors = []
+"""
+from collections import defaultdict
+
+class UnionFind:
+    def __init__(self, nodes):
+        self.father = {}
+        self.children = defaultdict(list)
+        for node in nodes:
+            self.father[node.label] = node.label
+            self.children[node.label].append(node.label)
+
+    def find(self, node):
+        path = []
+        while node != self.father[node]:
+            path.append(node)
+            node = self.father[node]
+        for n in path:
+            self.father[n] = node
+        return node
+
+    def union(self, nodeA, nodeB):
+        rootA, rootB = self.find(nodeA), self.find(nodeB)
+        if rootA != rootB:
+            self.father[rootA] = rootB
+            self.children[rootB].extend(self.children[rootA])
+            self.children[rootA] = []
+
+
+class Solution:
+    """
+    @param {UndirectedGraphNode[]} nodes a array of undirected graph node
+    @return {int[][]} a connected set of a undirected graph
+    """
+    def connectedSet(self, nodes):
+        # write your code here
+        uf = UnionFind(nodes)
+
+        for node in nodes:
+            for neighbor in node.neighbors:
+                uf.union(node.label, neighbor.label)
+
+        result = []
+        for k, v in uf.children.items():
+            if len(v) > 0:
+                result.append(sorted(v))
+
+        return result
+```
+
+
+**Union Find 2**
+
+Find parent用来寻根，中间遍历建立关系，同时union，结果输出略加处理。
 
 ```python
 class Solution:

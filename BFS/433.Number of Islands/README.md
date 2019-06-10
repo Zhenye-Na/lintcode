@@ -157,6 +157,62 @@ class Solution:
         return 0 <= x <= m - 1 and 0 <= y <= n - 1
 ```
 
+区别是不需要建立一个 set 来区分是否访问过, 因为他必须要访问, 不然怎么 connect 呢?
+
+```python
+class Solution:
+    """
+    @param grid: a boolean 2D matrix
+    @return: an integer
+    """
+    def __init__(self):
+
+        self.dx = [0, 0, 1, -1]
+        self.dy = [1, -1, 0, 0]
+        self.father = {}
+
+    def numIslands(self, grid):
+        # write your code here
+        if not grid or len(grid) == 0 or len(grid[0]) == 0:
+            return 0
+
+        m, n = len(grid), len(grid[0])
+        self.father = {i:i for i in range(m * n)}
+        self.size = sum([sum(l) for l in grid])
+
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j]:
+                    for k in range(4):
+                        x, y = i + self.dx[k], j + self.dy[k]
+                        if self._inBound(x, y, m, n, grid):
+                            self.union(i * n + j, x * n + y)
+
+        return self.query()
+
+    def _inBound(self, x, y, m, n, grid):
+        return 0 <= x < m and 0 <= y < n and grid[x][y]
+
+    def find(self, position):
+        path = []
+        while position != self.father[position]:
+            path.append(position)
+            position = self.father[position]
+
+        for p in path:
+            self.father[p] = position
+
+        return position
+
+    def union(self, p1, p2):
+        root_p1, root_p2 = self.find(p1), self.find(p2)
+        if root_p2 != root_p1:
+            self.father[root_p1] = root_p2
+            self.size -= 1
+
+    def query(self):
+        return self.size
+```
 
 **DFS**
 

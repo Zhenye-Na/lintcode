@@ -81,8 +81,35 @@ class Solution:
 
 **Union Find**
 
+每一条边相当于一次 `connect / union` 操作, 看最后的联通块个数是否为 1 
 
 ```python
+class UnionFind:
+    def __init__(self, n):
+        self.father = {}
+        for i in range(n):
+            self.father[i] = i
+        self.size = n
+
+    def find(self, node):
+        path = []
+        while node != self.father[node]:
+            path.append(node)
+            node = self.father[node]
+        
+        for n in path:
+            self.father[n] = node
+
+        return node
+
+    def union(self, nodeA, nodeB):
+        rootA = self.find(nodeA)
+        rootB = self.find(nodeB)
+        if rootA != rootB:
+            self.father[rootA] = rootB
+            self.size -= 1
+
+
 class Solution:
     """
     @param n: An integer
@@ -90,32 +117,15 @@ class Solution:
     @return: true if it's a valid tree, or false
     """
     def validTree(self, n, edges):
-        if n - 1 != len(edges):
+        # write your code here
+        if len(edges) != n - 1:
             return False
 
-        self.father = {i: i for i in range(n)}
-        self.size = n
+        uf = UnionFind(n)
 
-        for a, b in edges:
-            self.union(a, b)
+        for s, t in edges:
+            uf.union(s, t)
 
-        return self.size == 1
+        return uf.size == 1
 
-    def union(self, a, b):
-        root_a = self.find(a)
-        root_b = self.find(b)
-        if root_a != root_b:
-            self.size -= 1
-            self.father[root_a] = root_b
-
-    def find(self, node):
-        path = []
-        while node != self.father[node]:
-            path.append(node)
-            node = self.father[node]
-
-        for n in path:
-            self.father[n] = node
-
-        return node
 ```
