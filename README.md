@@ -94,6 +94,7 @@
 630.Knight Shortest Path II (M)  
 1446.01 Matrix Walking Problem (M)  
 375.Clone Binary Tree  
+477.Surrounded Regions  
 
 
 #### [DFS](./DFS/)
@@ -171,7 +172,11 @@
 609.Two Sum - Less than or equal to target  
 443.Two Sum - Greater than target  
 610.Two Sum - Difference equals to target  
-
+32.Minimum Window Substring  
+384.Longest Substring Without Repeating Characters  
+386.Longest Substring with At Most K Distinct Characters  
+406.Minimum Size Subarray Sum  
+461.Kth Smallest Numbers in Unsorted Array
 
 #### [Stack](./Stack/)
 
@@ -179,11 +184,11 @@
 494.Implement Stack by Two Queues  
 40.Implement Queue by Two Stacks  
 224.Implement Three Stacks by Single Array (M)
-955.Implement Queue by Circular Array
+955.Implement Queue by Circular Array  
 **12.Min Stack (Monotonic Stack)** (M)  
 **122.Largest Rectangle in Histogram** (H)  
 **510.Maximal Rectangle** (H)  
-**126.Max Tree** (H)
+**126.Max Tree** (H)  
 
 > **Iterator 相关题**
 
@@ -204,19 +209,21 @@
 
 #### [Heap](./Heap/)
 
+104.Merge K Sorted Lists  
+1272.Kth Smallest Element in a Sorted Matrix  
 130.Heapify  
 4.Ugly Number II  
+401.Kth Smallest Number in Sorted Matrix  
+465.Kth Smallest Sum In Two Sorted Arrays (H)  
+471.Top K Frequent Words  
+486.Merge K Sorted Arrays  
+543.Kth Largest in N Arrays  
 544.Top k Largest Numbers  
 545.Top k Largest Numbers II  
+577.Merge K Sorted Interval Lists  
 612.K Closest Points  
 613.High Five  
-104.Merge K Sorted Lists  
-486.Merge K Sorted Arrays  
 81.Find Median from Data Stream  
-401.Kth Smallest Number in Sorted Matrix  
-131.The Skyline Problem (H)  
-471.Top K Frequent Words  
-
 
 #### [Dynamic Programming](./Dynamic_Programming/)
 
@@ -244,18 +251,28 @@
 [Backpack IV]()  
 
 
-#### [Trie](./Trie/)
-
-
-
-
-
-
 #### [Union Find](./Union_Find/)
 
 433.Number of Islands  
 178.Graph Valid Tree  
 431.Connected Component in Undirected Graph (M)  
+589.Connecting Graph (M)  
+1070.Accounts Merge  
+589.Connecting Graph  
+590.Connecting Graph II  
+591.Connecting Graph III  
+434.Number of Islands II  
+805.Maximum Association Set  
+1396.Set Union  
+1569.Social Network
+
+#### [Trie](./Trie/)
+
+442.Implement Trie (Prefix Tree)  
+1090.Map Sum Pairs  
+559.Trie Service  
+132.Word Search II  
+634.Word Squares  
 
 
 #### [Sweep Line](./Sweep_Line/)
@@ -284,26 +301,20 @@
 53.Reverse Words in a String  
 927.Reverse Words in a String II  
 1173.Reverse Words in a String III  
-
-
-
-
+1041.Reorganize String  
 
 
 #### [Sort](./Sort/)
 
 80.Median  
 5.Kth Largest Element  
-
+894.Pancake Sorting
 
 
 
 #### [Math](./Math/)
 
 730.Sum of All Subsets  
-
-
-
 
 
 
