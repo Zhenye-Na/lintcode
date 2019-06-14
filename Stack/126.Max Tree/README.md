@@ -124,6 +124,13 @@ public class Solution {
 
 *解法 2*
 
+单调(递减)栈
+
+向左/向右 分别找到第一个比它自己大的数, 取最小值, 作为自己的"父亲", 至于左子树/右子树要取决于相对位置关系, 如果在父亲结点的左侧, 就是左儿子
+
+使用九章算法强化班中讲到的单调栈。保存一个单调递减栈。每个数从栈中被 pop 出的时候，就知道它往左和往右的第一个比他大的数的位置了。
+时间复杂度 `O(n)`，而暴力算法最坏情况下会有 `O(n^2)`
+
 ```python
 """
 Definition of TreeNode:
@@ -144,15 +151,18 @@ class Solution:
             
         nodes = [TreeNode(num) for num in A + [sys.maxsize]]
         stack = []
+
         for index, num in enumerate(A + [sys.maxsize]):
             while stack and A[stack[-1]] < num:
                 top = stack.pop()
                 left = A[stack[-1]] if stack else sys.maxsize
+
+                # 看左右两边哪一个小, 左边小, pop出来的就是左边节点的右子树
                 if left < num:
                     nodes[stack[-1]].right = nodes[top]
                 else:
                     nodes[index].left = nodes[top]
-            
+
             stack.append(index)
 
         # sys.maxsize 's left child is the maximum number

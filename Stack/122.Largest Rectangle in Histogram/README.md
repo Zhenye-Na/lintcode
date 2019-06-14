@@ -28,6 +28,13 @@ The first and second rectangular truncated rectangle has an area of 2 * 1 = 2.
 
 **单调栈解法**
 
+```
+用九章算法强化班中讲过的单调栈(stack)。维护一个单调递增栈，逐个将元素 push 到栈里。push 进去之前先把 >= 自己的元素 pop 出来。
+每次从栈中 pop 出一个数的时候，就找到了往左数比它小的第一个数（当前栈顶）和往右数比它小的第一个数（即将入栈的数），
+从而可以计算出这两个数中间的部分宽度 * 被pop出的数，就是以这个被pop出来的数为最低的那个直方向两边展开的最大矩阵面积。
+因为要计算两个数中间的宽度，因此放在 stack 里的是每个数的下标。
+```
+
 *O(n)*
 
 每个元素进栈出栈 -> O(n)
@@ -38,6 +45,8 @@ The first and second rectangular truncated rectangle has an area of 2 * 1 = 2.
 - 下面代码中, `h = height[stack.pop()]` 可以知道左边界和右边界, 因为是 `cur` 这根柱子让 `h` 从栈中 `pop` 出来, (假如 `cur` 不是他的右边界, 那么 `h` 早就 `pop` 出来了), 左边界就是现在的**栈顶元素**
 - 以 h 为高度的矩形, 被 cur 以右边界限制住了, 即使 cur 右边有比 cur 还矮的柱子, 以 h 为高的矩形也画不过去
 - `cur = -1` 这一步操作是为了清空栈
+
+*实现方式 1*
 
 ```python
 class Solution:
@@ -61,6 +70,29 @@ class Solution:
 
             stack.append(i)
 
+        return area
+```
+
+*实现方式 2*
+
+```python
+class Solution:
+    """
+    @param height: A list of integer
+    @return: The area of largest rectangle in the histogram
+    """
+    def largestRectangleArea(self, heights):
+        indices_stack = []
+        area = 0
+        for index, height in enumerate(heights + [0]):
+            while indices_stack and heights[indices_stack[-1]] >= height:    	#如果列表尾部高度大于当前高度
+                popped_index = indices_stack.pop()
+                left_index = indices_stack[-1] if indices_stack else -1		
+                width = index - left_index - 1		#如果列表为空，则宽度为index，否则为index-indices_stack[-1]-1
+                area = max(area, width * heights[popped_index])
+                
+            indices_stack.append(index)		#压入列表中
+            
         return area
 ```
 

@@ -21,6 +21,7 @@ class Solution:
             while stack and A[stack[-1]] < num:
                 top = stack.pop()
                 left = A[stack[-1]] if stack else sys.maxsize
+
                 if left < num:
                     nodes[stack[-1]].right = nodes[top]
                 else:
