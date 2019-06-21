@@ -17,6 +17,7 @@
 585.Maximum Number in Mountain Sequence  
 75.Find Peak Element  
 141.Sqrt(x)  
+586.Sqrt(x) II  
 248.Count of Smaller Number (M)  
 159.Find Minimum in Rotated Sorted Array  
 160.Find Minimum in Rotated Sorted Array II  
@@ -119,7 +120,7 @@
 1031.Is Graph Bipartite
 
 
-#### [Linked List]()
+#### [Linked List](./Linked_List)
 
 450.Reverse Nodes in k-Group  
 165.Merge Two Sorted Lists  
@@ -137,7 +138,7 @@
 372.Delete Node in a Linked List  
 
 
-#### [Array]()
+#### [Array](./Array)
 
 41.Maximum Subarray  
 604.Window Sum  
@@ -176,14 +177,16 @@
 384.Longest Substring Without Repeating Characters  
 386.Longest Substring with At Most K Distinct Characters  
 406.Minimum Size Subarray Sum  
-461.Kth Smallest Numbers in Unsorted Array
+461.Kth Smallest Numbers in Unsorted Array  
+363.Trapping Rain Water  
+1487.Judging Triangle
 
 #### [Stack](./Stack/)
 
 575.Decode String (Expression Expand)  
 494.Implement Stack by Two Queues  
 40.Implement Queue by Two Stacks  
-224.Implement Three Stacks by Single Array (M)
+224.Implement Three Stacks by Single Array (M)  
 955.Implement Queue by Circular Array  
 **12.Min Stack (Monotonic Stack)** (M)  
 **122.Largest Rectangle in Histogram** (H)  
@@ -224,13 +227,20 @@
 612.K Closest Points  
 613.High Five  
 81.Find Median from Data Stream  
+360.Sliding Window Median  
+
 
 #### [Dynamic Programming](./Dynamic_Programming/)
 
-109.Triangle   
+109.Triangle  
+110.Minimum Path Sum  
+114.Unique Paths  
+115.Unique Paths II  
+679.Unique Paths III  
+
 191.Maximum Product Subarray  
 
-**Backpack**
+> **Backpack**
 
 0-1 背包问题
 
@@ -277,16 +287,9 @@
 
 #### [Sweep Line](./Sweep_Line/)
 
-
-
-
-
-
-#### [Deque](./Deque/)
-
-
-
-
+391.Number of Airplanes in the Sky  
+919.Meeting Rooms II  
+821.Time Intersection
 
 
 #### [Bit Manipulation](./Bit_Manipulation/)
@@ -302,6 +305,8 @@
 927.Reverse Words in a String II  
 1173.Reverse Words in a String III  
 1041.Reorganize String  
+78.Longest Common Prefix  
+784.The Longest Common Prefix II  
 
 
 #### [Sort](./Sort/)
@@ -320,6 +325,8 @@
 
 #### [Others](./Others/)
 
+842.Origami  
+1022.Valid Tic-Tac-Toe State  
 
 
 
