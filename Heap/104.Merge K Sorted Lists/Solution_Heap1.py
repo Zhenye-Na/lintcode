@@ -1,6 +1,5 @@
 import heapq
 
-
 """
 Definition of ListNode
 class ListNode(object):
