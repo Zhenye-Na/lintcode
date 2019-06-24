@@ -25,7 +25,9 @@ Output: 9973
 Explanation: No swap.
 ```
 
+数字最多是9位数, 所以完全可以暴力枚举所有的交换情况, 然后取最大的.
 
+或者可以统计出每一位数字最后出现的位置, 然后从最高位开始, 对于每一位尝试寻找一个在它右边的最大的数, 若能找到, 直接交换即可.
 
 ```python
 class Solution:
@@ -40,7 +42,7 @@ class Solution:
             for j in range(i + 1, len(num)):
                 if int(num[j]) > int(num[i]):
                     # swap
-                    tmp = int("".join(num[:i] + [num[j]] + num[i + 1:j] + [num[i]] + num[j + 1:]))
+                    tmp = int("".join(num[:i] + [num[j]] + num[i + 1:j] + [num[i]] + num[j + 1:])
                     res = max(res, tmp)
         return res
 ```
