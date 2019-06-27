@@ -9,18 +9,19 @@ class Solution:
     def uniqueWeightedPaths(self, grid):
         if not grid or not grid[0]:
             return 0
-        
+
         n, m = len(grid), len(grid[0])
         tmp, sumset = 0, []
         for v in grid[0]:
             tmp += v
             sumset.append({tmp})
-        
-        for i in range(1,n):
+
+        for i in range(1, n):
             for j in range(m):
                 if j == 0:
                     v = sumset[j].pop() + grid[i][j]
                     sumset[j] = {v}
                 else:
-                    sumset[j] = {grid[i][j] + v for v in sumset[j].union(sumset[j-1])}
+                    sumset[j] = {grid[i][j] +
+                                 v for v in sumset[j].union(sumset[j - 1])}
         return sum(sumset[m-1])
