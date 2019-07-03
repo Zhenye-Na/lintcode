@@ -1,5 +1,5 @@
 class LinkedNode:
-    
+
     def __init__(self, key=None, value=None, next=None):
         self.key = key
         self.value = value
@@ -10,6 +10,7 @@ class LRUCache:
     """
     @param: capacity: An integer
     """
+
     def __init__(self, capacity):
         # do intialization if necessary
         self.key_to_prev = {}
@@ -17,11 +18,11 @@ class LRUCache:
         self.tail = self.dummy
         self.capacity = capacity
 
-
     """
     @param: key: An integer
     @return: An integer
     """
+
     def get(self, key):
         # write your code here
         if key not in self.key_to_prev:
@@ -34,9 +35,10 @@ class LRUCache:
     @param: value: An integer
     @return: nothing
     """
+
     def set(self, key, value):
         # write your code here
-        if key in self.key_to_prev:	   
+        if key in self.key_to_prev:
             self.kick(self.key_to_prev[key])
             self.key_to_prev[key].next.value = value
         else:
@@ -50,7 +52,7 @@ class LRUCache:
         self.key_to_prev[node.key] = self.tail
         self.tail.next = node
         self.tail = node
-    
+
     def pop_front(self):
         # 删除头部
         head = self.dummy.next
@@ -65,8 +67,10 @@ class LRUCache:
         node = prev.next
         if node == self.tail:
             return
+
         prev.next = node.next
         if node.next is not None:
             self.key_to_prev[node.next.key] = prev
             node.next = None
+
         self.push_back(node)
