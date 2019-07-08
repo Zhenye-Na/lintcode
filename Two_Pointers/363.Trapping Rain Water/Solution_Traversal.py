@@ -5,21 +5,25 @@ class Solution:
     """
     def trapRainWater(self, heights):
         # write your code here
-        if not heights or len(heights) == 0:
+        # Forward-Backward-Traverse
+        if not heights or len(heights) <= 1:
             return 0
 
-        left_max, left_max_height = [], -1
-        for height in heights:
-            left_max_height = max(left_max_height, height)
-            left_max.append(left_max_height)
+        # find the highest bar on the left
+        left_max, curr_max = [], -1
+        for i in range(len(heights)):
+            curr_max = max(curr_max, heights[i])
+            left_max.append(curr_max)
 
-        right_max, right_max_height = [], -1
-        for height in reversed(heights):
-            right_max_height = max(right_max_height, height)
-            right_max.append(right_max_height)
+        # find the highest bar on the right
+        right_max, curr_max = [], -1
+        for i in range(len(heights) - 1, -1, -1):
+            curr_max = max(curr_max, heights[i])
+            right_max.append(curr_max)
 
-        water, n = 0, len(heights)
-        for i in range(n):
-            water += min(left_max[i], right_max[n - i - 1]) - heights[i]
+        # select the lower bar from left_max and right_max
+        res, n = 0, len(heights)
+        for i in range(len(heights)):
+            res += min(left_max[i], right_max[n - 1 - i]) - heights[i]
 
-        return water
+        return res

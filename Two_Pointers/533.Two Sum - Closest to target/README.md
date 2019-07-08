@@ -2,7 +2,7 @@
 
 **Description**
 
-Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
+Given an array nums of `n` integers, find two integers in nums such that the sum is closest to a given number, `target`.
 
 ```
 Return the absolute value of difference between the sum of the two integers and the target.
@@ -33,7 +33,7 @@ The minimum difference is 6. (4 - (- 1 - 1) = 6).
 Do it in `O(nlogn)` time complexity.
 
 
-
+**Two Pointers**
 
 ```python
 class Solution:

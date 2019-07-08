@@ -58,7 +58,7 @@ class Solution:
         left, right = start, end
         pivot = startColor + (endColor - startColor) // 2
         while left <= right:
-            while left <= right and colors[left] <= pivot:
+            while left <= right and colors[left] < pivot:
                 left += 1
             while left <= right and colors[right] > pivot:
                 right -= 1
