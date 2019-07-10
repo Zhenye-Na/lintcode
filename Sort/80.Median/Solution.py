@@ -3,6 +3,7 @@ class Solution:
     @param nums: A list of integers
     @return: An integer denotes the middle number of the array
     """
+
     def median(self, nums):
         # write your code here
         if not nums or len(nums) == 0:
@@ -14,7 +15,7 @@ class Solution:
         if start == end:
             return nums[start]
 
-        left, right =  start, end
+        left, right = start, end
         pivot = nums[left + (right - left) // 2]
         while left <= right:
             while left <= right and nums[left] < pivot:

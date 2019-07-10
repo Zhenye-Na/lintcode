@@ -2,7 +2,7 @@
 
 **Description**
 
-Find K-th largest element in an array.
+Find `K`-th largest element in an array.
 
 You can swap elements in the array
 
@@ -42,6 +42,7 @@ class Solution:
     @param nums: An array
     @return: the Kth largest element
     """
+
     def kthLargestElement(self, n, nums):
         # write your code here
         if not nums or len(nums) == 0:
@@ -52,7 +53,6 @@ class Solution:
     def _findK(self, start, end, nums, n):
         if start == end:
             return nums[start]
-
 
         left, right = start, end
         pivot = nums[left + (right - left) // 2]
