@@ -3,6 +3,7 @@ class Solution:
     @param: s: A string
     @return: A list of lists of string
     """
+
     def partition(self, s):
         # write your code here
         results = []

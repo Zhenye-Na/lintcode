@@ -2,9 +2,9 @@
 
 **Description**
 
-Given a string s. Partition s such that every substring in the partition is a palindrome.
+Given a string `s`. Partition `s` such that every `substring` in the partition is a palindrome.
 
-Return all possible palindrome partitioning of s.
+Return all possible palindrome partitioning of `s`.
 
 ```
 Different partitionings can be in any order.
