@@ -40,6 +40,13 @@ And then the window to the right one. ` [1, | 2,3,1,2,3 |] `, a maximum of ` 3 `
 `O(n)` time and `O(k)` memory
 
 
+**单调递减队列**
+
+比如 window size = 3, 数组 `[5, 2, 3, 4, 1, 6]`
+
+`[5, 2, 3]` 中, 我们没有必要去存储 `2` 这个数字, 因为它永远都不可能称为最大值, 因为 `5`, `3` 都在.
+
+
 ```
 quote @Nepenthes Athene 的解释
 
@@ -66,6 +73,7 @@ deque里的记录有两个特点：
 ```python
 from collections import deque
 
+
 class Solution:
     """
     @param nums: A list of integers.
@@ -86,39 +94,47 @@ class Solution:
 
             if i + 1 >= k:
                 res.append(nums[max_queue[0]])
-            
+
             if i + 1 - k == max_queue[0]:
                 max_queue.popleft()
 
         return res
 ```
 
+**huahua 的解法**
+
 ```python
-from collections import deque
+"""
+Author: Huahua
+Running time: 238 ms
+"""
+
+
+class MaxQueue:
+    def __init__(self):
+        self.q_ = collections.deque()
+
+    def push(self, e):
+        while self.q_ and e > self.q_[-1]:
+            self.q_.pop()
+        self.q_.append(e)
+
+    def pop(self):
+        self.q_.popleft()
+
+    def max(self):
+        return self.q_[0]
+
 
 class Solution:
-    """
-    @param nums: A list of integers.
-    @param k: An integer
-    @return: The maximum number inside the window at each moving.
-    """
     def maxSlidingWindow(self, nums, k):
-        # write your code here
-        if not nums or len(nums) == 0:
-            return []
-
-        max_queue, res = deque([]), []
+        q = MaxQueue()
+        ans = []
         for i in range(len(nums)):
-
-            while max_queue and nums[i] >= nums[max_queue[-1]]:
-                max_queue.pop()
-            max_queue.append(i)
-
-            if i + 1 >= k:
-                res.append(nums[max_queue[0]])
-            
-            if i + 1 - k == max_queue[0]:
-                max_queue.popleft()
-
-        return res
+            q.push(nums[i])
+            if i >= k - 1:
+                ans.append(q.max())
+                if nums[i - k + 1] == q.max():
+                    q.pop()
+        return ans
 ```

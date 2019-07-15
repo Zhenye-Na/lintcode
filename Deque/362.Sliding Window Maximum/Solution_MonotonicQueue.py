@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     """
     @param nums: A list of integers.
@@ -20,7 +21,7 @@ class Solution:
 
             if i + 1 >= k:
                 res.append(nums[max_queue[0]])
-            
+
             if i + 1 - k == max_queue[0]:
                 max_queue.popleft()
 
