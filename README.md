@@ -330,6 +330,15 @@
 
 
 
+#### Resources
+
+Below are some good resources to look through:
+
+- [Big-O Cheat Sheet](http://www.bigocheatsheet.com/), PDF version can be download [here](http://www.bigocheatsheet.com/pdf/big-o-cheatsheet.pdf) or be found in this repo [here](./big-o-cheatsheet.pdf)
+- Sergey, [Java Collections Complexity cheatsheet](https://gist.github.com/iSergius/e06963c6eca0a639023666097227427c), txt file can be found [here](./complexityjava.txt)
+- Python Complexity Analysis, txt file can be found [here](complexitypython.txt)
+
+
 <p align="center">
 <span style="color:#1d58a6"><sup> &copy; Copyright Zhenye Na <img src="https://cdn3.iconfinder.com/data/icons/coffee-11/500/Coffee_brain-512.png" width="20" height="auto" /> May 2018 </sup></span>
 </p>
