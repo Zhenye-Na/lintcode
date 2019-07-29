@@ -12,13 +12,13 @@ class Solution:
         dy = [1, -1, 0, 0]
 
         m, n = len(board), len(board[0])
-        self.father = {i : i for i in range(m * n + 1)}
+        self.father = {i: i for i in range(m * n + 1)}
 
         for i in range(m):
             for j in range(n):
                 if board[i][j] == "X":
                     continue
-                
+
                 if i == 0 or i == m - 1 or j == 0 or j == n - 1:
                     self._connect(i * n + j, m * n)
                 else:
@@ -30,9 +30,8 @@ class Solution:
 
         for x in range(m):
             for y in range(n):
-                if board[x][y] == "O" and self._find(x * n + y) != m * n :
+                if board[x][y] == "O" and self._find(x * n + y) != m * n:
                     board[x][y] = "X"
-
 
     def _find(self, loc):
         path = []
@@ -50,4 +49,3 @@ class Solution:
         cluster2 = self._find(loc2)
         if cluster2 != cluster1:
             self.father[min(cluster2, cluster1)] = max(cluster2, cluster1)
-

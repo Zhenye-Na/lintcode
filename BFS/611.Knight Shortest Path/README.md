@@ -28,7 +28,7 @@ If the knight is at `(x, y)`, he can get to the following positions in one step:
 ```
 
 
-Example
+**Example**
 
 Example 1:
 
@@ -54,10 +54,9 @@ source = [2, 0] destination = [2, 2]
 Output:-1
 ```
 
-
 **BFS**
 
-普通方法可能会导致 MLE, 所以需要用一个 `HashMap<Tuple, Integer>` 来记录从 `source` 到当前每一个位置走了多少步.
+普通方法会导致 MLE, 所以需要用一个 `HashMap<Tuple, Integer>` 来记录从 `source` 到当前每一个位置走了多少步.
 
 ```python
 from collections import deque
