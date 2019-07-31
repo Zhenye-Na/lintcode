@@ -31,8 +31,6 @@ Output: -1
 `O(logn)` time, `n` is the first index of the given target number.
 
 
-
-
 二倍跳跃边界搜索, 二分查找答案
 
 ```python
@@ -43,7 +41,6 @@ while reader.get(end) < target:
 本题是找到第一个出现的位置，所以先查找 `start` 是否返回，再查找 `end` 是否返回
 
 
-
 ```python
 """
 Definition of ArrayReader
@@ -52,6 +49,7 @@ class ArrayReader(object):
     	# return the number on given index, 
         # return 2147483647 if the index is invalid.
 """
+
 class Solution:
     """
     @param: reader: An instance of ArrayReader.
@@ -80,5 +78,4 @@ class Solution:
         if reader.get(end) == target:
             return end
         return -1
-
 ```

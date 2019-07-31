@@ -4,7 +4,7 @@
 
 Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 
-(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
+(i.e., `0 1 2 4 5 6 7` might become `4 5 6 7 0 1 2`).
 
 Find the minimum element.
 
@@ -40,7 +40,7 @@ Output : 0.
 // 反正面试考的不是你在这个题上会不会用二分法。这个题的考点是你想不想得到最坏情况。
 ```
 
-在每次循环中, 只要让让 `nums[start] != nums[end]` 就可以, 原来的模板不用变
+在每次循环中, 只要让 `nums[start] != nums[end]` 就可以, 原来的模板不用变
 
 
 ```python
@@ -70,4 +70,3 @@ class Solution:
             return nums[start]
         return nums[end]
 ```
-

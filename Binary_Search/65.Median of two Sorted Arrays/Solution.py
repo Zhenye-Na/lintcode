@@ -24,8 +24,10 @@ class Solution:
         if k == 1:
             return min(A[a_index], B[b_index])
 
-        a_val = A[a_index + k // 2 - 1] if a_index + k // 2 <= len(A) else sys.maxsize
-        b_val = B[b_index + k // 2 - 1] if b_index + k // 2 <= len(B) else sys.maxsize
+        a_val = A[a_index + k // 2 - 1] if a_index + \
+            k // 2 <= len(A) else sys.maxsize
+        b_val = B[b_index + k // 2 - 1] if b_index + \
+            k // 2 <= len(B) else sys.maxsize
 
         if a_val > b_val:
             return self._find_kth_element(A, a_index, B, b_index + k // 2, k - k // 2)

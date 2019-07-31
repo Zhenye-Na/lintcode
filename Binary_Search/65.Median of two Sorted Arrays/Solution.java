@@ -30,7 +30,6 @@ public class Solution {
             return Math.min(A[indexA], B[indexB]);
         }
 
-
         int keyA = Integer.MAX_VALUE;
         int keyB = Integer.MAX_VALUE;
 

@@ -20,7 +20,7 @@ Input: [4, 5, 6, 7, 0, 1, 2]
 Output: 0
 
 Explanation:
-The minimum value in an array is 0.
+The minimum value in an ar7ray is 0.
 ```
 
 Example 2:
@@ -33,6 +33,9 @@ Explanation:
 The minimum value in an array is 1.
 ```
 
+**解析**
+
+对数组进行具象化, 可以画出图, 然后问题就是"以数组开头元素作为比较的基准, 还是数组末尾元素?", 这里考虑特殊情况也就是*没有经过 rotate 的数组*. 如果以开头元素的话, 得不到正确答案.
 
 ```python
 class Solution:

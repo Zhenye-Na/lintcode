@@ -4,6 +4,7 @@ class Solution:
     @param target: An integer you want to search in matrix
     @return: An integer indicate the total occurrence of target in the given matrix
     """
+
     def searchMatrix1(self, matrix, target):
         # write your code here
         count = 0
@@ -25,7 +26,6 @@ class Solution:
 
         return count
 
-
     def searchMatrix2(self, matrix, target):
         # write your code here
         if not matrix or not target:
@@ -38,4 +38,3 @@ class Solution:
                     count += 1
                     break
         return count
-

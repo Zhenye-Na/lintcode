@@ -12,7 +12,7 @@ class Solution:
         while start + 1 < end:
             while nums[start] == nums[end]:
                 end -= 1
-            
+
             mid = start + (end - start) // 2
             if nums[mid] > nums[end]:
                 start = mid

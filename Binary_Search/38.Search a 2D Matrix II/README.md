@@ -12,15 +12,19 @@ This matrix has the following properties:
 
 **Example**
 
-```
+
 Example 1:
 
+```
 Input:
 	[[3,4]]
 	target=3
 Output:1
+```
+
 Example 2:
 
+```
 Input:
     [
       [1, 3, 5, 7],
@@ -37,9 +41,9 @@ Output:2
 
 
 
-#### 遍历一下数组
+**遍历一下数组**
 
-#### 二维矩阵: 可以采用逼近法，从左下角开始往上逼近
+二维矩阵: 可以采用逼近法，从左下角开始往上逼近
 
 <div>
   <img src="https://liweiwei1419.github.io/images/sword-for-offer/4-1.jpg" width="70%">
@@ -51,13 +55,13 @@ Assuming: No duplicate integers in each row or column 这一点很关键, 面试
 - 若小于 `target`, 则这一列就可以划掉了（因为每一列的最下面一个数最大）
 - 若大于 `target`, 则这一行就可以划掉了（因为每一行的最左边一个数最小）
 
-#### 遍历 + 二分
+**遍历 + 二分**
 
-从右上角到左下角遍历，时间复杂度O(m+n)，空间复杂度O(1)
+从右上角到左下角遍历，时间复杂度 `O(m+n)`，空间复杂度 `O(1)`
 
-遍历每行，在每行中用binary search，时间复杂度O(mlogn), 可以先对比行数和列数，然后遍历比较小的维度，二分搜索比较大的维度，时间复杂度 min ( O(mlogn), O(nlogm))
+遍历每行，在每行中用binary search，时间复杂度 `O(mlogn)`, 可以先对比行数和列数，然后遍历比较小的维度，二分搜索比较大的维度，时间复杂度 `min ( O(mlogn), O(nlogm))`
 
-对比遍历和二分法，在行数列数接近的时候选用前者, 在 m >> n 或者 n >> m 的时候选择后者
+对比遍历和二分法，在行数列数接近的时候选用前者, 在 `m >> n` 或者 `n >> m` 的时候选择后者
 
 
 ```python
@@ -68,23 +72,23 @@ Assuming: No duplicate integers in each row or column 这一点很关键, 面试
 # - 更多详情请见官方网站：http://www.jiuzhang.com/?source=code
 
 
-def searchMatrix1(self,matrix,target):
+def searchMatrix1(self, matrix, target):
         m = len(matrix)
         if m == 0: return 0
         n = len(matrix[0])
         if n == 0: return 0
-        row,column = 0, n-1
+        row, column = 0, n-1
         ans = 0
         while row < m and column >= 0:
             if matrix[row][column] < target:
                 row += 1
             elif matrix[row][column] > target:
                 column -= 1
-            else:#matrix[row][colum] == target:
+            else:  # matrix[row][colum] == target:
                 ans += 1
                 row += 1
         return ans
-        
+
     def searchMatrix2(self, matrix, target):
         # write your code here
         def binarySearch(nums,target):
@@ -108,7 +112,7 @@ def searchMatrix1(self,matrix,target):
         for i in range(m):
             ans += binarySearch(matrix[i],target)
         return ans
-        
+
     def searchMatrix3(self, matrix, target):
         def searchRow(matrix,target):
             ans = 0
@@ -127,7 +131,7 @@ def searchMatrix1(self,matrix,target):
                 if matrix[i][left] == target or matrix[i][right] == target:
                     ans += 1
             return ans
-        
+
         def searchColumn(matrix,target):
             ans = 0
             for i in range(len(matrix[0])):
@@ -145,7 +149,7 @@ def searchMatrix1(self,matrix,target):
                 if matrix[left][i] == target or matrix[right][i] == target:
                     ans += 1
             return ans
-        
+
         m = len(matrix)
         if m == 0: return 0
         n = len(matrix[0])

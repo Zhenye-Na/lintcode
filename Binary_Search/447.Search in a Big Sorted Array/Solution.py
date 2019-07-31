@@ -5,6 +5,8 @@ class ArrayReader(object):
     	# return the number on given index, 
         # return 2147483647 if the index is invalid.
 """
+
+
 class Solution:
     """
     @param: reader: An instance of ArrayReader.
@@ -20,7 +22,7 @@ class Solution:
         start, end = 0, n
         while start + 1 < end:
             mid = start + (end - start) // 2
-            
+
             if reader.get(mid) == target:
                 end = mid
             elif reader.get(mid) > target:
