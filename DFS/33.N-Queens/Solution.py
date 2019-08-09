@@ -13,7 +13,6 @@ class Solution:
         results = self._draw_chessboard(n)
         return results
 
-
     def _dfs(self, startIndex, n, solution):
         if len(solution) == n:
             self.solutions.append(solution[:])
@@ -24,8 +23,6 @@ class Solution:
                 self._dfs(0, n, solution)
                 solution.pop()
 
-
-
     def _isValid(self, solution, colIndex, rowIndex):
         for row, col in enumerate(solution):
             if row == rowIndex or col == colIndex:
@@ -35,7 +32,6 @@ class Solution:
             if row - col == rowIndex - colIndex:
                 return False
         return True
-
 
     def _draw_chessboard(self, n):
         results = []

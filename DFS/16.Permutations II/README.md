@@ -77,7 +77,7 @@ class Solution:
         for i in range(len(nums)):
             if not visited[i]:
                 # remove duplicates
-                if i > 0 and nums[i - 1] == nums[i] and visited[i - 1]:
+                if i > 0 and nums[i - 1] == nums[i] and not visited[i - 1]:
                     continue
 
                 # backtracking
