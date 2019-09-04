@@ -42,7 +42,7 @@ Explanation:
 
 **Hash Map**
 
-简单讲就是将每个数的前两位数作为 `unique key`, 将其个位数作为 `value`, 放入 hashmap中, 因此有
+简单讲就是将每个数的前两位数作为 `unique key`, 将其个位数作为 `value`, 放入 hashmap 中, 因此有
 
 - `depth = key // 10`, `pos = key % 10`
 - `left_child_key = (depth + 1) * 10 + pos * 2 - 1`

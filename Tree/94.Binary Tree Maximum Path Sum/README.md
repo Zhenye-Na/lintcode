@@ -13,14 +13,14 @@ Example 1:
 	Input:  For the following binary tree（only one node）:
 	2
 	Output：2
-	
+
 Example 2:
 	Input:  For the following binary tree:
 
       1
      / \
     2   3
-		
+
 	Output: 6
 ```
 

@@ -1,11 +1,12 @@
 import sys
 
+
 class Solution:
     """
     @param root: The root of binary tree.
     @return: True if the binary tree is BST, or false
     """
-    
+
     def isValidBST(self, root):
         # write your code here
         if root is None:
@@ -14,16 +15,15 @@ class Solution:
         leftMax = sys.maxsize
         rightMin = -sys.maxsize - 1
         return self.dfs(root, rightMin, leftMax)
-        
-    def dfs(self, root, Min, Max): 
+
+    def dfs(self, root, Min, Max):
         if root is None:
             return True
 
-        if root.val >= Max or root.val <= Min :
+        if root.val >= Max or root.val <= Min:
             return False
-        
-        return self.dfs(root.left, Min, root.val) and self.dfs(root.right, root.val, Max)
 
+        return self.dfs(root.left, Min, root.val) and self.dfs(root.right, root.val, Max)
 
 
 """
@@ -34,11 +34,13 @@ class TreeNode:
         self.left, self.right = None, None
 """
 
+
 class Solution:
     """
     @param root: The root of binary tree.
     @return: True if the binary tree is BST, or false
     """
+
     def isValidBST(self, root):
         # write your code here
         isBST, _, _ = self._validate(root)

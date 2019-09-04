@@ -116,8 +116,4 @@ class Solution:
             return current_min, min_right_tree, current_sum
 
         return current_min, root, current_sum
-
 ```
-
-
-

@@ -22,7 +22,7 @@ Input:  {-1}
 Output: true
 Explanation:
 For the following binary tree（only one node）:
-	      -1
+    -1
 This is a binary search tree.
 ```
 
@@ -59,14 +59,14 @@ class Solution:
         leftMax = sys.maxsize
         rightMin = -sys.maxsize - 1
         return self.dfs(root, rightMin, leftMax)
-        
+
     def dfs(self, root, Min, Max): 
         if root is None:
             return True
 
         if root.val >= Max or root.val <= Min :
             return False
-        
+
         return self.dfs(root.left, Min, root.val) and self.dfs(root.right, root.val, Max)
 ```
 

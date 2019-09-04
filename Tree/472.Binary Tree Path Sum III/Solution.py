@@ -6,12 +6,14 @@ class ParentTreeNode:
         self.parent, self.left, self.right = None, None, None
 """
 
+
 class Solution:
     """
     @param: root: the root of binary tree
     @param: target: An integer
     @return: all valid paths
     """
+
     def binaryTreePathSum3(self, root, target):
         # write your code here
         results = []

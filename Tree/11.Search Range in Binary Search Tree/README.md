@@ -2,7 +2,7 @@
 
 **Description**
 
-Given a binary search tree and a range [k1, k2], return node values within a given range in ascending order.
+Given a binary search tree and a range `[k1, k2]`, return node values within a given range in *ascending* order.
 
 **Example**
 

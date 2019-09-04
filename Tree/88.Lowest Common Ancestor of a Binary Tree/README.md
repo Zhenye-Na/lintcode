@@ -44,7 +44,7 @@ Explanation:
 使用分法法, 每次都返回一个可能的 LCA, 返回的时候分几种情况
 
 1. 如果两边返回的都不是 `null`
-    - 如果相等，那么就是 LCA, 返回其中任意一个即可
+    - 如果相等, 那么就是 LCA, 返回其中任意一个即可
     - 如果不相等, 那么 `root` 为 LCA
 2. 如果 `left != null && right == null` , 返回 `left`
 3. 如果 `right != null && left == null` , 返回 `right`
@@ -82,7 +82,6 @@ class Solution:
 
         left = self._dfs(root.left, A, B)
         right = self._dfs(root.right, A, B)
-
 
         # A 和 B 一边一个
         if left and right: 

@@ -1,8 +1,8 @@
 # 597. Subtree with Maximum Average
 
-Description
+**Description**
 
-Given a binary tree, find the subtree with maximum average. Return the root of the subtree.
+Given a binary tree, find the subtree with `maximum average`. Return the root of the subtree.
 
 ```
 LintCode will print the subtree which root is your return node.
@@ -37,7 +37,6 @@ Explanation:
  -5     11
 The average of subtree of 1,-5,11 is 2.333,-5,11. So the subtree of 11 is the maximun.
 ```
-
 
 
 **Divide Conquer + Global variable**

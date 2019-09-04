@@ -2,9 +2,10 @@
 
 **Description**
 
-Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes.
+Given the root and two nodes in a Binary Tree. Find the lowest common ancestor (LCA) of the two nodes.
+
 The lowest common ancestor is the node with largest depth which is the ancestor of both nodes.
-Return null if LCA does not exist.
+Return `null` if `LCA` does not exist.
 
 ```
 node A or node B may not exist in tree.
