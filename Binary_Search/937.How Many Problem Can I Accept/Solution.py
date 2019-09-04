@@ -4,6 +4,7 @@ class Solution:
     @param k: an integer
     @return: how many problem can you accept
     """
+
     def canAccept(self, n, k):
         # Write your code here
         # range of number of problems can be solved

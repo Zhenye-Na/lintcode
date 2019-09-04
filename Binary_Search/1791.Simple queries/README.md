@@ -9,6 +9,7 @@ Give you two arrays, the first array may contains repeatable integers, The secon
 
 Example 1:
 
+```
 Input: nums = [3, 2, 4, 3, 5, 1],sub = [2, 4]
 Output: [2, 5] 
 Explanation: <=2 numbers are [1,2], <= 4 numbers are [1,2,3,3,4]
