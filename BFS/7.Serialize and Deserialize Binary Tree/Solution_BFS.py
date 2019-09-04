@@ -16,6 +16,7 @@ class Solution:
     to serialize a binary tree which denote by a root node to a string which
     can be easily deserialized by your own "deserialize" method later.
     """
+
     def serialize(self, root):
         # write your code here
         self.queue = deque([])
@@ -53,6 +54,7 @@ class Solution:
     designed by yourself, and deserialize it here as you serialize it in 
     "serialize" method.
     """
+
     def deserialize(self, data):
         # write your code here
         if data[0] == '#':

@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def serialize(self, root):
         # write your code here
         if not root:
@@ -9,7 +9,7 @@ class Solution:
         ans += self.serialize(root.left)
         ans += self.serialize(root.right)
         return ans
-            
+
     def deserialize(self, data):
         # write your code here
         ch = data.pop(0)
@@ -23,14 +23,16 @@ class Solution:
 
 
 class Solution:
-    
+
     def serialize(self, root):
-        if not root: return ['#']
+        if not root:
+            return ['#']
         return [str(root.val)] + self.serialize(root.left) + self.serialize(root.right)
-    
+
     def deserialize(self, data):
         elem = data.pop(0)
-        if elem == '#': return None 
+        if elem == '#':
+            return None
         root = TreeNode(int(elem))
         root.left = self.deserialize(data)
         root.right = self.deserialize(data)

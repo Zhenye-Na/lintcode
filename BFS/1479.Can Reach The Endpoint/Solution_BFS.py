@@ -33,7 +33,7 @@ class Solution:
                 if (new_x, new_y) in history:
                     continue
 
-                if not self._isValid(new_x, new_y, m , n, grid):
+                if not self._isValid(new_x, new_y, m, n, grid):
                     continue
 
                 queue.append((new_x, new_y))
@@ -41,5 +41,5 @@ class Solution:
 
         return False
 
-    def _isValid(self, x, y, m , n, grid):
+    def _isValid(self, x, y, m, n, grid):
         return 0 <= x < m and 0 <= y < n and (grid[x][y] == self.SPACE or grid[x][y] == self.ENDPOINT)
