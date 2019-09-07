@@ -11,7 +11,7 @@ Different orders are counted as different combinations.
 
 **Example**
 
-Example1
+Example 1
 
 ```
 Input: nums = [1, 2, 4], and target = 4
@@ -26,7 +26,7 @@ The possible combination ways are:
 [4]
 ```
 
-Example2
+Example 2
 
 ```
 Input: nums = [1, 2], and target = 4
@@ -42,7 +42,9 @@ The possible combination ways are:
 
 
 
-Backtracking 做法, 巨慢无比 ...
+**Backtracking**
+
+巨慢无比 ...
 
 ```python
 class Solution:

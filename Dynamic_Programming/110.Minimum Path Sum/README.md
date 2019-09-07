@@ -6,7 +6,7 @@ Given a `m x n` grid filled with non-negative numbers, find a path from `top-lef
 
 You can only go `right` or `down` in the path..
 
-Example
+**Example**
 
 ```
 Example 1:
