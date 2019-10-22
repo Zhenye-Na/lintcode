@@ -18,7 +18,7 @@ class Solution:
         # map from integer -> set of neighbors
         mapping = self._get_neighbors(edges)
 
-        # Constraint 2: # of onnected component in the graph is 1
+        # Constraint 2: # of connected component in the graph is 1
         queue = deque([])
         queue.append(0)
         history = set()
