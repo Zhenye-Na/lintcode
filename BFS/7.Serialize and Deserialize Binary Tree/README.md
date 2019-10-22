@@ -38,12 +38,12 @@ it will be serialized {1,2,3}
 
 Our data serialization use BFS traversal. This is just for when you got Wrong Answer and want to debug the input.
 
-You can use other method to do serializaiton and deserialization.
+You can use other method to do `serializaiton` and `deserialization`.
 
 **BFS**
 
-- `serialize()` 采用bfs，对当前二叉树搜索，遍历vector，将当前节点左右儿子依次存入 vector，空节点需要删去。
-- `deserialize()` 首先切割字符串，然后用 isLeftChild 标记是当前是左右儿子，数字转化为字符串，存为队列首节点的左右儿子。
+- `serialize()` 采用 BFS, 对当前二叉树搜索, 遍历 `vector`, 将当前节点左右儿子依次存入 `vector`, 空节点需要删去.
+- `deserialize()` 首先切割字符串, 然后用 `isLeftChild` 标记是当前是左右儿子, 数字转化为字符串, 存为队列首节点的左右儿子
 
 ```python
 from collections import deque
@@ -129,7 +129,7 @@ class Solution:
 
 **DFS**
 
-用 `'#'` 将 node 隔开。很直接的解决。思路是分治法 (不是遍历)
+用 `'#'` 将 node 隔开. 很直接的解决. 思路是分治法 (不是遍历)
 
 ```python
 """
