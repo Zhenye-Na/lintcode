@@ -3,6 +3,7 @@ class Solution:
     @param height: A list of integer
     @return: The area of largest rectangle in the histogram
     """
+
     def largestRectangleArea(self, height):
         # write your code here
         if not height or len(height) == 0:
