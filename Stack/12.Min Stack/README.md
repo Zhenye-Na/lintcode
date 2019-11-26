@@ -52,6 +52,7 @@ Output:
 
 https://www.youtube.com/watch?v=5h42eila268
 
+(🐑教授 NB!)
 
 **解法 1**
 
@@ -118,44 +119,43 @@ public:
 
 **解法 2**
 
-- push()
+- `push()`
     - 只有当 `min_stack` 为空 或者 `min_stack` 的栈顶元素比 `push` 进来的元素 (`x`) **大于等于**的时候, 在 `min_stack` 添加 `x`
-- pop()
+- `pop()`
     - 正常 `value_stack.pop()`, 针对 `min_stack` 多了一点操作, 就是如果从 `value_stack` 的栈顶元素正好跟 `min_stack` 的栈顶元素相等, 那么就要把 `min_stack` 一起 `pop` 掉
 
 ```python
 class MinStack:
-    
+
     def __init__(self):
         # do intialization if necessary
         self.value_stack = []
         self.min_stack = []
 
-
-    """
-    @param: number: An integer
-    @return: nothing
-    """
     def push(self, number):
+        """
+        @param: number: An integer
+        @return: nothing
+        """
         # write your code here
         self.value_stack.append(number)
         if len(self.min_stack) == 0 or number <= self.min_stack[-1]:
             self.min_stack.append(number)
 
-    """
-    @return: An integer
-    """
     def pop(self):
+        """
+        @return: An integer
+        """
         # write your code here
         element = self.value_stack.pop()
         if element == self.min_stack[-1]:
             self.min_stack.pop()
         return element
 
-    """
-    @return: An integer
-    """
     def min(self):
+        """
+        @return: An integer
+        """
         # write your code here
         return self.min_stack[-1]
 ```
@@ -283,22 +283,19 @@ public:
 
 ```python
 class MinStack:
-    
+
     def __init__(self):
         self.stack = []
-        
+
     def push(self, num):
-        
         min_val = min(num, self.stack[-1][1] if self.stack else num)
         self.stack.append((num, min_val))
-        
+
     def pop(self) -> int:
-        
         val, _ = self.stack.pop()
         return val
-        
+
     def min(self) -> int:
-        
         _, min_val = self.stack[-1]
         return min_val
 ```
