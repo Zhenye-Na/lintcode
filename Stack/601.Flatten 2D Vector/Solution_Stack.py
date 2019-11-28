@@ -1,28 +1,3 @@
-# 601. Flatten 2D Vector
-
-**Description**
-
-Implement an iterator to flatten a 2d vector.
-
-**Example**
-
-Example 1:
-
-```
-Input:[[1,2],[3],[4,5,6]]
-Output:[1,2,3,4,5,6]
-```
-
-Example 2:
-
-```
-Input:[[7,9],[5]]
-Output:[7,9,5]
-```
-
-**Stack**
-
-```python
 class Vector2D(object):
 
     # @param vec2d {List[List[int]]}
@@ -63,4 +38,3 @@ class Vector2D(object):
 # Your Vector2D object will be instantiated and called as such:
 # i, v = Vector2D(vec2d), []
 # while i.hasNext(): v.append(i.next())
-```

@@ -25,33 +25,36 @@ class NestedIterator(object):
 
     def __init__(self, nestedList):
         # Initialize your data structure here.
-        # :type nestedList: List[NestedInteger]
+        self.queue = deque(nestedList)
         self.next_elem = None
-        self.stack = []
-        for elem in reversed(nestedList):
-            self.stack.append(elem)
 
     # @return {int} the next element in the iteration
     def next(self):
         # Write your code here
         if self.next_elem is None:
             self.hasNext()
-        temp, self.next_elem = self.next_elem, None
-        return temp
+
+        self.next_elem, res = None, self.next_elem
+        return res
 
     # @return {boolean} true if the iteration has more element or false
     def hasNext(self):
         # Write your code here
-        if self.next_elem:
+        if self.next_elem is not None:
+            # do not move pointer
+            # what if we call hasNext() several times ?
             return True
-            
-        while self.stack:
-            top = self.stack.pop()
-            if top.isInteger():
-                self.next_elem = top.getInteger()
+
+        while self.queue:
+            element = self.queue.popleft()
+
+            if element.isInteger():
+                self.next_elem = element.getInteger()
                 return True
-            for elem in reversed(top.getList()):
-                self.stack.append(elem)
+            else:
+                for elem in reversed(element.getList()):
+                    self.queue.appendleft(elem)
+
         return False
 
 
