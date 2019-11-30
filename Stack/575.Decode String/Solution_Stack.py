@@ -34,7 +34,7 @@ class Solution:
                 s_prime = int(stack[-1]) * s_prime
                 stack.pop()
                 stack.append(s_prime)
-                
+
                 i += 1
 
             else:

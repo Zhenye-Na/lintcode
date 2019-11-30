@@ -22,6 +22,6 @@ class Solution:
                 timestamp += 1
                 result[stack.pop()] += timestamp - last_timestamp
 
-            last_timestamp = timestamp 
+            last_timestamp = timestamp
 
         return result

@@ -1,29 +1,31 @@
-1116. Exclusive Time of Functions
-Description
-中文
-English
-Given the running logs of n functions that are executed in a nonpreemptive single threaded CPU, find the exclusive time of these functions.
+# 1116. Exclusive Time of Functions
 
-Each function has a unique id, start from 0 to n-1. A function may be called recursively or by another function.
+**Description**
 
-A log is a string has this format : function_id:start_or_end:timestamp. For example, 0:start:0 means function 0 starts from the very beginning of time 0. 0:end:0 means function 0 ends to the very end of time 0.
+Given the running logs of `n` functions that are executed in a nonpreemptive single threaded CPU, find the exclusive time of these functions.
+
+Each function has a unique id, start from `0` to `n-1`. A function may be called recursively or by another function.
+
+A log is a string has this format : `function_id:start_or_end:timestamp`. For example, `0:start:0` means function `0` starts from the very beginning of time `0`. `0:end:0` means function `0` ends to the very end of time `0`.
 
 Exclusive time of a function is defined as the time spent within this function, the time spent by calling other functions should not be considered as this function's exclusive time. You should return the exclusive time of each function sorted by their function id.
 
+```
 Input logs will be sorted by timestamp, NOT log id.
 Your output should be sorted by function id, which means the 0th element of your output corresponds to the exclusive time of function 0.
 Two functions won't start or end at the same time.
 Functions could be called recursively, and will always end.
 1 <= n <= 100
+```
 
-Have you met this question in a real interview?  
-Example
+**Example**
 
 
 Example 1:
 
 ![](https://assets.leetcode.com/uploads/2019/04/05/diag1b.png)
 
+```
 Input:
 2
 0:start:0
@@ -38,8 +40,11 @@ Function 0 starts at time 0, then it executes 2 units of time and reaches the en
 Now function 0 calls function 1, function 1 starts at time 2, executes 4 units of time and end at time 5.
 Function 0 is running again at time 6, and also end at the time 6, thus executes 1 unit of time. 
 So function 0 totally execute 2 + 1 = 3 units of time, and function 1 totally execute 4 units of time.
+```
+
 Example 2:
 
+```
 Input:
 3
 0:start:0
@@ -61,3 +66,36 @@ Function 1 is running again at time 5, and also end at the time 5, thus executes
 Function 0 is running again at time 6, and also end at the time 6, thus executes 1 unit of time. 
 Function 1 starts at time 7, and also end at the time 10, thus executes 4 unit of time. 
 So function 0 totally execute 2+1 = 3, units of time, and function 1 totally execute 1+1+4 = 6 units of time.function 2 totally execute 2 units of time.
+```
+
+**Stack**
+
+```python
+class Solution:
+    """
+    @param n: a integer
+    @param logs: a list of integers
+    @return: return a list of integers
+    """
+    def exclusiveTime(self, n, logs):
+        # write your code here
+        stack = []
+        result = [0 for _ in range(n)]
+        last_timestamp = 0
+
+        for log in logs:
+            log = log.split(":")
+            thread_id, status, timestamp = int(log[0]), log[1], int(log[2])
+
+            if status == "start":
+                if stack:
+                    result[stack[-1]] += timestamp - last_timestamp
+                stack.append(thread_id)
+            else:
+                timestamp += 1
+                result[stack.pop()] += timestamp - last_timestamp
+
+            last_timestamp = timestamp
+
+        return result
+```
