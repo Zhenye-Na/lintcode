@@ -33,7 +33,6 @@ class Solution:
 
         return water
 
-
     def _create_boders(self, heights):
         self.m, self.n = len(heights), len(heights[0])
         for row in [0, self.m - 1]:
@@ -45,7 +44,6 @@ class Solution:
             for row in range(self.m):
                 heappush(self.borders, (heights[row][col], row, col))
                 self.visited.add((row, col))
-
 
     def _inBound(self, x, y):
         return 0 <= x < self.m and 0 <= y < self.n and (x, y) not in self.visited

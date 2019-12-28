@@ -9,8 +9,10 @@ Numbers keep coming, return the median of numbers at every time a new number add
 What's the definition of Median?
 
 The median is not equal to median in math.
-Median is the number that in the middle of a sorted array. If there are n numbers in a sorted array A, the median is A[(n - 1) / 2]A[(n−1)/2].
-For example, if A=[1,2,3], median is 2. If A=[1,19], median is 1.
+
+Median is the number that in the middle of a sorted array. If there are `n` numbers in a sorted array `A`, the median is `A[(n - 1) / 2]`.
+
+For example, if `A=[1,2,3]`, median is `2`. If `A=[1,19]`, median is `1`.
 
 **Example**
 
@@ -48,7 +50,7 @@ Total run time in `O(nlogn)`.
 这个过程中，可能会出现左边部分并不完全都 `<=` 右边部分的情况。这种情况发生的时候，交换左边最大和右边最小的数即可。
 
 ```
-把比 median 小的放在 maxheap 里，把比 median 大的放在 minheap 里。median 单独放在一个变量里。
+把比 median 小的放在 maxheap 里, 把比 median 大的放在 minheap 里。median 单独放在一个变量里。
 每次新增一个数的时候，先根据比当前的 median 大还是小丢到对应的 heap 里。
 
 丢完以后，再处理左右两边的平衡性:
@@ -95,16 +97,17 @@ class Solution:
         return medians
 ```
 
+用到两个堆, 但是可以有两种方式解决
 
-**Min Heap**
+- 跟中位数去比较大小, 决定放在哪一侧, 然后去平衡两个堆得大小
+- 直接按照堆的大小去添加元素, 然后去平衡两个堆得大小
 
-*Time Limit Exceeded*
+**第一种**
 
-> 89% test cases passed
+针对每一个 num, 拿它去和 已知的 median 去做比较, 根据大小关系, 把他放在对应的 heap 里面
 
 ```python
-import math
-import heapq
+from heapq import heappush, heappop
 
 class Solution:
     """
@@ -114,17 +117,75 @@ class Solution:
     def medianII(self, nums):
         # write your code here
         if not nums or len(nums) == 0:
-            return nums
+            return []
 
-        heap = []
+        # 用两个堆
+        # max_heap 存放小于 median 的数
+        # min_heap 存放大于 median 的数
+
+        # 不跟 median 比较
+        min_heap, max_heap = [], []
         medians = []
-        for i in range(len(nums)):
-            heapq.heappush(heap, nums[i])
-            medians.append(self._findMedian(heap))
+        for num in nums:
+
+            if len(max_heap) == 0 or num < - max_heap[0]:
+                heappush(max_heap, - num)
+            else:
+                heappush(min_heap, num)
+
+            # balance
+            # len(max_heap) == len(min_heap) or len(max_heap) == len(min_heap) + 1
+            if len(max_heap) < len(min_heap):
+                heappush(max_heap, - heappop(min_heap))
+            elif len(max_heap) > len(min_heap) + 1:
+                heappush(min_heap, - heappop(max_heap))
+
+            # median is stored on top of max_heap
+            medians.append(- max_heap[0])
+
+        return medians
+```
+
+**第二种**
+
+不去做比较 根据两个 heap 的大小来决定 放在哪里, 然后 balance 两个 heap
+
+```python
+from heapq import heappush, heappop
+
+class Solution:
+    """
+    @param nums: A list of integers
+    @return: the median of numbers
+    """
+    def medianII(self, nums):
+        # write your code here
+        if not nums or len(nums) == 0:
+            return []
+
+        # 用两个堆
+        # max_heap 存放小于 median 的数
+        # min_heap 存放大于 median 的数
+
+        # 不跟 median 比较
+        min_heap, max_heap = [], []
+        medians = []
+        for num in nums:
+
+            if len(max_heap) == 0 or len(max_heap) <= len(min_heap):
+                heappush(max_heap, - num)
+            else:
+                heappush(min_heap, num)
+
+            if len(max_heap) != 0 and len(min_heap) != 0:
+                self.balance(min_heap, max_heap)
+
+            medians.append(- max_heap[0])
 
         return medians
 
-    def _findMedian(self, heap):
-        k = (len(heap) - 1) // 2 + 1
-        return heapq.nsmallest(k, heap)[-1]
+    def balance(self, min_heap, max_heap):
+        if - max_heap[0] > min_heap[0]:
+            heappush(min_heap, - heappop(max_heap))
+            heappush(max_heap, - heappop(min_heap))
 ```

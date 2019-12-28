@@ -1,11 +1,13 @@
 import heapq
 
+
 class Solution:
     """
     @param nums: A list of integers
     @param k: An integer
     @return: The median of the element inside the window at each moving
     """
+
     def medianSlidingWindow(self, nums, k):
         # write your code here
         if not nums or len(nums) == 0:
@@ -32,7 +34,6 @@ class Solution:
                 heapq.heappush(minHeap, nums[i])
             else:
                 heapq.heappush(maxHeap, - nums[i])
-
 
         for i in range(k - 1, len(nums)):
             # add new element
