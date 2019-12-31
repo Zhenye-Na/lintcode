@@ -1,10 +1,10 @@
 # 391. Number of Airplanes in the Sky
 
-Description
+**Description**
 
 Given an list interval, which are taking off and landing time of the flight. How many airplanes are there at most at the same time in the sky?
 
-If landing and taking off of different planes happen at the same time, we consider landing should happen at first.
+> If landing and taking off of different planes happen at the same time, we consider landing should happen at first.
 
 **Example**
 
@@ -35,7 +35,7 @@ Explanation: Landing happen before taking off.
 
 遍历数组即可, 碰到起飞计数器加一, 碰到降落计数器减一. 维护最大值作为答案.
 
-注意降落优先于起飞.
+注意*降落优先于起飞*.
 
 算法：**扫描线**
 
@@ -50,8 +50,8 @@ Explanation: Landing happen before taking off.
 最后对所有点 index 进行从小到大的遍历，统计更新 count，取得最大值 max
 ```
 
-- 时间复杂度: O(nlogn)
-- 空间复杂度: O(n)
+- 时间复杂度: `O(nlogn)`
+- 空间复杂度: `O(n)`
 
 
 ```python
