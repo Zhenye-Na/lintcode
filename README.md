@@ -1,6 +1,6 @@
 <h3 align="center"><strong>LintCode Online Judge</strong></h3>
 
-![](./assets/proj.png)
+![](https://files.realpython.com/media/Python-Interview-Questions_Watermarked.5c5245ea8638.jpg)
 
 #### [Binary Search](./Binary_Search/)
 
@@ -294,8 +294,10 @@
 
 #### [Bit Manipulation](./Bit_Manipulation/)
 
-
-
+82.Single Number  
+83.Single Number II  
+84.Single Number III  
+824.Single Number IV  
 
 
 #### [String](./String/)
