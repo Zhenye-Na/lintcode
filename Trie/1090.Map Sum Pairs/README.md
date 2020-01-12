@@ -27,6 +27,7 @@ obj.insert(key,val)
 param_2 = obj.sum(prefix)
 """
 
+
 class TrieNode:
 
     def __init__(self):
@@ -48,7 +49,6 @@ class Trie:
             node = node.children[ch]
             node.val += val
 
-
     def searchPrefix(self, prefix):
         node = self.root
         for ch in prefix:
@@ -57,6 +57,7 @@ class Trie:
                 return 0
 
         return node.val
+
 
 class MapSum:
 
@@ -79,7 +80,6 @@ class MapSum:
             self.trie.add(key, val)
 
         self.d[key] = val
- 
 
     def sum(self, prefix):
         """

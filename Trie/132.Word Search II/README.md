@@ -19,14 +19,15 @@ Explanation:
 search in Matrix，so return ["again","can","dad","dog"].
 ```
 
-
 Example 2:
 
+```
 Input: ["a"], ["b"]
 Output: []
 Explanation:
  a
 search in Matrix，return [].
+```
 
 **Challenge**
 
@@ -122,4 +123,3 @@ class Solution:
     def _isValid(self, x, y, board, visited):
         return 0 <= x < len(board) and 0 <= y < len(board[0]) and (x, y) not in visited
 ```
-
