@@ -47,7 +47,6 @@ class Solution:
                         if new_state in history:
                             continue
 
-
                         history.add(new_state)
                         queue.append(new_state)
 

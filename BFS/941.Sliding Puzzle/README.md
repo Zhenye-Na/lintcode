@@ -22,7 +22,7 @@ Example 1:
 ```
 Given board = `[[1,2,3],[4,0,5]]`, return `1`.
 
-Explanation: 
+Explanation:
 Swap the 0 and the 5 in one move.
 ```
 
@@ -31,7 +31,7 @@ Example 2:
 ```
 Given board = `[[1,2,3],[5,4,0]]`, return `-1`.
 
-Explanation: 
+Explanation:
 No number of moves will make the board solved.
 ```
 
@@ -40,7 +40,7 @@ Example 3:
 ```
 Given board = `[[4,1,2],[5,0,3]]`, return `5`.
 
-Explanation: 
+Explanation:
 5 is the smallest number of moves that solves the board.
 An example path:
 After move 0: [[4,1,2],[5,0,3]]
@@ -63,13 +63,14 @@ Given board = `[[3,2,4],[1,5,0]]`, return `14`.
 
 分层 BFS, 问题是"多少步", 这就基本上是 分层BFS, 模板牢记
 
-- 如何交换字符串中两个字符? 
+- 如何交换字符串中两个字符?
     - 把字符串变成 list 然后交换, 再转会成字符串即可
 - 使用 set 用来除重
 
 
 ```python
 from collections import deque
+
 
 class Solution:
     """
@@ -96,18 +97,20 @@ class Solution:
 
         steps = 0
         while queue:
-            steps += 1
             size = len(queue)
 
             for _ in range(size):
                 state = queue.popleft()
+
+                if state == target_state:
+                    return steps
 
                 idx = state.find("0")
                 x, y = idx // n, idx % n
 
                 for i in range(4):
                     new_x, new_y = x + self.dx[i], y + self.dy[i]
-                    
+
                     if self.isValid(new_x, new_y, m, n):
                         newIdx = new_x * n + new_y
                         new_state = self.swap(state, idx, newIdx)
@@ -115,11 +118,11 @@ class Solution:
                         if new_state in history:
                             continue
 
-                        if new_state != target_state:
-                            history.add(new_state)
-                            queue.append(new_state)
-                        else:
-                            return steps
+                        history.add(new_state)
+                        queue.append(new_state)
+
+
+            steps += 1
 
         return -1
 
