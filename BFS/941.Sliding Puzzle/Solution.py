@@ -26,11 +26,13 @@ class Solution:
 
         steps = 0
         while queue:
-            steps += 1
             size = len(queue)
 
             for _ in range(size):
                 state = queue.popleft()
+
+                if state == target_state:
+                    return steps
 
                 idx = state.find("0")
                 x, y = idx // n, idx % n
@@ -45,11 +47,12 @@ class Solution:
                         if new_state in history:
                             continue
 
-                        if new_state != target_state:
-                            history.add(new_state)
-                            queue.append(new_state)
-                        else:
-                            return steps
+
+                        history.add(new_state)
+                        queue.append(new_state)
+
+
+            steps += 1
 
         return -1
 
