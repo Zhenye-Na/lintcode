@@ -23,7 +23,7 @@ Explanation: [0,2], [1,3], [1,1], [2,2], [0,4]
 
 **Prefix Sum**
 
-求出 prefix sum 后, 排序
+求出 prefix sum 后, 排序, 比较一下 difference 就可以
 
 ```python
 class Solution:
@@ -31,6 +31,7 @@ class Solution:
     @param: nums: A list of integers
     @return: A list of integers includes the index of the first number and the index of the last number
     """
+
     def subarraySumClosest(self, nums):
         # write your code here
         if not nums or len(nums) == 0:
@@ -43,7 +44,7 @@ class Solution:
             prefix_sum += num
             prefix_list.append((prefix_sum, i))
 
-        prefix_list.sort(key=lambda x : x[0])
+        prefix_list.sort(key=lambda x: x[0])
 
         min_diff = sys.maxsize
         l, r = -1, -1

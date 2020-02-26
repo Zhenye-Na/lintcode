@@ -6,20 +6,23 @@ Given an integer array, find a subarray where the sum of numbers is `zero`. Your
 
 There is at least one subarray that it's sum equals to `zero`.
 
+**Example**
 
-Example
+Example 1:
 
 ```
-Example 1:
-	Input:  [-3, 1, 2, -3, 4]
-	Output: [0, 2] or [1, 3].
-	
-	Explanation:
-	return anyone that the sum is 0.
+Input:  [-3, 1, 2, -3, 4]
+Output: [0, 2] or [1, 3].
+
+Explanation:
+return anyone that the sum is 0.
+```
 
 Example 2:
-	Input:  [-3, 1, -4, 2, -3, 4]
-	Output: [1,5]
+
+```
+Input:  [-3, 1, -4, 2, -3, 4]
+Output: [1,5]
 ```
 
 **Prefix Sum**
@@ -32,6 +35,7 @@ class Solution:
     @param nums: A list of integers
     @return: A list of integers includes the index of the first number and the index of the last number
     """
+
     def subarraySum(self, nums):
         # write your code here
         prefix_sum = {0: -1}
@@ -41,6 +45,6 @@ class Solution:
             if total in prefix_sum:
                 return prefix_sum[total] + 1, i
             prefix_sum[total] = i
-            
+
         return -1, -1
 ```
